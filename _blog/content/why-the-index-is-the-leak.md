@@ -47,7 +47,7 @@ Regulated data stays regulated after you transform it. If a derived copy can dis
 4. What leaves in telemetry, logs and support bundles? Traces often carry the content you meant to protect.
 5. What can you show an assessor? Look for exportable logs of who queried what, and when.
 
-### How DPLYD is built around this
+### How Fleet Agentic is built around this
 
 We started from the index instead of the file. The model, retrieval index, embeddings and logs all run on hardware inside your network, and no third-party model API sees your prompts or retrieved passages. Lighthouse handles identity, isolation and segmentation. Sentinel is an immutable audit log with evidence export, so question five gets a report and not a promise. Air-gapped deployment is available, with updates by offline transfer.
 
@@ -67,4 +67,4 @@ Pick one AI tool your organization already uses and ask IT to trace a single doc
 
 Book a 30-minute walkthrough on your own data. **[Schedule it](https://cal.com/kdplyd/30min)**
 
-**Sources:** Morris et al., arXiv 2310.06816; arXiv 2607.01276; [dplyd.io/learn/the-index-is-the-leak](https://dplyd.io/learn/the-index-is-the-leak/).
+**Sources:** Morris et al., arXiv 2310.06816; arXiv 2607.01276; [fleetagentic.ai/learn/the-index-is-the-leak](https://fleetagentic.ai/learn/the-index-is-the-leak/).

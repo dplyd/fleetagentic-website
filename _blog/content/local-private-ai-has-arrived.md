@@ -19,11 +19,11 @@ If you work in healthcare, defense, legal, or finance, you already know the calc
 
 You don't have to wait anymore. When the model runs locally, the privacy concern goes away because the data goes nowhere. It stays on your box, in your office, under your control. Nothing leaks because nothing leaves.
 
-That's the whole reason DPLYD exists.
+That's the whole reason Fleet Agentic exists.
 
 We put great open weight models on a small box that sits on your desk. One unit comfortably serves five to twenty people depending on how hard they lean on it.
 
-But the model is the easy part. The hard part is everything around it, and that's where we spent our effort. DPLYD ships with auditability built in, so you can show your work when someone asks. Role based access controls, so only the right people see the right things. And the ability to load the models with your own local knowledge, so the system can respond with context specific to you.
+But the model is the easy part. The hard part is everything around it, and that's where we spent our effort. Fleet Agentic ships with auditability built in, so you can show your work when someone asks. Role based access controls, so only the right people see the right things. And the ability to load the models with your own local knowledge, so the system can respond with context specific to you.
 
 Stability. Security. Your most sensitive data can now leverage AI, and trust it will never walk out the door.
 

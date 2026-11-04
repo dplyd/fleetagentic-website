@@ -1,6 +1,6 @@
-baseURL = "https://dplyd.io/blog/"
+baseURL = "https://fleetagentic.ai/blog/"
 languageCode = "en-us"
-title = "DPLYD Blog"
+title = "Fleet Agentic Blog"
 enableRobotsTXT = false
 disableKinds = ["taxonomy", "term"]
 summaryLength = 40
@@ -20,4 +20,4 @@ summaryLength = 40
   endLevel = 3
 
 [params]
-  description = "On-prem AI, data sovereignty, and compliance for regulated organizations — from DPLYD."
+  description = "On-prem AI, data sovereignty, and compliance for regulated organizations — from Fleet Agentic."

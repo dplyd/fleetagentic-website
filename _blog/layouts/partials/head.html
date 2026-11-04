@@ -7,24 +7,24 @@
 <link rel="manifest" href="/site.webmanifest">
 {{- $isHome := .IsHome }}
 {{- $desc := cond (ne (string .Params.summary) "") (string .Params.summary) .Site.Params.description }}
-{{- $title := cond $isHome (printf "%s — On-Prem AI, Sovereignty & Compliance" .Site.Title) (printf "%s — DPLYD" .Title) }}
+{{- $title := cond $isHome (printf "%s — On-Prem AI, Sovereignty & Compliance" .Site.Title) (printf "%s — Fleet Agentic" .Title) }}
 <title>{{ $title }}</title>
 <meta name="description" content="{{ $desc }}">
 <link rel="canonical" href="{{ .Permalink }}">
 <meta property="og:type" content="{{ cond $isHome "website" "article" }}">
-<meta property="og:site_name" content="DPLYD">
+<meta property="og:site_name" content="Fleet Agentic">
 <meta property="og:title" content="{{ cond $isHome .Site.Title .Title }}">
 <meta property="og:description" content="{{ $desc }}">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:image" content="https://dplyd.io/assets/og-card.png">
+<meta property="og:image" content="https://fleetagentic.ai/assets/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ cond $isHome .Site.Title .Title }}">
 <meta name="twitter:description" content="{{ $desc }}">
-<meta name="twitter:image" content="https://dplyd.io/assets/og-card.png">
+<meta name="twitter:image" content="https://fleetagentic.ai/assets/og-card.png">
 {{- if not $isHome }}
-{{- $author := cond (ne (string .Params.author) "") (dict "@type" "Person" "name" (string .Params.author)) (dict "@type" "Organization" "name" "DPLYD Inc." "url" "https://dplyd.io/") }}
+{{- $author := cond (ne (string .Params.author) "") (dict "@type" "Person" "name" (string .Params.author)) (dict "@type" "Organization" "name" "Fleet Agentic" "url" "https://fleetagentic.ai/") }}
 {{- $blogPosting := dict
   "@context" "https://schema.org"
   "@type" "BlogPosting"
@@ -34,14 +34,14 @@
   "datePublished" (.Date.Format "2006-01-02")
   "dateModified" ((or .Lastmod .Date).Format "2006-01-02")
   "author" $author
-  "publisher" (dict "@type" "Organization" "name" "DPLYD" "logo" (dict "@type" "ImageObject" "url" "https://dplyd.io/assets/dplyd-logo.png"))
+  "publisher" (dict "@type" "Organization" "name" "Fleet Agentic" "logo" (dict "@type" "ImageObject" "url" "https://fleetagentic.ai/assets/fleet-agentic-logo.png"))
   "mainEntityOfPage" .Permalink }}
 {{- $breadcrumb := dict
   "@context" "https://schema.org"
   "@type" "BreadcrumbList"
   "itemListElement" (slice
-    (dict "@type" "ListItem" "position" 1 "name" "Home" "item" "https://dplyd.io/")
-    (dict "@type" "ListItem" "position" 2 "name" "Blog" "item" "https://dplyd.io/blog/")
+    (dict "@type" "ListItem" "position" 1 "name" "Home" "item" "https://fleetagentic.ai/")
+    (dict "@type" "ListItem" "position" 2 "name" "Blog" "item" "https://fleetagentic.ai/blog/")
     (dict "@type" "ListItem" "position" 3 "name" .Title "item" .Permalink)) }}
 <script type="application/ld+json">{{ $blogPosting | jsonify | safeJS }}</script>
 <script type="application/ld+json">{{ $breadcrumb | jsonify | safeJS }}</script>

@@ -1,7 +1,7 @@
 // Single source of truth for prices. Elements marked
 // data-cfg="<key>" are filled from here; meta/OG/JSON-LD must be kept in sync by hand
 // (crawlers do not run this script).
-window.DPLYD_CONFIG = {
+window.FLEET_CONFIG = {
   prices: {
     entry: {
       amount: '$500/month',
@@ -18,7 +18,7 @@ window.DPLYD_CONFIG = {
   }
 };
 (function () {
-  var c = window.DPLYD_CONFIG;
+  var c = window.FLEET_CONFIG;
   var get = function (path) { return path.split('.').reduce(function (o, k) { return o && o[k]; }, c); };
   document.addEventListener('DOMContentLoaded', function () {
     Array.prototype.forEach.call(document.querySelectorAll('[data-cfg]'), function (el) {

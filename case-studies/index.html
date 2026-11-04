@@ -8,28 +8,28 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
 <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<title>Case Studies — DPLYD AI</title>
-<meta name="description" content="How DPLYD deploys sovereign AI where the data can't move — proof from regulated environments.">
-<link rel="canonical" href="https://dplyd.io/case-studies/">
+<title>Case Studies — Fleet Agentic</title>
+<meta name="description" content="How Fleet Agentic deploys sovereign AI where the data can't move — proof from regulated environments.">
+<link rel="canonical" href="https://fleetagentic.ai/case-studies/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="DPLYD">
-<meta property="og:title" content="Case Studies — DPLYD AI">
-<meta property="og:description" content="How DPLYD deploys sovereign AI where the data can't move — proof from regulated environments.">
-<meta property="og:url" content="https://dplyd.io/case-studies/">
-<meta property="og:image" content="https://dplyd.io/assets/og-card.png">
+<meta property="og:site_name" content="Fleet Agentic">
+<meta property="og:title" content="Case Studies — Fleet Agentic">
+<meta property="og:description" content="How Fleet Agentic deploys sovereign AI where the data can't move — proof from regulated environments.">
+<meta property="og:url" content="https://fleetagentic.ai/case-studies/">
+<meta property="og:image" content="https://fleetagentic.ai/assets/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Case Studies — DPLYD AI">
-<meta name="twitter:description" content="How DPLYD deploys sovereign AI where the data can't move — proof from regulated environments.">
-<meta name="twitter:image" content="https://dplyd.io/assets/og-card.png">
+<meta name="twitter:title" content="Case Studies — Fleet Agentic">
+<meta name="twitter:description" content="How Fleet Agentic deploys sovereign AI where the data can't move — proof from regulated environments.">
+<meta name="twitter:image" content="https://fleetagentic.ai/assets/og-card.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Hanken+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: #05070E; color: #EAF0FF; font-family: 'Hanken Grotesk', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-  ::selection { background: #27FDFC; color: #05070E; }
+  body { margin: 0; background: #12223B; color: #F0EBE0; font-family: 'Hanken Grotesk', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  ::selection { background: #BD984B; color: #12223B; }
   a { text-decoration: none; }
   @keyframes waveDrift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @keyframes glowPulse { 0%,100% { opacity: .35; } 50% { opacity: .7; } }
@@ -37,31 +37,31 @@
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } html { scroll-behavior: auto; } }
 
   .hub { position: relative; z-index: 1; max-width: 1160px; margin: 0 auto; padding: clamp(48px,7vw,84px) 32px clamp(64px,8vw,96px); }
-  .hub .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; color: #27FDFC; margin: 0 0 20px; }
-  .hub h1 { font-family: 'Sora', sans-serif; font-weight: 700; font-size: clamp(30px,5vw,50px); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 16px; color: #fff; }
-  .hub .sub { font-size: clamp(16px,2vw,19px); line-height: 1.6; color: #8B96AD; margin: 0 0 52px; max-width: 60ch; }
+  .hub .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; color: #BD984B; margin: 0 0 20px; }
+  .hub h1 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: clamp(30px,5vw,50px); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 16px; color: #F0EBE0; }
+  .hub .sub { font-size: clamp(16px,2vw,19px); line-height: 1.6; color: #A3ABB8; margin: 0 0 52px; max-width: 60ch; }
   .cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap: 18px; }
-  .study-card { position: relative; display: block; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 30px 28px; background: rgba(255,255,255,0.015); transition: border-color .25s ease, transform .25s ease; }
-  .study-card:hover { border-color: rgba(39,253,252,0.45); transform: translateY(-4px); }
-  .study-card .tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #77839B; margin-bottom: 16px; display: block; }
-  .study-card h3 { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 21px; color: #fff; margin: 0 0 12px; line-height: 1.25; }
-  .study-card p { font-size: 14.5px; line-height: 1.6; color: #8B96AD; margin: 0 0 20px; }
-  .study-card .cta { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.05em; color: #27FDFC; }
+  .study-card { position: relative; display: block; border: 1px solid rgba(240,235,224,0.1); border-radius: 16px; padding: 30px 28px; background: rgba(240,235,224,0.015); transition: border-color .25s ease, transform .25s ease; }
+  .study-card:hover { border-color: rgba(189,152,75,0.45); transform: translateY(-4px); }
+  .study-card .tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #8C96A6; margin-bottom: 16px; display: block; }
+  .study-card h3 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 600; font-size: 21px; color: #F0EBE0; margin: 0 0 12px; line-height: 1.25; }
+  .study-card p { font-size: 14.5px; line-height: 1.6; color: #A3ABB8; margin: 0 0 20px; }
+  .study-card .cta { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.05em; color: #BD984B; }
 </style>
 </head>
 <body>
 
   <!-- ambient background -->
-  <div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(39,253,252,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(39,253,252,0.035) 1px, transparent 1px);background-size:44px 44px;animation:gridPan 32s linear infinite;mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%);-webkit-mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%)"></div>
-  <div aria-hidden="true" style="position:fixed;top:-260px;left:50%;transform:translateX(-50%);width:900px;height:600px;z-index:0;pointer-events:none;background:radial-gradient(closest-side, rgba(39,253,252,0.14), transparent);filter:blur(30px);animation:glowPulse 9s ease-in-out infinite"></div>
+  <div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(189,152,75,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(189,152,75,0.035) 1px, transparent 1px);background-size:44px 44px;animation:gridPan 32s linear infinite;mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%);-webkit-mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%)"></div>
+  <div aria-hidden="true" style="position:fixed;top:-260px;left:50%;transform:translateX(-50%);width:900px;height:600px;z-index:0;pointer-events:none;background:radial-gradient(closest-side, rgba(189,152,75,0.14), transparent);filter:blur(30px);animation:glowPulse 9s ease-in-out infinite"></div>
 
   <!-- header -->
-  <header style="position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(5,7,14,0.55);border-bottom:1px solid rgba(255,255,255,0.07)">
+  <header style="position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(18,34,59,0.55);border-bottom:1px solid rgba(240,235,224,0.07)">
     <div style="max-width:1280px;margin:0 auto;padding:15px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
-      <a href="../" aria-label="DPLYD AI home" style="display:flex;align-items:center;flex-shrink:0"><img src="../assets/dplyd-logo-nav.png" alt="DPLYD AI" width="76" height="28" style="height:28px;width:76px;display:block"></a>
+      <a href="../" aria-label="Fleet Agentic home" style="display:flex;align-items:center;gap:10px;flex-shrink:0"><img src="../assets/fleet-agentic-mark.svg" alt="" width="36" height="26" style="height:26px;width:36px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:13px;line-height:1;letter-spacing:0.04em;color:#F0EBE0;text-transform:uppercase">Fleet<br>Agentic</span></a>
       <div style="display:flex;align-items:center;gap:24px">
-        <a href="../" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#AEB8CC">← Back to home</a>
-        <a href="../#book" style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:0.06em;color:#05070E;background:#27FDFC;padding:11px 20px;border-radius:8px">Book a Demo</a>
+        <a href="../" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#C9C4B8">← Back to home</a>
+        <a href="../#book" style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:0.06em;color:#12223B;background:#BD984B;padding:11px 20px;border-radius:8px">Book a Demo</a>
       </div>
     </div>
   </header>
@@ -70,7 +70,7 @@
   <main class="hub">
     <div class="eyebrow">Field Results</div>
     <h1>Proof from regulated environments.</h1>
-    <p class="sub">How DPLYD deploys sovereign AI where the data can't move.</p>
+    <p class="sub">How Fleet Agentic deploys sovereign AI where the data can't move.</p>
 
     <div class="cards">
       <a class="study-card" href="defense-cmmc/">
@@ -80,51 +80,51 @@
         <span class="cta">Read case study &rarr;</span>
       </a>
     </div>
-    <p style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#77839B;margin:24px 0 0">▸ additional deployments in progress — write-ups published as customers clear them for release.</p>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#8C96A6;margin:24px 0 0">▸ additional deployments in progress — write-ups published as customers clear them for release.</p>
   </main>
 
   <!-- footer -->
-  <footer style="position:relative;z-index:1;border-top:1px solid rgba(255,255,255,0.08);background:#070A12">
-    <div aria-hidden="true" style="overflow:hidden;height:22px;opacity:0.35"><div style="display:flex;width:200%;animation:waveDrift 30s linear infinite;font-family:'JetBrains Mono',monospace;font-size:14px;line-height:22px;color:#27FDFC;white-space:nowrap"><span>&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;</span><span>&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;</span></div></div>
+  <footer style="position:relative;z-index:1;border-top:1px solid rgba(240,235,224,0.08);background:#0C1829">
+    <div aria-hidden="true" style="overflow:hidden;height:22px;opacity:0.35"><div style="display:flex;width:200%;animation:waveDrift 30s linear infinite;font-family:'JetBrains Mono',monospace;font-size:14px;line-height:22px;color:#BD984B;white-space:nowrap"><span>&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;</span><span>&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;</span></div></div>
     <div style="max-width:1280px;margin:0 auto;padding:52px 32px 40px">
       <div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;margin-bottom:40px">
         <div style="max-width:340px">
-          <img src="../assets/dplyd-logo-nav.png" alt="DPLYD AI" width="70" height="26" style="height:26px;width:70px;display:block;margin-bottom:16px">
-          <p style="font-size:14.5px;line-height:1.6;color:#8B96AD;margin:0">Sovereign intelligence for regulated verticals. The AI that lives inside your perimeter.</p>
+          <span style="display:flex;align-items:center;gap:10px;margin-bottom:16px"><img src="../assets/fleet-agentic-mark.svg" alt="" width="33" height="24" style="height:24px;width:33px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:12px;line-height:1;letter-spacing:0.04em;color:#F0EBE0;text-transform:uppercase">Fleet<br>Agentic</span></span>
+          <p style="font-size:14.5px;line-height:1.6;color:#A3ABB8;margin:0">Sovereign intelligence for regulated verticals. The AI that lives inside your perimeter.</p>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:48px">
           <div style="display:flex;flex-direction:column;gap:12px">
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#77839B">PRODUCT</span>
-            <a href="../#platform" style="font-size:14px;color:#AEB8CC">Platform</a>
-            <a href="../#verticals" style="font-size:14px;color:#AEB8CC">Verticals</a>
-            <a href="../#security" style="font-size:14px;color:#AEB8CC">Security</a>
-            <a href="../#pricing" style="font-size:14px;color:#AEB8CC">Pricing</a>
-            <a href="../solutions/defense/" style="font-size:14px;color:#AEB8CC">Defense AI</a>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#8C96A6">PRODUCT</span>
+            <a href="../#platform" style="font-size:14px;color:#C9C4B8">Platform</a>
+            <a href="../#verticals" style="font-size:14px;color:#C9C4B8">Verticals</a>
+            <a href="../#security" style="font-size:14px;color:#C9C4B8">Security</a>
+            <a href="../#pricing" style="font-size:14px;color:#C9C4B8">Pricing</a>
+            <a href="../solutions/defense/" style="font-size:14px;color:#C9C4B8">Defense AI</a>
           </div>
           <div style="display:flex;flex-direction:column;gap:12px">
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#77839B">COMPANY</span>
-            <a href="../about/" style="font-size:14px;color:#AEB8CC">About</a>
-            <a href="../carrier/" style="font-size:14px;color:#AEB8CC">Carrier Partner Program</a>
-            <a href="../#book" style="font-size:14px;color:#AEB8CC">Book a Demo</a>
-            <a href="../#contact" style="font-size:14px;color:#AEB8CC">Contact Sales</a>
-            <a href="mailto:info@dplyd.io" style="font-size:14px;color:#AEB8CC">info@dplyd.io</a>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#8C96A6">COMPANY</span>
+            <a href="../about/" style="font-size:14px;color:#C9C4B8">About</a>
+            <a href="../carrier/" style="font-size:14px;color:#C9C4B8">Carrier Partner Program</a>
+            <a href="../#book" style="font-size:14px;color:#C9C4B8">Book a Demo</a>
+            <a href="../#contact" style="font-size:14px;color:#C9C4B8">Contact Sales</a>
+            <a href="mailto:info@fleetagentic.ai" style="font-size:14px;color:#C9C4B8">info@fleetagentic.ai</a>
           </div>
         </div>
       </div>
-      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.07);border-bottom:1px solid rgba(255,255,255,0.07);margin-bottom:24px">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#77839B">BUILT&nbsp;TO&nbsp;THE&nbsp;STANDARD&nbsp;OF</span>
-        <a href="../#posture" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#AEB8CC;border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:6px 12px">CMMC L2</a>
-        <a href="../#posture" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#AEB8CC;border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:6px 12px">HIPAA</a>
-        <a href="../#posture" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#AEB8CC;border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:6px 12px">FERPA</a>
-        <a href="../#posture" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#AEB8CC;border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:6px 12px">NIST 800-171</a>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;padding:20px 0;border-top:1px solid rgba(240,235,224,0.07);border-bottom:1px solid rgba(240,235,224,0.07);margin-bottom:24px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#8C96A6">BUILT&nbsp;TO&nbsp;THE&nbsp;STANDARD&nbsp;OF</span>
+        <a href="../#posture" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#C9C4B8;border:1px solid rgba(240,235,224,0.12);border-radius:6px;padding:6px 12px">CMMC L2</a>
+        <a href="../#posture" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#C9C4B8;border:1px solid rgba(240,235,224,0.12);border-radius:6px;padding:6px 12px">HIPAA</a>
+        <a href="../#posture" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#C9C4B8;border:1px solid rgba(240,235,224,0.12);border-radius:6px;padding:6px 12px">FERPA</a>
+        <a href="../#posture" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#C9C4B8;border:1px solid rgba(240,235,224,0.12);border-radius:6px;padding:6px 12px">NIST 800-171</a>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#77839B">&copy; 2026 DPLYD AI</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8C96A6">&copy; 2026 Fleet Agentic</span>
         <div style="display:flex;gap:24px">
-          <a href="../#security" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#77839B">Security</a>
-          <a href="../terms/" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#77839B">Terms</a>
-          <a href="../privacy/" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#77839B">Privacy</a>
-          <a href="mailto:info@dplyd.io" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#77839B">Contact</a>
+          <a href="../#security" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8C96A6">Security</a>
+          <a href="../terms/" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8C96A6">Terms</a>
+          <a href="../privacy/" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8C96A6">Privacy</a>
+          <a href="mailto:info@fleetagentic.ai" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8C96A6">Contact</a>
         </div>
       </div>
     </div>

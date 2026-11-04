@@ -43,9 +43,9 @@ With AI, every AI tool that processes, stores, or indexes CUI is a part of the s
 5. Ask each AI vendor to give you in writing where prompts, files, embeddings and logs are stored.
 6. Put the report on your calendar and re-check regularly.
 
-### How DPLYD fits
+### How Fleet Agentic fits
 
-DPLYD was designed from the start to meet the standard of CMMC. The model, index, embeddings, and logs run inside your network, so adding AI won't add a third-party system or cloud to your "boundary." Sentinel produces exportable evidence for an assessor or to back your own affirmation. See our [defense case study](/case-studies/defense-cmmc/).
+Fleet Agentic was designed from the start to meet the standard of CMMC. The model, index, embeddings, and logs run inside your network, so adding AI won't add a third-party system or cloud to your "boundary." Sentinel produces exportable evidence for an assessor or to back your own affirmation. See our [defense case study](/case-studies/defense-cmmc/).
 
 ### Using the pause well
 
