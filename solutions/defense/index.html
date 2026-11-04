@@ -40,7 +40,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Hanken+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: #332B29; color: #F9D9CE; font-family: 'Hanken Grotesk', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  body { margin: 0; background: #FFF8F4; color: #332B29; font-family: 'Hanken Grotesk', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
   ::selection { background: #EEAE56; color: #332B29; }
   a { text-decoration: none; }
   table { border-collapse: collapse; }
@@ -53,11 +53,11 @@
   @keyframes gridPan { from { background-position: 0 0; } to { background-position: 44px 44px; } }
 
   .navlink { transition: color .2s; }
-  .navlink:hover { color: #EEAE56; }
+  .navlink:hover { color: #8F5406; }
   .btn-primary { transition: transform .15s ease, box-shadow .25s ease; }
   .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(238,174,86,0.4); }
   .btn-ghost { transition: border-color .2s ease, color .2s ease; }
-  .btn-ghost:hover { border-color: #EEAE56; color: #EEAE56; }
+  .btn-ghost:hover { border-color: #EEAE56; color: #8F5406; }
   .card-hover { transition: border-color .25s ease, transform .25s ease; }
   .card-hover:hover { border-color: rgba(238,174,86,0.4); transform: translateY(-4px); }
   .foot-link { transition: color .2s; }
@@ -66,12 +66,12 @@
   [data-reveal] { transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
   .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .cmp-table th, .cmp-table td { padding: 16px 20px; text-align: left; font-size: 14.5px; line-height: 1.5; vertical-align: top; }
-  .cmp-table th { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #B3A29B; border-bottom: 1px solid rgba(249,217,206,0.10); }
-  .cmp-table td { border-bottom: 1px solid rgba(249,217,206,0.06); color: #E3CFC6; }
+  .cmp-table th { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6B5C56; border-bottom: 1px solid rgba(51,43,41,0.18); }
+  .cmp-table td { border-bottom: 1px solid rgba(51,43,41,0.06); color: #4A403D; }
   .cmp-table tr:last-child td { border-bottom: none; }
-  .cmp-row-label { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #CDBDB5; white-space: nowrap; }
-  .cmp-cloud { color: #F2907D; }
-  .cmp-fleet { color: #F9D9CE; background: rgba(238,174,86,0.045); }
+  .cmp-row-label { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #5E524E; white-space: nowrap; }
+  .cmp-cloud { color: #B0381F; }
+  .cmp-fleet { color: #332B29; background: rgba(238,174,86,0.045); }
   @media (max-width: 1100px) {
     #desknav { display: none !important; }
     #navToggle { display: flex !important; }
@@ -85,73 +85,73 @@
 <body>
 
   <!-- ambient background -->
-  <div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(238,174,86,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(238,174,86,0.035) 1px, transparent 1px);background-size:44px 44px;animation:gridPan 32s linear infinite;mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%);-webkit-mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%)"></div>
-  <div aria-hidden="true" style="position:fixed;top:-260px;left:50%;transform:translateX(-50%);width:900px;height:600px;z-index:0;pointer-events:none;background:radial-gradient(closest-side, rgba(238,174,86,0.14), transparent);filter:blur(30px);animation:glowPulse 9s ease-in-out infinite"></div>
+  <div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(238,174,86,0.067) 1px, transparent 1px), linear-gradient(90deg, rgba(238,174,86,0.067) 1px, transparent 1px);background-size:44px 44px;animation:gridPan 32s linear infinite;mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%);-webkit-mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%)"></div>
+  <div aria-hidden="true" style="position:fixed;top:-260px;left:50%;transform:translateX(-50%);width:900px;height:600px;z-index:0;pointer-events:none;background:radial-gradient(closest-side, rgba(238,174,86,0.266), transparent);filter:blur(30px);animation:glowPulse 9s ease-in-out infinite"></div>
 
   <!-- ================= HEADER ================= -->
-  <header id="siteHeader" style="position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(51,43,41,0.55);border-bottom:1px solid rgba(249,217,206,0.07)">
+  <header id="siteHeader" style="position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(253,241,234,0.55);border-bottom:1px solid rgba(51,43,41,0.12)">
     <div style="max-width:1280px;margin:0 auto;padding:15px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px">
-      <a href="../../" aria-label="Fleet Agentic home" style="display:flex;align-items:center;gap:10px;flex-shrink:0"><img src="../../assets/fleet-agentic-mark.svg" alt="" width="42" height="30" style="height:30px;width:42px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:15px;line-height:1;letter-spacing:0.04em;color:#F9D9CE;text-transform:uppercase">Fleet<br>Agentic</span></a>
+      <a href="../../" aria-label="Fleet Agentic home" style="display:flex;align-items:center;gap:10px;flex-shrink:0"><img src="../../assets/fleet-agentic-mark.svg" alt="" width="42" height="30" style="height:30px;width:42px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:15px;line-height:1;letter-spacing:0.04em;color:#332B29;text-transform:uppercase">Fleet<br>Agentic</span></a>
       <nav id="desknav" style="display:flex;align-items:center;gap:28px">
-        <a href="../../#platform" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#E3CFC6">Platform</a>
-        <a href="../../#security" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#E3CFC6">Security</a>
-        <a href="../legal/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#E3CFC6">Legal</a>
-        <a href="../healthcare/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#E3CFC6">Healthcare</a>
-        <a href="../defense/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#EEAE56">Defense</a>
-        <a href="../../case-studies/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#E3CFC6">Case Studies</a>
-        <a href="../../carrier/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#E3CFC6">Partners</a>
+        <a href="../../#platform" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#4A403D">Platform</a>
+        <a href="../../#security" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#4A403D">Security</a>
+        <a href="../legal/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#4A403D">Legal</a>
+        <a href="../healthcare/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#4A403D">Healthcare</a>
+        <a href="../defense/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#8F5406">Defense</a>
+        <a href="../../case-studies/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#4A403D">Case Studies</a>
+        <a href="../../carrier/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#4A403D">Partners</a>
         <a href="#book" class="btn-primary" style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:0.06em;color:#332B29;background:#EEAE56;padding:11px 20px;border-radius:8px;box-shadow:0 0 0 rgba(238,174,86,0)">Book a Demo</a>
       </nav>
-      <button id="navToggle" aria-label="Menu" aria-expanded="false" style="display:none;align-items:center;justify-content:center;width:42px;height:42px;background:transparent;border:1px solid rgba(249,217,206,0.16);border-radius:8px;color:#F9D9CE;font-family:'JetBrains Mono',monospace;font-size:20px;cursor:pointer">≡</button>
+      <button id="navToggle" aria-label="Menu" aria-expanded="false" style="display:none;align-items:center;justify-content:center;width:42px;height:42px;background:transparent;border:1px solid rgba(51,43,41,0.16);border-radius:8px;color:#332B29;font-family:'JetBrains Mono',monospace;font-size:20px;cursor:pointer">≡</button>
     </div>
-    <div id="mobnav" style="display:none;padding:8px 32px 22px;border-top:1px solid rgba(249,217,206,0.06);background:rgba(51,43,41,0.96)">
-      <a href="../../#platform" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#E3CFC6;border-bottom:1px solid rgba(249,217,206,0.05)">Platform</a>
-      <a href="../../#security" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#E3CFC6;border-bottom:1px solid rgba(249,217,206,0.05)">Security</a>
-      <a href="../legal/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#E3CFC6;border-bottom:1px solid rgba(249,217,206,0.05)">Legal</a>
-      <a href="../healthcare/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#E3CFC6;border-bottom:1px solid rgba(249,217,206,0.05)">Healthcare</a>
-      <a href="../defense/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#EEAE56;border-bottom:1px solid rgba(249,217,206,0.05)">Defense</a>
-      <a href="../../case-studies/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#E3CFC6;border-bottom:1px solid rgba(249,217,206,0.05)">Case Studies</a>
-      <a href="../../carrier/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#E3CFC6;border-bottom:1px solid rgba(249,217,206,0.05)">Partners</a>
+    <div id="mobnav" style="display:none;padding:8px 32px 22px;border-top:1px solid rgba(51,43,41,0.06);background:rgba(253,241,234,0.96)">
+      <a href="../../#platform" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#4A403D;border-bottom:1px solid rgba(51,43,41,0.05)">Platform</a>
+      <a href="../../#security" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#4A403D;border-bottom:1px solid rgba(51,43,41,0.05)">Security</a>
+      <a href="../legal/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#4A403D;border-bottom:1px solid rgba(51,43,41,0.05)">Legal</a>
+      <a href="../healthcare/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#4A403D;border-bottom:1px solid rgba(51,43,41,0.05)">Healthcare</a>
+      <a href="../defense/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#8F5406;border-bottom:1px solid rgba(51,43,41,0.05)">Defense</a>
+      <a href="../../case-studies/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#4A403D;border-bottom:1px solid rgba(51,43,41,0.05)">Case Studies</a>
+      <a href="../../carrier/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#4A403D;border-bottom:1px solid rgba(51,43,41,0.05)">Partners</a>
       <a href="#book" style="display:block;text-align:center;margin-top:16px;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;letter-spacing:0.06em;color:#332B29;background:#EEAE56;border-radius:8px">Book a Demo</a>
     </div>
   </header>
 
   <!-- ================= HERO ================= -->
-  <section style="position:relative;z-index:1;background:linear-gradient(180deg, rgba(238,174,86,0.05), transparent 65%)">
+  <section style="position:relative;z-index:1;background:linear-gradient(180deg, rgba(238,174,86,0.095), transparent 65%)">
     <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,9vw,110px) 32px clamp(40px,6vw,64px)">
       <div style="display:flex;flex-wrap:wrap;gap:clamp(40px,5vw,72px);align-items:center">
         <!-- left copy -->
         <div style="flex:1 1 420px;min-width:min(100%,420px)">
-          <div style="display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#9FDDDC;border:1px solid rgba(238,174,86,0.28);border-radius:999px;padding:7px 14px;margin-bottom:26px">
+          <div style="display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#17625F;border:1px solid rgba(238,174,86,0.28);border-radius:999px;padding:7px 14px;margin-bottom:26px">
             <span style="width:7px;height:7px;border-radius:50%;background:#EEAE56;animation:pulseDot 2.6s ease-in-out infinite"></span>Defense&nbsp;AI
           </div>
-          <h1 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(36px,5.6vw,62px);line-height:1.05;letter-spacing:-0.025em;margin:0 0 22px;color:#F9D9CE">Frontier-grade AI, without CUI leaving <span style="color:#EEAE56">the facility.</span></h1>
-          <p style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:400;font-size:clamp(18px,2.4vw,23px);line-height:1.4;color:#E3CFC6;margin:0 0 18px;max-width:36ch">The productivity of generative AI — for proposals, past performance, and program data that can't touch a public cloud.</p>
-          <p style="font-size:16px;line-height:1.65;color:#CDBDB5;margin:0 0 18px;max-width:50ch">Fleet Agentic puts fully managed AI inside your perimeter. Controlled Unclassified Information stays on your network — and so does every index, embedding, and log derived from it.</p>
-          <p style="font-size:15px;line-height:1.65;color:#B3A29B;margin:0 0 34px;max-width:52ch;border-left:2px solid rgba(238,174,86,0.3);padding-left:14px">Fleet Agentic for defense is a managed on-premises AI for contractors handling CUI: BD search, proposal drafting, and program knowledge retrieval run entirely inside your boundary, aligned with your CMMC 2.0 Level 2 posture.</p>
+          <h1 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(36px,5.6vw,62px);line-height:1.05;letter-spacing:-0.025em;margin:0 0 22px;color:#332B29">Frontier-grade AI, without CUI leaving <span style="box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 0.14em;border-radius:7px;color:#332B29;background:#EEAE56">the facility.</span></h1>
+          <p style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:400;font-size:clamp(18px,2.4vw,23px);line-height:1.4;color:#4A403D;margin:0 0 18px;max-width:36ch">The productivity of generative AI — for proposals, past performance, and program data that can't touch a public cloud.</p>
+          <p style="font-size:16px;line-height:1.65;color:#5E524E;margin:0 0 18px;max-width:50ch">Fleet Agentic puts fully managed AI inside your perimeter. Controlled Unclassified Information stays on your network — and so does every index, embedding, and log derived from it.</p>
+          <p style="font-size:15px;line-height:1.65;color:#6B5C56;margin:0 0 34px;max-width:52ch;border-left:2px solid rgba(238,174,86,0.3);padding-left:14px">Fleet Agentic for defense is a managed on-premises AI for contractors handling CUI: BD search, proposal drafting, and program knowledge retrieval run entirely inside your boundary, aligned with your CMMC 2.0 Level 2 posture.</p>
           <div style="display:flex;flex-wrap:wrap;gap:14px">
             <a href="#book" class="btn-primary" style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;letter-spacing:0.05em;color:#332B29;background:#EEAE56;padding:15px 26px;border-radius:9px;box-shadow:0 0 30px rgba(238,174,86,0.22)">Book a Demo <span style="font-size:15px">→</span></a>
-            <a href="../../#contact" class="btn-ghost" style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;letter-spacing:0.05em;color:#F9D9CE;background:transparent;border:1px solid rgba(249,217,206,0.2);padding:15px 26px;border-radius:9px">Talk to Sales</a>
+            <a href="../../#contact" class="btn-ghost" style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;letter-spacing:0.05em;color:#332B29;background:transparent;border:1px solid rgba(51,43,41,0.2);padding:15px 26px;border-radius:9px">Talk to Sales</a>
           </div>
         </div>
 
         <!-- right: waterline diagram, defense-flavored -->
         <div style="flex:1 1 400px;min-width:min(100%,360px)">
-          <div style="position:relative;border:1px solid rgba(249,217,206,0.1);border-radius:18px;overflow:hidden;background:linear-gradient(180deg, rgba(242,144,125,0.06) 0%, rgba(51,43,41,0) 40%, rgba(238,174,86,0.07) 100%);padding:22px 22px 24px">
-            <span aria-hidden="true" style="position:absolute;top:9px;left:11px;font-family:'JetBrains Mono',monospace;color:rgba(249,217,206,0.25);font-size:14px">┌</span>
-            <span aria-hidden="true" style="position:absolute;top:9px;right:11px;font-family:'JetBrains Mono',monospace;color:rgba(249,217,206,0.25);font-size:14px">┐</span>
-            <span aria-hidden="true" style="position:absolute;bottom:9px;left:11px;font-family:'JetBrains Mono',monospace;color:rgba(249,217,206,0.25);font-size:14px">└</span>
-            <span aria-hidden="true" style="position:absolute;bottom:9px;right:11px;font-family:'JetBrains Mono',monospace;color:rgba(249,217,206,0.25);font-size:14px">┘</span>
+          <div style="position:relative;border:1px solid rgba(51,43,41,0.1);border-radius:18px;overflow:hidden;background:linear-gradient(180deg, rgba(242,144,125,0.06) 0%, rgba(253,241,234,0) 40%, rgba(238,174,86,0.133) 100%);padding:22px 22px 24px">
+            <span aria-hidden="true" style="position:absolute;top:9px;left:11px;font-family:'JetBrains Mono',monospace;color:rgba(51,43,41,0.25);font-size:14px">┌</span>
+            <span aria-hidden="true" style="position:absolute;top:9px;right:11px;font-family:'JetBrains Mono',monospace;color:rgba(51,43,41,0.25);font-size:14px">┐</span>
+            <span aria-hidden="true" style="position:absolute;bottom:9px;left:11px;font-family:'JetBrains Mono',monospace;color:rgba(51,43,41,0.25);font-size:14px">└</span>
+            <span aria-hidden="true" style="position:absolute;bottom:9px;right:11px;font-family:'JetBrains Mono',monospace;color:rgba(51,43,41,0.25);font-size:14px">┘</span>
 
             <!-- above -->
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#F2907D">▲ ABOVE&nbsp;·&nbsp;THE&nbsp;CLOUD</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#B0381F">▲ ABOVE&nbsp;·&nbsp;THE&nbsp;CLOUD</span>
               <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;color:rgba(242,144,125,0.55)">GovCloud&nbsp;/&nbsp;third-party&nbsp;API</span>
             </div>
             <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;opacity:0.85">
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(248,170,155,0.9);border:1px dashed rgba(242,144,125,0.4);border-radius:6px;padding:6px 10px;animation:floaty 6s ease-in-out infinite">◇ frontier&nbsp;LLM</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(248,170,155,0.9);border:1px dashed rgba(242,144,125,0.4);border-radius:6px;padding:6px 10px;animation:floaty2 7s ease-in-out infinite 0.6s">◇ public&nbsp;cloud</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(248,170,155,0.9);border:1px dashed rgba(242,144,125,0.4);border-radius:6px;padding:6px 10px;animation:floaty 6.5s ease-in-out infinite 0.3s">◇ shared&nbsp;tenancy</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(176,56,31,0.9);border:1px dashed rgba(242,144,125,0.4);border-radius:6px;padding:6px 10px;animation:floaty 6s ease-in-out infinite">◇ frontier&nbsp;LLM</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(176,56,31,0.9);border:1px dashed rgba(242,144,125,0.4);border-radius:6px;padding:6px 10px;animation:floaty2 7s ease-in-out infinite 0.6s">◇ public&nbsp;cloud</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(176,56,31,0.9);border:1px dashed rgba(242,144,125,0.4);border-radius:6px;padding:6px 10px;animation:floaty 6.5s ease-in-out infinite 0.3s">◇ shared&nbsp;tenancy</span>
             </div>
 
             <!-- waterline -->
@@ -159,167 +159,167 @@
               <div style="display:flex;width:200%;animation:waveDrift 18s linear infinite;font-family:'JetBrains Mono',monospace;font-size:17px;line-height:30px;color:rgba(238,174,86,0.55);white-space:nowrap">
                 <span>≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿</span><span>≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿</span>
               </div>
-              <span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.28em;color:#EEAE56;background:#2A2321;padding:2px 10px;border-radius:4px">WATERLINE</span>
+              <span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.28em;color:#8F5406;background:#F9D9CE;padding:2px 10px;border-radius:4px">WATERLINE</span>
             </div>
-            <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#B3A29B;margin-bottom:16px">↑ your&nbsp;facility's&nbsp;boundary&nbsp;↑</div>
+            <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#6B5C56;margin-bottom:16px">↑ your&nbsp;facility's&nbsp;boundary&nbsp;↑</div>
 
             <!-- below: Fleet Agentic -->
             <div style="border:1px solid rgba(159,221,220,0.4);border-radius:12px;background:rgba(159,221,220,0.05);padding:16px;box-shadow:0 0 40px rgba(159,221,220,0.08) inset">
               <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
                 <span style="width:11px;height:11px;border-radius:50%;background:#9FDDDC;animation:pulseDot 2.4s ease-in-out infinite;flex-shrink:0"></span>
-                <span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;color:#F9D9CE;letter-spacing:0.01em">Fleet Agentic</span>
-                <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#9FDDDC;border:1px solid rgba(159,221,220,0.3);border-radius:5px;padding:3px 8px">ON-PREM</span>
+                <span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;color:#332B29;letter-spacing:0.01em">Fleet Agentic</span>
+                <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#17625F;border:1px solid rgba(159,221,220,0.3);border-radius:5px;padding:3px 8px">ON-PREM</span>
               </div>
-              <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;color:#B3A29B;margin-bottom:9px">▾ YOUR PROGRAM DATA — STAYS HOME</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;color:#6B5C56;margin-bottom:9px">▾ YOUR PROGRAM DATA — STAYS HOME</div>
               <div style="display:flex;flex-wrap:wrap;gap:7px">
-                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9FDDDC;border:1px solid rgba(159,221,220,0.35);border-radius:5px;padding:5px 9px">CUI</span>
-                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9FDDDC;border:1px solid rgba(159,221,220,0.35);border-radius:5px;padding:5px 9px">proposals</span>
-                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9FDDDC;border:1px solid rgba(159,221,220,0.35);border-radius:5px;padding:5px 9px">past&nbsp;performance</span>
-                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9FDDDC;border:1px solid rgba(159,221,220,0.35);border-radius:5px;padding:5px 9px">teaming&nbsp;data</span>
+                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#17625F;border:1px solid rgba(159,221,220,0.35);border-radius:5px;padding:5px 9px">CUI</span>
+                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#17625F;border:1px solid rgba(159,221,220,0.35);border-radius:5px;padding:5px 9px">proposals</span>
+                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#17625F;border:1px solid rgba(159,221,220,0.35);border-radius:5px;padding:5px 9px">past&nbsp;performance</span>
+                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#17625F;border:1px solid rgba(159,221,220,0.35);border-radius:5px;padding:5px 9px">teaming&nbsp;data</span>
               </div>
             </div>
-            <p style="text-align:center;font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;font-size:13.5px;color:#E3CFC6;margin:16px 4px 2px">"What's beneath the waterline is your business."</p>
+            <p style="text-align:center;font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;font-size:13.5px;color:#4A403D;margin:16px 4px 2px">"What's beneath the waterline is your business."</p>
           </div>
         </div>
       </div>
 
       <!-- subhead strip -->
-      <div style="margin-top:clamp(44px,6vw,68px);display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;padding-top:26px;border-top:1px solid rgba(249,217,206,0.07)">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#B3A29B">BUILT&nbsp;TO&nbsp;THE&nbsp;STANDARD&nbsp;OF</span>
-        <a href="../../#posture" style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#E3CFC6"><span style="color:#9FDDDC">◆</span> CMMC&nbsp;2.0&nbsp;L2</a>
-        <a href="../../#posture" style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#E3CFC6"><span style="color:#9FDDDC">◆</span> NIST&nbsp;800-171</a>
+      <div style="margin-top:clamp(44px,6vw,68px);display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;padding-top:26px;border-top:1px solid rgba(51,43,41,0.12)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#6B5C56">BUILT&nbsp;TO&nbsp;THE&nbsp;STANDARD&nbsp;OF</span>
+        <a href="../../#posture" style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#4A403D"><span style="color:#17625F">◆</span> CMMC&nbsp;2.0&nbsp;L2</a>
+        <a href="../../#posture" style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#4A403D"><span style="color:#17625F">◆</span> NIST&nbsp;800-171</a>
       </div>
     </div>
   </section>
 
   <!-- divider -->
-  <div aria-hidden="true" style="position:relative;z-index:1;overflow:hidden;height:26px;opacity:0.4"><div style="display:flex;width:200%;animation:waveDriftRev 26s linear infinite;font-family:'JetBrains Mono',monospace;font-size:15px;line-height:26px;color:#EEAE56;white-space:nowrap"><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span></div></div>
+  <div aria-hidden="true" style="position:relative;z-index:1;overflow:hidden;height:26px;opacity:0.4"><div style="display:flex;width:200%;animation:waveDriftRev 26s linear infinite;font-family:'JetBrains Mono',monospace;font-size:15px;line-height:26px;color:#8F5406;white-space:nowrap"><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span></div></div>
 
   <!-- ================= THE BOUNDARY ================= -->
   <section style="position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:clamp(64px,9vw,110px) 32px">
-    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#F2907D;margin-bottom:22px">The&nbsp;Boundary</div>
-    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,52px);line-height:1.06;letter-spacing:-0.02em;margin:0 0 28px;color:#F9D9CE;max-width:22ch">Your assessors drew the boundary. Cloud AI erases it.</h2>
-    <p data-reveal style="font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:#CDBDB5;margin:0 0 24px;max-width:64ch">NIST 800-171's data-flow controls — 3.1.x access enforcement, 3.13.x boundary protection — exist to keep CUI inside a defined, assessed enclave. Every cloud AI tool asks you to ship that same CUI to a server outside it.</p>
-    <p data-reveal style="font-size:16px;line-height:1.65;color:#CDBDB5;margin:0 0 40px;max-width:64ch">That's not a convenience question. It's a scope question. If the assessment boundary doesn't cover the AI vendor's cloud, the CUI shouldn't be reaching it — full stop.</p>
+    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#B0381F;margin-bottom:22px">The&nbsp;Boundary</div>
+    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,52px);line-height:1.06;letter-spacing:-0.02em;margin:0 0 28px;color:#332B29;max-width:22ch">Your assessors drew the boundary. Cloud AI erases it.</h2>
+    <p data-reveal style="font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:#5E524E;margin:0 0 24px;max-width:64ch">NIST 800-171's data-flow controls — 3.1.x access enforcement, 3.13.x boundary protection — exist to keep CUI inside a defined, assessed enclave. Every cloud AI tool asks you to ship that same CUI to a server outside it.</p>
+    <p data-reveal style="font-size:16px;line-height:1.65;color:#5E524E;margin:0 0 40px;max-width:64ch">That's not a convenience question. It's a scope question. If the assessment boundary doesn't cover the AI vendor's cloud, the CUI shouldn't be reaching it — full stop.</p>
     <div data-reveal style="position:relative;border-left:2px solid #EEAE56;padding:20px 0 20px 26px;max-width:60ch">
-      <span aria-hidden="true" style="position:absolute;top:12px;left:-9px;font-family:'JetBrains Mono',monospace;color:#EEAE56;font-size:14px;background:#332B29;padding:2px 0">◆</span>
-      <p style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:500;font-size:clamp(18px,2.4vw,24px);line-height:1.35;color:#F9D9CE;margin:0">You built your compliance posture around a defined enclave. That instinct was right. <span style="color:#EEAE56">AI shouldn't be the exception that punches a hole in it.</span></p>
+      <span aria-hidden="true" style="position:absolute;top:12px;left:-9px;font-family:'JetBrains Mono',monospace;color:#8F5406;font-size:14px;background:#FFF8F4;padding:2px 0">◆</span>
+      <p style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:500;font-size:clamp(18px,2.4vw,24px);line-height:1.35;color:#332B29;margin:0">You built your compliance posture around a defined enclave. That instinct was right. <span style="color:#8F5406">AI shouldn't be the exception that punches a hole in it.</span></p>
     </div>
   </section>
 
   <!-- ================= THE INDEX IS THE LEAK ================= -->
   <section style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:clamp(40px,6vw,72px) 32px">
     <div style="max-width:1080px;margin:0 auto 40px">
-      <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#F2907D;margin-bottom:22px">The&nbsp;part&nbsp;nobody&nbsp;tells&nbsp;you</div>
-      <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,48px);line-height:1.07;letter-spacing:-0.02em;margin:0 0 22px;color:#F9D9CE;max-width:22ch">Keeping the file local isn't enough. <span style="color:#F2907D">The index is the leak.</span></h2>
-      <p data-reveal style="font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:#CDBDB5;margin:0 0 16px;max-width:66ch">Most "on-prem-friendly" defense AI keeps the <em>document</em> local — then ships an <em>index</em> of it to the cloud. That distinction is marketing, not a control boundary.</p>
-      <p data-reveal style="font-size:16px;line-height:1.65;color:#CDBDB5;margin:0;max-width:66ch">An index derived from your proposal file is a second copy of the sensitive part:</p>
+      <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#B0381F;margin-bottom:22px">The&nbsp;part&nbsp;nobody&nbsp;tells&nbsp;you</div>
+      <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,48px);line-height:1.07;letter-spacing:-0.02em;margin:0 0 22px;color:#332B29;max-width:22ch">Keeping the file local isn't enough. <span style="box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 0.14em;border-radius:7px;color:#332B29;background:#F2907D">The index is the leak.</span></h2>
+      <p data-reveal style="font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:#5E524E;margin:0 0 16px;max-width:66ch">Most "on-prem-friendly" defense AI keeps the <em>document</em> local — then ships an <em>index</em> of it to the cloud. That distinction is marketing, not a control boundary.</p>
+      <p data-reveal style="font-size:16px;line-height:1.65;color:#5E524E;margin:0;max-width:66ch">An index derived from your proposal file is a second copy of the sensitive part:</p>
     </div>
 
     <!-- five-item differentiator grid -->
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-bottom:40px">
-      <div data-reveal style="border:1px solid rgba(249,217,206,0.10);border-radius:13px;padding:24px 22px;background:rgba(249,217,206,0.015)">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#F2907D;margin-bottom:14px">[¶]</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#F2907D;margin-bottom:12px">CHUNKS</div>
-        <p style="font-size:14.5px;line-height:1.55;color:#CDBDB5;margin:0">Verbatim passages lifted straight out of a proposal or program document. Not a summary. The text itself.</p>
+      <div data-reveal style="border:1px solid rgba(51,43,41,0.18);border-radius:13px;padding:24px 22px;background:rgba(255,255,255,0.75)">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#B0381F;margin-bottom:14px">[¶]</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#B0381F;margin-bottom:12px">CHUNKS</div>
+        <p style="font-size:14.5px;line-height:1.55;color:#5E524E;margin:0">Verbatim passages lifted straight out of a proposal or program document. Not a summary. The text itself.</p>
       </div>
-      <div data-reveal style="border:1px solid rgba(249,217,206,0.10);border-radius:13px;padding:24px 22px;background:rgba(249,217,206,0.015)">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#F2907D;margin-bottom:14px">[≈]</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#F2907D;margin-bottom:12px">EMBEDDINGS</div>
-        <p style="font-size:14.5px;line-height:1.55;color:#CDBDB5;margin:0">Encode the meaning, and are reversible enough to <span style="color:#E3CFC6">reconstruct the source</span>.</p>
+      <div data-reveal style="border:1px solid rgba(51,43,41,0.18);border-radius:13px;padding:24px 22px;background:rgba(255,255,255,0.75)">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#B0381F;margin-bottom:14px">[≈]</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#B0381F;margin-bottom:12px">EMBEDDINGS</div>
+        <p style="font-size:14.5px;line-height:1.55;color:#5E524E;margin:0">Encode the meaning, and are reversible enough to <span style="color:#4A403D">reconstruct the source</span>.</p>
       </div>
-      <div data-reveal style="border:1px solid rgba(249,217,206,0.10);border-radius:13px;padding:24px 22px;background:rgba(249,217,206,0.015)">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#F2907D;margin-bottom:14px">[#]</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#F2907D;margin-bottom:12px">KEYWORDS</div>
-        <p style="font-size:14.5px;line-height:1.55;color:#CDBDB5;margin:0">Program names, teaming partners, contract numbers, proposal themes — in plaintext.</p>
+      <div data-reveal style="border:1px solid rgba(51,43,41,0.18);border-radius:13px;padding:24px 22px;background:rgba(255,255,255,0.75)">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#B0381F;margin-bottom:14px">[#]</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#B0381F;margin-bottom:12px">KEYWORDS</div>
+        <p style="font-size:14.5px;line-height:1.55;color:#5E524E;margin:0">Program names, teaming partners, contract numbers, proposal themes — in plaintext.</p>
       </div>
-      <div data-reveal style="border:1px solid rgba(249,217,206,0.10);border-radius:13px;padding:24px 22px;background:rgba(249,217,206,0.015)">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#F2907D;margin-bottom:14px">[⊟]</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#F2907D;margin-bottom:12px">METADATA</div>
-        <p style="font-size:14.5px;line-height:1.55;color:#CDBDB5;margin:0">Authors, dates, solicitation numbers, file paths: a map of every program you're pursuing.</p>
+      <div data-reveal style="border:1px solid rgba(51,43,41,0.18);border-radius:13px;padding:24px 22px;background:rgba(255,255,255,0.75)">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#B0381F;margin-bottom:14px">[⊟]</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#B0381F;margin-bottom:12px">METADATA</div>
+        <p style="font-size:14.5px;line-height:1.55;color:#5E524E;margin:0">Authors, dates, solicitation numbers, file paths: a map of every program you're pursuing.</p>
       </div>
-      <div data-reveal style="border:1px solid rgba(249,217,206,0.10);border-radius:13px;padding:24px 22px;background:rgba(249,217,206,0.015)">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#F2907D;margin-bottom:14px">[⇄]</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#F2907D;margin-bottom:12px">RELATIONSHIPS</div>
-        <p style="font-size:14.5px;line-height:1.55;color:#CDBDB5;margin:0">Which teaming partners, primes, and programs connect. Disclosure without a single sentence leaving.</p>
+      <div data-reveal style="border:1px solid rgba(51,43,41,0.18);border-radius:13px;padding:24px 22px;background:rgba(255,255,255,0.75)">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#B0381F;margin-bottom:14px">[⇄]</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#B0381F;margin-bottom:12px">RELATIONSHIPS</div>
+        <p style="font-size:14.5px;line-height:1.55;color:#5E524E;margin:0">Which teaming partners, primes, and programs connect. Disclosure without a single sentence leaving.</p>
       </div>
     </div>
 
-    <p data-reveal style="font-size:16px;line-height:1.65;color:#CDBDB5;margin:0 0 32px;max-width:64ch">The original file never moved. The CUI did.</p>
+    <p data-reveal style="font-size:16px;line-height:1.65;color:#5E524E;margin:0 0 32px;max-width:64ch">The original file never moved. The CUI did.</p>
 
     <!-- clean statement -->
     <div data-reveal style="position:relative;border-left:2px solid #EEAE56;padding:22px 0 22px 26px;max-width:72ch">
-      <span aria-hidden="true" style="position:absolute;top:14px;left:-9px;font-family:'JetBrains Mono',monospace;color:#EEAE56;font-size:14px;background:#332B29;padding:2px 0">◆</span>
-      <p style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:500;font-size:clamp(17px,2.2vw,22px);line-height:1.4;color:#F9D9CE;margin:0">A cloud index of local CUI is <span style="color:#EEAE56">outside the boundary</span> the moment it can disclose, infer, search, or reconstruct protected material off your enclave. Fleet Agentic keeps the index on the same side of the boundary as the file. Always.</p>
+      <span aria-hidden="true" style="position:absolute;top:14px;left:-9px;font-family:'JetBrains Mono',monospace;color:#8F5406;font-size:14px;background:#FFF8F4;padding:2px 0">◆</span>
+      <p style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:500;font-size:clamp(17px,2.2vw,22px);line-height:1.4;color:#332B29;margin:0">A cloud index of local CUI is <span style="color:#8F5406">outside the boundary</span> the moment it can disclose, infer, search, or reconstruct protected material off your enclave. Fleet Agentic keeps the index on the same side of the boundary as the file. Always.</p>
     </div>
   </section>
 
   <!-- ================= BRING THE AI TO THE DATA ================= -->
   <section style="position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,88px) 32px">
     <div style="max-width:1080px;margin:0 auto 52px">
-      <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#9FDDDC;margin-bottom:22px">The&nbsp;Approach</div>
-      <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,52px);line-height:1.06;letter-spacing:-0.02em;margin:0 0 24px;color:#F9D9CE;max-width:20ch">Bring the AI to the data — <span style="color:#EEAE56">not the reverse.</span></h2>
-      <p data-reveal style="font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:#CDBDB5;margin:0;max-width:60ch">Fleet Agentic is managed AI that lives inside your assessed boundary. The model runs where your program data already is.</p>
+      <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#17625F;margin-bottom:22px">The&nbsp;Approach</div>
+      <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,52px);line-height:1.06;letter-spacing:-0.02em;margin:0 0 24px;color:#332B29;max-width:20ch">Bring the AI to the data — <span style="box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 0.14em;border-radius:7px;color:#332B29;background:#EEAE56">not the reverse.</span></h2>
+      <p data-reveal style="font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:#5E524E;margin:0;max-width:60ch">Fleet Agentic is managed AI that lives inside your assessed boundary. The model runs where your program data already is.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px">
-      <div data-reveal class="card-hover" style="position:relative;border:1px solid rgba(249,217,206,0.10);border-radius:14px;padding:30px 26px;background:rgba(249,217,206,0.015)">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;color:#EEAE56;margin-bottom:20px">[⊡]</div>
-        <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:20px;color:#F9D9CE;margin:0 0 10px">Inside your boundary</h3>
-        <p style="font-size:15px;line-height:1.6;color:#CDBDB5;margin:0">CUI never crosses your enclave. Full generative capability, zero egress of controlled data.</p>
+      <div data-reveal class="card-hover" style="position:relative;border:1px solid rgba(51,43,41,0.18);border-radius:14px;padding:30px 26px;background:rgba(255,255,255,0.75)">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;color:#8F5406;margin-bottom:20px">[⊡]</div>
+        <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:20px;color:#332B29;margin:0 0 10px">Inside your boundary</h3>
+        <p style="font-size:15px;line-height:1.6;color:#5E524E;margin:0">CUI never crosses your enclave. Full generative capability, zero egress of controlled data.</p>
       </div>
-      <div data-reveal class="card-hover" style="position:relative;border:1px solid rgba(249,217,206,0.10);border-radius:14px;padding:30px 26px;background:rgba(249,217,206,0.015)">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;color:#EEAE56;margin-bottom:20px">[↻]</div>
-        <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:20px;color:#F9D9CE;margin:0 0 10px">Fully managed</h3>
-        <p style="font-size:15px;line-height:1.6;color:#CDBDB5;margin:0">On a lease, we own the hardware, updates, and lifecycle. Your team operates; we maintain. No new servers for your IT to babysit.</p>
+      <div data-reveal class="card-hover" style="position:relative;border:1px solid rgba(51,43,41,0.18);border-radius:14px;padding:30px 26px;background:rgba(255,255,255,0.75)">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;color:#8F5406;margin-bottom:20px">[↻]</div>
+        <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:20px;color:#332B29;margin:0 0 10px">Fully managed</h3>
+        <p style="font-size:15px;line-height:1.6;color:#5E524E;margin:0">On a lease, we own the hardware, updates, and lifecycle. Your team operates; we maintain. No new servers for your IT to babysit.</p>
       </div>
-      <div data-reveal class="card-hover" style="position:relative;border:1px solid rgba(249,217,206,0.10);border-radius:14px;padding:30px 26px;background:rgba(249,217,206,0.015)">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;color:#EEAE56;margin-bottom:20px">[≡]</div>
-        <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:20px;color:#F9D9CE;margin:0 0 10px">Predictable economics</h3>
-        <p style="font-size:15px;line-height:1.6;color:#CDBDB5;margin:0">Lease the appliance for one flat $5,000/month: every BD, capture, and proposal staffer works from it, and the price doesn't climb when you add the whole team. Need the hardware inside your own accreditation boundary? Bring your own: $500/month, then $25 per seat. No per-token metering either way.</p>
+      <div data-reveal class="card-hover" style="position:relative;border:1px solid rgba(51,43,41,0.18);border-radius:14px;padding:30px 26px;background:rgba(255,255,255,0.75)">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;color:#8F5406;margin-bottom:20px">[≡]</div>
+        <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:20px;color:#332B29;margin:0 0 10px">Predictable economics</h3>
+        <p style="font-size:15px;line-height:1.6;color:#5E524E;margin:0">Lease the appliance for one flat $5,000/month: every BD, capture, and proposal staffer works from it, and the price doesn't climb when you add the whole team. Need the hardware inside your own accreditation boundary? Bring your own: $500/month, then $25 per seat. No per-token metering either way.</p>
       </div>
     </div>
   </section>
 
   <!-- ================= USE CASES ================= -->
   <section style="position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:clamp(48px,7vw,88px) 32px">
-    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#9FDDDC;margin-bottom:22px">The&nbsp;Workload</div>
-    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,48px);line-height:1.07;letter-spacing:-0.02em;margin:0 0 24px;color:#F9D9CE;max-width:24ch">General-purpose intelligence, with BD and capture where it counts.</h2>
-    <p data-reveal style="font-size:clamp(16px,2.1vw,20px);line-height:1.6;color:#CDBDB5;margin:0 0 36px;max-width:66ch">Fleet Agentic isn't a narrow point-tool. Fleet Agentic runs capable general models — the same drafting, summarizing, and reasoning your team would reach for anywhere — plus program-specific workflows on top.</p>
+    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#17625F;margin-bottom:22px">The&nbsp;Workload</div>
+    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,48px);line-height:1.07;letter-spacing:-0.02em;margin:0 0 24px;color:#332B29;max-width:24ch">General-purpose intelligence, with BD and capture where it counts.</h2>
+    <p data-reveal style="font-size:clamp(16px,2.1vw,20px);line-height:1.6;color:#5E524E;margin:0 0 36px;max-width:66ch">Fleet Agentic isn't a narrow point-tool. Fleet Agentic runs capable general models — the same drafting, summarizing, and reasoning your team would reach for anywhere — plus program-specific workflows on top.</p>
     <div data-reveal style="display:flex;flex-direction:column;gap:14px;margin-bottom:36px">
-      <span style="font-size:16px;color:#F9D9CE;display:flex;gap:12px;line-height:1.5"><span style="color:#EEAE56;font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span><strong style="color:#F9D9CE">Proposal &amp; BD drafting</strong>&nbsp;on 20 years of past performance</span>
-      <span style="font-size:16px;color:#F9D9CE;display:flex;gap:12px;line-height:1.5"><span style="color:#EEAE56;font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span><strong style="color:#F9D9CE">Program knowledge search</strong>&nbsp;across contract documents and prior submissions</span>
-      <span style="font-size:16px;color:#F9D9CE;display:flex;gap:12px;line-height:1.5"><span style="color:#EEAE56;font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span><strong style="color:#F9D9CE">Compliance-aware summarization</strong>&nbsp;of DFARS clauses and solicitation packages</span>
-      <span style="font-size:16px;color:#F9D9CE;display:flex;gap:12px;line-height:1.5"><span style="color:#EEAE56;font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span>Teaming and capture research grounded in <em>your</em> program history, not the open internet</span>
+      <span style="font-size:16px;color:#332B29;display:flex;gap:12px;line-height:1.5"><span style="color:#8F5406;font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span><strong style="color:#332B29">Proposal &amp; BD drafting</strong>&nbsp;on 20 years of past performance</span>
+      <span style="font-size:16px;color:#332B29;display:flex;gap:12px;line-height:1.5"><span style="color:#8F5406;font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span><strong style="color:#332B29">Program knowledge search</strong>&nbsp;across contract documents and prior submissions</span>
+      <span style="font-size:16px;color:#332B29;display:flex;gap:12px;line-height:1.5"><span style="color:#8F5406;font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span><strong style="color:#332B29">Compliance-aware summarization</strong>&nbsp;of DFARS clauses and solicitation packages</span>
+      <span style="font-size:16px;color:#332B29;display:flex;gap:12px;line-height:1.5"><span style="color:#8F5406;font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span>Teaming and capture research grounded in <em>your</em> program history, not the open internet</span>
     </div>
-    <p data-reveal style="font-size:16px;line-height:1.65;color:#CDBDB5;margin:0;max-width:66ch">One deployment serves the whole capture and delivery organization. Program work gets program handling; everything else your people do with AI runs on the same secure box.</p>
+    <p data-reveal style="font-size:16px;line-height:1.65;color:#5E524E;margin:0;max-width:66ch">One deployment serves the whole capture and delivery organization. Program work gets program handling; everything else your people do with AI runs on the same secure box.</p>
   </section>
 
   <!-- ================= AUDIT-READY ================= -->
-  <section style="position:relative;z-index:1;border-top:1px solid rgba(249,217,206,0.06);border-bottom:1px solid rgba(249,217,206,0.06);background:linear-gradient(180deg, rgba(238,174,86,0.03), transparent 60%)">
+  <section style="position:relative;z-index:1;border-top:1px solid rgba(51,43,41,0.06);border-bottom:1px solid rgba(51,43,41,0.06);background:linear-gradient(180deg, rgba(238,174,86,0.057), transparent 60%)">
     <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,9vw,110px) 32px">
       <div style="display:flex;flex-wrap:wrap;gap:clamp(36px,5vw,64px);align-items:center">
         <div style="flex:1 1 400px;min-width:min(100%,360px)">
-          <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#9FDDDC;margin-bottom:22px">The&nbsp;Record</div>
-          <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,52px);line-height:1.06;letter-spacing:-0.02em;margin:0 0 22px;color:#F9D9CE">Audit-ready <span style="color:#EEAE56">by construction.</span></h2>
-          <p data-reveal style="font-size:clamp(16px,2.1vw,20px);line-height:1.6;color:#CDBDB5;margin:0 0 16px;max-width:54ch">Compliance shouldn't be a slide deck you assemble the week before a C3PAO assessment. Fleet Agentic produces an immutable, exportable record of every AI interaction: what ran, on which documents, under what policy, with what result.</p>
-          <p data-reveal style="font-size:16px;line-height:1.6;color:#CDBDB5;margin:0 0 30px;max-width:54ch">When an assessor asks for evidence — or when a program audit surfaces two years later — the record already exists.</p>
+          <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#17625F;margin-bottom:22px">The&nbsp;Record</div>
+          <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,52px);line-height:1.06;letter-spacing:-0.02em;margin:0 0 22px;color:#332B29">Audit-ready <span style="box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 0.14em;border-radius:7px;color:#332B29;background:#EEAE56">by construction.</span></h2>
+          <p data-reveal style="font-size:clamp(16px,2.1vw,20px);line-height:1.6;color:#5E524E;margin:0 0 16px;max-width:54ch">Compliance shouldn't be a slide deck you assemble the week before a C3PAO assessment. Fleet Agentic produces an immutable, exportable record of every AI interaction: what ran, on which documents, under what policy, with what result.</p>
+          <p data-reveal style="font-size:16px;line-height:1.6;color:#5E524E;margin:0 0 30px;max-width:54ch">When an assessor asks for evidence — or when a program audit surfaces two years later — the record already exists.</p>
           <div data-reveal style="display:inline-flex;align-items:center;gap:16px;flex-wrap:wrap">
-            <span style="font-family:'JetBrains Mono',monospace;font-size:clamp(15px,2.4vw,20px);color:#B3A29B;text-decoration:line-through">"trust us"</span>
-            <span style="font-family:'JetBrains Mono',monospace;font-size:18px;color:#EEAE56">──▶</span>
-            <span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:clamp(17px,2.6vw,24px);color:#EEAE56">evidence on demand.</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:clamp(15px,2.4vw,20px);color:#6B5C56;text-decoration:line-through">"trust us"</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:18px;color:#8F5406">──▶</span>
+            <span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:clamp(17px,2.6vw,24px);color:#8F5406">evidence on demand.</span>
           </div>
         </div>
         <div data-reveal style="flex:1 1 360px;min-width:min(100%,320px)">
           <div style="border:1px solid rgba(238,174,86,0.28);border-radius:14px;background:rgba(238,174,86,0.03);padding:22px;font-family:'JetBrains Mono',monospace;font-size:12.5px;line-height:2">
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(249,217,206,0.08)">
-              <span style="color:#EEAE56;letter-spacing:0.16em">SENTINEL&nbsp;·&nbsp;AUDIT&nbsp;LOG</span>
-              <span style="color:#B3A29B">immutable</span>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(51,43,41,0.08)">
+              <span style="color:#8F5406;letter-spacing:0.16em">SENTINEL&nbsp;·&nbsp;AUDIT&nbsp;LOG</span>
+              <span style="color:#6B5C56">immutable</span>
             </div>
-            <div style="color:#CDBDB5"><span style="color:#9FD79A">✔</span> cui_flag&nbsp;&nbsp;<span style="color:#B3A29B">bound</span></div>
-            <div style="color:#CDBDB5"><span style="color:#9FD79A">✔</span> access_scope&nbsp;&nbsp;<span style="color:#B3A29B">verified</span></div>
-            <div style="color:#CDBDB5"><span style="color:#9FD79A">✔</span> enclave_boundary&nbsp;&nbsp;<span style="color:#B3A29B">enforced</span></div>
-            <div style="color:#CDBDB5"><span style="color:#9FD79A">✔</span> control_family&nbsp;&nbsp;<span style="color:#B3A29B">3.1&nbsp;/&nbsp;3.13</span></div>
-            <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(249,217,206,0.08);color:#EEAE56">▸ export&nbsp;evidence&nbsp;<span style="animation:pulseDot 1.4s ease-in-out infinite">▮</span></div>
+            <div style="color:#5E524E"><span style="color:#276B32">✔</span> cui_flag&nbsp;&nbsp;<span style="color:#6B5C56">bound</span></div>
+            <div style="color:#5E524E"><span style="color:#276B32">✔</span> access_scope&nbsp;&nbsp;<span style="color:#6B5C56">verified</span></div>
+            <div style="color:#5E524E"><span style="color:#276B32">✔</span> enclave_boundary&nbsp;&nbsp;<span style="color:#6B5C56">enforced</span></div>
+            <div style="color:#5E524E"><span style="color:#276B32">✔</span> control_family&nbsp;&nbsp;<span style="color:#6B5C56">3.1&nbsp;/&nbsp;3.13</span></div>
+            <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(51,43,41,0.08);color:#8F5406">▸ export&nbsp;evidence&nbsp;<span style="animation:pulseDot 1.4s ease-in-out infinite">▮</span></div>
           </div>
         </div>
       </div>
@@ -328,16 +328,16 @@
 
   <!-- ================= COMPARISON TABLE ================= -->
   <section style="position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:clamp(64px,9vw,110px) 32px">
-    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#9FDDDC;margin-bottom:22px">The&nbsp;Comparison</div>
-    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,46px);line-height:1.07;letter-spacing:-0.02em;margin:0 0 32px;color:#F9D9CE;max-width:22ch">Fleet Agentic vs. GovCloud SaaS AI.</h2>
+    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#17625F;margin-bottom:22px">The&nbsp;Comparison</div>
+    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,46px);line-height:1.07;letter-spacing:-0.02em;margin:0 0 32px;color:#332B29;max-width:22ch">Fleet Agentic vs. GovCloud SaaS AI.</h2>
 
-    <div data-reveal class="table-wrap" style="border:1px solid rgba(249,217,206,0.10);border-radius:14px;background:rgba(249,217,206,0.015);margin-bottom:28px">
+    <div data-reveal class="table-wrap" style="border:1px solid rgba(51,43,41,0.18);border-radius:14px;background:rgba(255,255,255,0.75);margin-bottom:28px">
       <table class="cmp-table" style="width:100%;min-width:620px">
         <thead>
           <tr>
             <th style="width:26%"></th>
             <th>GovCloud SaaS AI</th>
-            <th style="color:#EEAE56">Fleet Agentic</th>
+            <th style="color:#8F5406">Fleet Agentic</th>
           </tr>
         </thead>
         <tbody>
@@ -375,57 +375,57 @@
       </table>
     </div>
 
-    <p data-reveal style="font-size:16px;line-height:1.65;color:#CDBDB5;margin:0;max-width:68ch">GovCloud SaaS AI is still someone else's cloud — inside the FedRAMP boundary, but outside yours. Fleet Agentic refuses that trade: <span style="color:#EEAE56">the intelligence comes to the data.</span></p>
+    <p data-reveal style="font-size:16px;line-height:1.65;color:#5E524E;margin:0;max-width:68ch">GovCloud SaaS AI is still someone else's cloud — inside the FedRAMP boundary, but outside yours. Fleet Agentic refuses that trade: <span style="color:#8F5406">the intelligence comes to the data.</span></p>
   </section>
 
   <!-- ================= BUILT FOR ================= -->
   <section style="position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:clamp(40px,6vw,72px) 32px clamp(64px,9vw,110px)">
-    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#9FDDDC;margin-bottom:22px">Who&nbsp;It's&nbsp;For</div>
-    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,46px);line-height:1.07;letter-spacing:-0.02em;margin:0 0 24px;color:#F9D9CE;max-width:22ch">Built for the contractors cloud AI can't serve.</h2>
-    <p data-reveal style="font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:#CDBDB5;margin:0 0 32px;max-width:66ch">Some work simply cannot go to a third-party API: CUI under NIST 800-171, programs preparing for CMMC 2.0 Level 2 assessment, export-controlled technical data, and any contractor that treats its assessment boundary as non-negotiable.</p>
+    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#17625F;margin-bottom:22px">Who&nbsp;It's&nbsp;For</div>
+    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,46px);line-height:1.07;letter-spacing:-0.02em;margin:0 0 24px;color:#332B29;max-width:22ch">Built for the contractors cloud AI can't serve.</h2>
+    <p data-reveal style="font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:#5E524E;margin:0 0 32px;max-width:66ch">Some work simply cannot go to a third-party API: CUI under NIST 800-171, programs preparing for CMMC 2.0 Level 2 assessment, export-controlled technical data, and any contractor that treats its assessment boundary as non-negotiable.</p>
     <div data-reveal style="position:relative;border-left:2px solid #EEAE56;padding:20px 0 20px 26px;max-width:60ch">
-      <span aria-hidden="true" style="position:absolute;top:12px;left:-9px;font-family:'JetBrains Mono',monospace;color:#EEAE56;font-size:14px;background:#332B29;padding:2px 0">◆</span>
-      <p style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:500;font-size:clamp(18px,2.4vw,24px);line-height:1.35;color:#F9D9CE;margin:0">If your answer to "where does the data go?" has to be <em>nowhere outside the enclave</em> — <span style="color:#EEAE56">Fleet Agentic is the only version of this that works.</span></p>
+      <span aria-hidden="true" style="position:absolute;top:12px;left:-9px;font-family:'JetBrains Mono',monospace;color:#8F5406;font-size:14px;background:#FFF8F4;padding:2px 0">◆</span>
+      <p style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:500;font-size:clamp(18px,2.4vw,24px);line-height:1.35;color:#332B29;margin:0">If your answer to "where does the data go?" has to be <em>nowhere outside the enclave</em> — <span style="color:#8F5406">Fleet Agentic is the only version of this that works.</span></p>
     </div>
   </section>
 
   <!-- divider -->
-  <div aria-hidden="true" style="position:relative;z-index:1;overflow:hidden;height:26px;opacity:0.4"><div style="display:flex;width:200%;animation:waveDriftRev 26s linear infinite;font-family:'JetBrains Mono',monospace;font-size:15px;line-height:26px;color:#EEAE56;white-space:nowrap"><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span></div></div>
+  <div aria-hidden="true" style="position:relative;z-index:1;overflow:hidden;height:26px;opacity:0.4"><div style="display:flex;width:200%;animation:waveDriftRev 26s linear infinite;font-family:'JetBrains Mono',monospace;font-size:15px;line-height:26px;color:#8F5406;white-space:nowrap"><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span></div></div>
 
   <!-- ================= PROOF ================= -->
   <section style="position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:clamp(48px,7vw,80px) 32px">
-    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#9FDDDC;margin-bottom:22px">Field&nbsp;Results</div>
-    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,44px);line-height:1.08;letter-spacing:-0.02em;margin:0 0 32px;color:#F9D9CE;max-width:20ch">Proof from the field.</h2>
-    <a data-reveal href="../../case-studies/defense-cmmc/" class="card-hover" style="display:block;position:relative;border:1px solid rgba(249,217,206,0.1);border-radius:16px;padding:32px 30px;background:rgba(249,217,206,0.015)">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#B3A29B;display:block;margin-bottom:14px">DEFENSE&nbsp;&amp;&nbsp;AEROSPACE</span>
-      <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:clamp(19px,2.6vw,24px);color:#F9D9CE;margin:0 0 12px;line-height:1.25">AI Infrastructure for a Defense Contractor Preparing for CMMC 2.0</h3>
-      <p style="font-size:15px;line-height:1.6;color:#CDBDB5;margin:0 0 20px;max-width:64ch">Deploy generative AI on 20 years of BD content without violating CMMC Level 2 posture or exposing controlled data to frontier models.</p>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:0.05em;color:#EEAE56">Read the case study →</span>
+    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#17625F;margin-bottom:22px">Field&nbsp;Results</div>
+    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,44px);line-height:1.08;letter-spacing:-0.02em;margin:0 0 32px;color:#332B29;max-width:20ch">Proof from the field.</h2>
+    <a data-reveal href="../../case-studies/defense-cmmc/" class="card-hover" style="display:block;position:relative;border:1px solid rgba(51,43,41,0.1);border-radius:16px;padding:32px 30px;background:rgba(255,255,255,0.75)">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#6B5C56;display:block;margin-bottom:14px">DEFENSE&nbsp;&amp;&nbsp;AEROSPACE</span>
+      <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:clamp(19px,2.6vw,24px);color:#332B29;margin:0 0 12px;line-height:1.25">AI Infrastructure for a Defense Contractor Preparing for CMMC 2.0</h3>
+      <p style="font-size:15px;line-height:1.6;color:#5E524E;margin:0 0 20px;max-width:64ch">Deploy generative AI on 20 years of BD content without violating CMMC Level 2 posture or exposing controlled data to frontier models.</p>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:0.05em;color:#8F5406">Read the case study →</span>
     </a>
   </section>
 
   <!-- divider -->
-  <div aria-hidden="true" style="position:relative;z-index:1;overflow:hidden;height:26px;opacity:0.4"><div style="display:flex;width:200%;animation:waveDrift 24s linear infinite;font-family:'JetBrains Mono',monospace;font-size:15px;line-height:26px;color:#EEAE56;white-space:nowrap"><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span></div></div>
+  <div aria-hidden="true" style="position:relative;z-index:1;overflow:hidden;height:26px;opacity:0.4"><div style="display:flex;width:200%;animation:waveDrift 24s linear infinite;font-family:'JetBrains Mono',monospace;font-size:15px;line-height:26px;color:#8F5406;white-space:nowrap"><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span></div></div>
 
   <!-- ================= FAQ ================= -->
   <section style="position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:clamp(48px,7vw,80px) 32px">
-    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#9FDDDC;margin-bottom:22px">FAQ</div>
-    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,44px);line-height:1.08;letter-spacing:-0.02em;margin:0 0 32px;color:#F9D9CE;max-width:20ch">Straight answers.</h2>
-    <div data-reveal style="border:1px solid rgba(249,217,206,0.10);border-radius:13px;padding:22px 24px;background:rgba(249,217,206,0.015);margin-bottom:12px">
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#F9D9CE;margin:0 0 10px"><span style="color:#EEAE56">Q ▸</span> Can we use generative AI on CUI at all?</h3>
-      <p style="font-size:14.5px;line-height:1.65;color:#CDBDB5;margin:0">Yes, if the entire processing chain stays inside your assessed boundary. That is the design constraint Fleet Agentic is built around: model, index, embeddings, and logs all remain on your network.</p>
+    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#17625F;margin-bottom:22px">FAQ</div>
+    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,44px);line-height:1.08;letter-spacing:-0.02em;margin:0 0 32px;color:#332B29;max-width:20ch">Straight answers.</h2>
+    <div data-reveal style="border:1px solid rgba(51,43,41,0.18);border-radius:13px;padding:22px 24px;background:rgba(255,255,255,0.75);margin-bottom:12px">
+      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#332B29;margin:0 0 10px"><span style="color:#8F5406">Q ▸</span> Can we use generative AI on CUI at all?</h3>
+      <p style="font-size:14.5px;line-height:1.65;color:#5E524E;margin:0">Yes, if the entire processing chain stays inside your assessed boundary. That is the design constraint Fleet Agentic is built around: model, index, embeddings, and logs all remain on your network.</p>
     </div>
-    <div data-reveal style="border:1px solid rgba(249,217,206,0.10);border-radius:13px;padding:22px 24px;background:rgba(249,217,206,0.015);margin-bottom:12px">
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#F9D9CE;margin:0 0 10px"><span style="color:#EEAE56">Q ▸</span> Does Fleet Agentic expand our CMMC assessment scope?</h3>
-      <p style="font-size:14.5px;line-height:1.65;color:#CDBDB5;margin:0">Fleet Agentic is deployed inside your existing boundary and inherits your enclave's controls; Sentinel produces the audit evidence assessors ask for. It is scoped as an asset within the boundary, not a new external service.</p>
+    <div data-reveal style="border:1px solid rgba(51,43,41,0.18);border-radius:13px;padding:22px 24px;background:rgba(255,255,255,0.75);margin-bottom:12px">
+      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#332B29;margin:0 0 10px"><span style="color:#8F5406">Q ▸</span> Does Fleet Agentic expand our CMMC assessment scope?</h3>
+      <p style="font-size:14.5px;line-height:1.65;color:#5E524E;margin:0">Fleet Agentic is deployed inside your existing boundary and inherits your enclave's controls; Sentinel produces the audit evidence assessors ask for. It is scoped as an asset within the boundary, not a new external service.</p>
     </div>
-    <div data-reveal style="border:1px solid rgba(249,217,206,0.10);border-radius:13px;padding:22px 24px;background:rgba(249,217,206,0.015);margin-bottom:12px">
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#F9D9CE;margin:0 0 10px"><span style="color:#EEAE56">Q ▸</span> What about the search index — isn't that where tools leak?</h3>
-      <p style="font-size:14.5px;line-height:1.65;color:#CDBDB5;margin:0">Most "compliant" AI tools keep the file local but ship an index to their cloud. An index is derived CUI. Fleet Agentic keeps the index on the same side of the boundary as the data.</p>
+    <div data-reveal style="border:1px solid rgba(51,43,41,0.18);border-radius:13px;padding:22px 24px;background:rgba(255,255,255,0.75);margin-bottom:12px">
+      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#332B29;margin:0 0 10px"><span style="color:#8F5406">Q ▸</span> What about the search index — isn't that where tools leak?</h3>
+      <p style="font-size:14.5px;line-height:1.65;color:#5E524E;margin:0">Most "compliant" AI tools keep the file local but ship an index to their cloud. An index is derived CUI. Fleet Agentic keeps the index on the same side of the boundary as the data.</p>
     </div>
-    <div data-reveal style="border:1px solid rgba(249,217,206,0.10);border-radius:13px;padding:22px 24px;background:rgba(249,217,206,0.015)">
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#F9D9CE;margin:0 0 10px"><span style="color:#EEAE56">Q ▸</span> Is it air-gapped?</h3>
-      <p style="font-size:14.5px;line-height:1.65;color:#CDBDB5;margin:0">Yes, on request. Fleet Agentic can be deployed fully disconnected. Managed updates are delivered on a schedule and by a mechanism that fits your environment, including offline transfer for air-gapped enclaves.</p>
+    <div data-reveal style="border:1px solid rgba(51,43,41,0.18);border-radius:13px;padding:22px 24px;background:rgba(255,255,255,0.75)">
+      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#332B29;margin:0 0 10px"><span style="color:#8F5406">Q ▸</span> Is it air-gapped?</h3>
+      <p style="font-size:14.5px;line-height:1.65;color:#5E524E;margin:0">Yes, on request. Fleet Agentic can be deployed fully disconnected. Managed updates are delivered on a schedule and by a mechanism that fits your environment, including offline transfer for air-gapped enclaves.</p>
     </div>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -440,24 +440,24 @@
   <!-- ================= FINAL CTA ================= -->
   <section id="book" style="position:relative;z-index:1;scroll-margin-top:80px;max-width:900px;margin:0 auto;padding:clamp(64px,9vw,110px) 32px">
     <div style="text-align:center;margin-bottom:44px">
-      <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5.4vw,50px);line-height:1.05;letter-spacing:-0.025em;margin:0 0 20px;color:#F9D9CE">See it on your own program data.</h2>
-      <p data-reveal style="font-size:clamp(17px,2.4vw,21px);line-height:1.5;color:#CDBDB5;margin:0">A 30-minute walkthrough of Fleet Agentic, running on your data, inside your boundary.</p>
+      <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5.4vw,50px);line-height:1.05;letter-spacing:-0.025em;margin:0 0 20px;color:#332B29">See it on your own program data.</h2>
+      <p data-reveal style="font-size:clamp(17px,2.4vw,21px);line-height:1.5;color:#5E524E;margin:0">A 30-minute walkthrough of Fleet Agentic, running on your data, inside your boundary.</p>
     </div>
-    <div data-reveal style="border:1px solid rgba(238,174,86,0.28);border-radius:16px;padding:34px 30px;background:linear-gradient(160deg, rgba(238,174,86,0.06), transparent);display:flex;flex-direction:column">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#EEAE56;margin-bottom:20px">▸ BOOK A DEMO</div>
-      <div id="cal-inline-defense" style="height:560px;flex:none;overflow:auto;border:1px solid rgba(238,174,86,0.3);border-radius:10px;background:#332B29;margin-bottom:22px"></div>
+    <div data-reveal style="border:1px solid rgba(238,174,86,0.28);border-radius:16px;padding:34px 30px;background:linear-gradient(160deg, rgba(238,174,86,0.114), transparent);display:flex;flex-direction:column">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#8F5406;margin-bottom:20px">▸ BOOK A DEMO</div>
+      <div id="cal-inline-defense" style="height:560px;flex:none;overflow:auto;border:1px solid rgba(238,174,86,0.3);border-radius:10px;background:#FFF8F4;margin-bottom:22px"></div>
       <a href="https://cal.com/kdplyd/30min" target="_blank" rel="noopener" class="btn-primary" style="align-self:center;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;letter-spacing:0.05em;color:#332B29;background:#EEAE56;padding:15px 26px;border-radius:9px">Book a Demo <span>→</span></a>
     </div>
   </section>
 
   <!-- ================= FOOTER ================= -->
-  <footer style="position:relative;z-index:1;border-top:1px solid rgba(249,217,206,0.08);background:#2A2321">
+  <footer style="position:relative;z-index:1;border-top:1px solid rgba(249,217,206,0.08);background:#332B29">
     <!-- waterline top edge -->
     <div aria-hidden="true" style="overflow:hidden;height:22px;opacity:0.35"><div style="display:flex;width:200%;animation:waveDrift 30s linear infinite;font-family:'JetBrains Mono',monospace;font-size:14px;line-height:22px;color:#EEAE56;white-space:nowrap"><span>≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿</span><span>≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿</span></div></div>
     <div style="max-width:1280px;margin:0 auto;padding:52px 32px 40px">
       <div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;margin-bottom:40px">
         <div style="max-width:340px">
-          <span style="display:flex;align-items:center;gap:10px;margin-bottom:16px"><img src="../../assets/fleet-agentic-mark.svg" alt="" width="33" height="24" style="height:24px;width:33px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:12px;line-height:1;letter-spacing:0.04em;color:#F9D9CE;text-transform:uppercase">Fleet<br>Agentic</span></span>
+          <span style="display:flex;align-items:center;gap:10px;margin-bottom:16px"><img src="../../assets/fleet-agentic-mark-dark.svg" alt="" width="33" height="24" style="height:24px;width:33px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:12px;line-height:1;letter-spacing:0.04em;color:#F9D9CE;text-transform:uppercase">Fleet<br>Agentic</span></span>
           <p style="font-size:14.5px;line-height:1.6;color:#CDBDB5;margin:0">On-prem AI for defense contractors. The AI that keeps CUI inside your boundary.</p>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:48px">
@@ -542,7 +542,7 @@
       var header = q('#siteHeader');
       var onScroll = function () {
         if (!header) return;
-        header.style.background = window.scrollY > 24 ? 'rgba(51,43,41,0.9)' : 'rgba(51,43,41,0.55)';
+        header.style.background = window.scrollY > 24 ? 'rgba(253,241,234,0.9)' : 'rgba(253,241,234,0.55)';
       };
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();

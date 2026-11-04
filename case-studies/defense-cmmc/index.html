@@ -56,7 +56,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Hanken+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: #332B29; color: #F9D9CE; font-family: 'Hanken Grotesk', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  body { margin: 0; background: #FFF8F4; color: #332B29; font-family: 'Hanken Grotesk', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
   ::selection { background: #EEAE56; color: #332B29; }
   a { text-decoration: none; }
   @keyframes waveDrift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
@@ -66,36 +66,36 @@
 
   .cs { position: relative; z-index: 1; max-width: 820px; margin: 0 auto; padding: clamp(48px,7vw,84px) 32px 0; }
   .cs .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; margin: 0 0 20px; }
-  .cs h1 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: clamp(30px,5vw,50px); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 18px; color: #F9D9CE; }
-  .cs h2 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: clamp(24px,3.6vw,34px); line-height: 1.15; letter-spacing: -0.015em; margin: 0 0 20px; color: #F9D9CE; }
-  .cs .deck { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 400; font-size: clamp(17px,2.2vw,21px); line-height: 1.5; color: #E3CFC6; margin: 0 0 14px; max-width: 62ch; }
-  .cs .redaction { font-style: italic; color: #B3A29B; font-size: 14px; margin: 0 0 30px; }
-  .cs p { font-size: 16px; line-height: 1.7; color: #E3CFC6; margin: 0 0 16px; max-width: 68ch; }
-  .cs section { padding: 44px 0; border-top: 1px solid rgba(249,217,206,0.07); }
+  .cs h1 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: clamp(30px,5vw,50px); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 18px; color: #332B29; }
+  .cs h2 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: clamp(24px,3.6vw,34px); line-height: 1.15; letter-spacing: -0.015em; margin: 0 0 20px; color: #332B29; }
+  .cs .deck { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 400; font-size: clamp(17px,2.2vw,21px); line-height: 1.5; color: #4A403D; margin: 0 0 14px; max-width: 62ch; }
+  .cs .redaction { font-style: italic; color: #6B5C56; font-size: 14px; margin: 0 0 30px; }
+  .cs p { font-size: 16px; line-height: 1.7; color: #4A403D; margin: 0 0 16px; max-width: 68ch; }
+  .cs section { padding: 44px 0; border-top: 1px solid rgba(51,43,41,0.12); }
   .cs .pullquote { position: relative; border-left: 2px solid #EEAE56; padding: 20px 0 20px 26px; margin: 30px 0 6px; max-width: 66ch; }
-  .cs .pullquote span.glyph { position: absolute; top: 12px; left: -9px; font-family: 'JetBrains Mono', monospace; color: #EEAE56; font-size: 14px; background: #332B29; padding: 2px 0; }
-  .cs .pullquote p { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 500; font-size: clamp(18px,2.4vw,23px); line-height: 1.4; color: #F9D9CE; margin: 0; }
+  .cs .pullquote span.glyph { position: absolute; top: 12px; left: -9px; font-family: 'JetBrains Mono', monospace; color: #8F5406; font-size: 14px; background: #FFF8F4; padding: 2px 0; }
+  .cs .pullquote p { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 500; font-size: clamp(18px,2.4vw,23px); line-height: 1.4; color: #332B29; margin: 0; }
   .cs .factstrip { display: flex; flex-wrap: wrap; gap: 12px 16px; margin: 0 0 8px; }
-  .cs .chip { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; color: #E3CFC6; border: 1px solid rgba(249,217,206,0.14); border-radius: 6px; padding: 8px 12px; }
-  .cs .chip b { color: #EEAE56; font-weight: 700; margin-right: 6px; }
+  .cs .chip { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; color: #4A403D; border: 1px solid rgba(51,43,41,0.14); border-radius: 6px; padding: 8px 12px; }
+  .cs .chip b { color: #8F5406; font-weight: 700; margin-right: 6px; }
   .cs .cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 16px; margin-top: 8px; }
-  .cs .card { border: 1px solid rgba(249,217,206,0.10); border-radius: 13px; padding: 24px 22px; background: rgba(249,217,206,0.015); }
-  .cs .card h3 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 600; font-size: 16.5px; color: #F9D9CE; margin: 0 0 10px; }
-  .cs .card p { font-size: 14.5px; line-height: 1.55; color: #CDBDB5; margin: 0; }
+  .cs .card { border: 1px solid rgba(51,43,41,0.18); border-radius: 13px; padding: 24px 22px; background: rgba(255,255,255,0.75); }
+  .cs .card h3 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 600; font-size: 16.5px; color: #332B29; margin: 0 0 10px; }
+  .cs .card p { font-size: 14.5px; line-height: 1.55; color: #5E524E; margin: 0; }
 </style>
 </head>
 <body>
 
   <!-- ambient background -->
-  <div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(238,174,86,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(238,174,86,0.035) 1px, transparent 1px);background-size:44px 44px;animation:gridPan 32s linear infinite;mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%);-webkit-mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%)"></div>
-  <div aria-hidden="true" style="position:fixed;top:-260px;left:50%;transform:translateX(-50%);width:900px;height:600px;z-index:0;pointer-events:none;background:radial-gradient(closest-side, rgba(238,174,86,0.14), transparent);filter:blur(30px);animation:glowPulse 9s ease-in-out infinite"></div>
+  <div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(238,174,86,0.067) 1px, transparent 1px), linear-gradient(90deg, rgba(238,174,86,0.067) 1px, transparent 1px);background-size:44px 44px;animation:gridPan 32s linear infinite;mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%);-webkit-mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%)"></div>
+  <div aria-hidden="true" style="position:fixed;top:-260px;left:50%;transform:translateX(-50%);width:900px;height:600px;z-index:0;pointer-events:none;background:radial-gradient(closest-side, rgba(238,174,86,0.266), transparent);filter:blur(30px);animation:glowPulse 9s ease-in-out infinite"></div>
 
   <!-- header -->
-  <header style="position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(51,43,41,0.55);border-bottom:1px solid rgba(249,217,206,0.07)">
+  <header style="position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(253,241,234,0.55);border-bottom:1px solid rgba(51,43,41,0.12)">
     <div style="max-width:1280px;margin:0 auto;padding:15px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
-      <a href="../../" aria-label="Fleet Agentic home" style="display:flex;align-items:center;gap:10px;flex-shrink:0"><img src="../../assets/fleet-agentic-mark.svg" alt="" width="42" height="30" style="height:30px;width:42px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:15px;line-height:1;letter-spacing:0.04em;color:#F9D9CE;text-transform:uppercase">Fleet<br>Agentic</span></a>
+      <a href="../../" aria-label="Fleet Agentic home" style="display:flex;align-items:center;gap:10px;flex-shrink:0"><img src="../../assets/fleet-agentic-mark.svg" alt="" width="42" height="30" style="height:30px;width:42px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:15px;line-height:1;letter-spacing:0.04em;color:#332B29;text-transform:uppercase">Fleet<br>Agentic</span></a>
       <div style="display:flex;align-items:center;gap:24px">
-        <a href="../" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#E3CFC6">← All case studies</a>
+        <a href="../" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#4A403D">← All case studies</a>
         <a href="../../#book" style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:0.06em;color:#332B29;background:#EEAE56;padding:11px 20px;border-radius:8px">Book a Demo</a>
       </div>
     </div>
@@ -103,10 +103,10 @@
 
   <!-- hero -->
   <main class="cs">
-    <nav aria-label="Breadcrumb" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B3A29B;margin-bottom:20px">
-      <a href="../../" style="color:#B3A29B">Home</a> / <a href="../" style="color:#B3A29B">Case Studies</a> / <span style="color:#E3CFC6">Defense &amp; CMMC 2.0</span>
+    <nav aria-label="Breadcrumb" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#6B5C56;margin-bottom:20px">
+      <a href="../../" style="color:#6B5C56">Home</a> / <a href="../" style="color:#6B5C56">Case Studies</a> / <span style="color:#4A403D">Defense &amp; CMMC 2.0</span>
     </nav>
-    <div class="eyebrow" style="color:#EEAE56">Case Study &middot; Defense &amp; Aerospace</div>
+    <div class="eyebrow" style="color:#8F5406">Case Study &middot; Defense &amp; Aerospace</div>
     <h1>AI Infrastructure for a Defense Contractor Preparing for CMMC 2.0</h1>
     <p class="deck">Frontier-grade AI productivity across 20 years of business-development content — without a single controlled document, or its derived index, leaving the perimeter.</p>
     <p class="redaction">Defense contractor. Name redacted at their request.</p>
@@ -117,7 +117,7 @@
 
     <!-- 01 / The Problem -->
     <section>
-      <div class="eyebrow" style="color:#F2907D">01 / The Problem</div>
+      <div class="eyebrow" style="color:#B0381F">01 / The Problem</div>
       <h2>The Problem</h2>
       <p>A defense contractor needed to bring AI into business development — not engineering. Contract negotiation, marketing content, and 20 years of institutional knowledge sat in a proprietary CRM they couldn't risk exposing to third-party APIs. They were mid-preparation for CMMC 2.0, meaning third-party auditors — not internal self-attestation — would soon verify every control. Anything built had to be audit-ready from day one, not retrofitted later.</p>
       <p>Internally, they lacked the GPU/inference expertise, Kubernetes fluency, and LLM tooling knowledge to scope, let alone build, a compliant solution. Prior consultants offered strategy decks, not deployable infrastructure.</p>
@@ -125,7 +125,7 @@
 
     <!-- 02 / The Solution -->
     <section>
-      <div class="eyebrow" style="color:#EEAE56">02 / The Solution</div>
+      <div class="eyebrow" style="color:#8F5406">02 / The Solution</div>
       <h2>The Solution</h2>
       <p>Fleet Agentic deployed fully managed, on-prem AI — inference and infrastructure-as-a-service, repeatable and consistent, running inside the contractor's perimeter. The core engineering:</p>
       <div class="cards">
@@ -146,7 +146,7 @@
 
     <!-- 03 / The Outcome -->
     <section>
-      <div class="eyebrow" style="color:#EEAE56">03 / The Outcome</div>
+      <div class="eyebrow" style="color:#8F5406">03 / The Outcome</div>
       <h2>The Outcome</h2>
       <div class="cards">
         <div class="card">
@@ -170,31 +170,31 @@
 
     <!-- 04 / The Pattern -->
     <section>
-      <div class="eyebrow" style="color:#EEAE56">04 / The Pattern</div>
+      <div class="eyebrow" style="color:#8F5406">04 / The Pattern</div>
       <h2>Why This Matters Broadly</h2>
-      <p>Defense contractors face a shared bind: real AI value sits in unstructured, decades-deep, proprietary content — but frontier models and cloud indexing are structurally incompatible with controlled environments. The same bind shows up for <a href="../../solutions/legal/" style="color:#EEAE56">law firms</a> holding privileged work product and <a href="../../solutions/healthcare/" style="color:#EEAE56">health systems</a> holding PHI. The fix isn't a thinner AI tool; it's moving inference <em>and</em> the index inside the perimeter, inheriting the access controls and audit posture the organization already built. That's the model Fleet Agentic now productizes across <a href="../../solutions/defense/" style="color:#EEAE56">defense contractors</a> and every other regulated vertical.</p>
+      <p>Defense contractors face a shared bind: real AI value sits in unstructured, decades-deep, proprietary content — but frontier models and cloud indexing are structurally incompatible with controlled environments. The same bind shows up for <a href="../../solutions/legal/" style="color:#8F5406">law firms</a> holding privileged work product and <a href="../../solutions/healthcare/" style="color:#8F5406">health systems</a> holding PHI. The fix isn't a thinner AI tool; it's moving inference <em>and</em> the index inside the perimeter, inheriting the access controls and audit posture the organization already built. That's the model Fleet Agentic now productizes across <a href="../../solutions/defense/" style="color:#8F5406">defense contractors</a> and every other regulated vertical.</p>
     </section>
   </main>
 
   <!-- CTA band -->
   <section style="position:relative;z-index:1;max-width:820px;margin:0 auto;padding:0 32px clamp(64px,8vw,96px)">
-    <div style="border-top:1px solid rgba(249,217,206,0.07);padding-top:44px;text-align:center">
-      <h2 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(24px,3.6vw,34px);line-height:1.15;letter-spacing:-0.015em;margin:0 0 14px;color:#F9D9CE">See it on your own data.</h2>
-      <p style="font-size:16px;line-height:1.6;color:#CDBDB5;margin:0 0 26px">A 30-minute walkthrough of Fleet Agentic, Lighthouse, and Sentinel.</p>
+    <div style="border-top:1px solid rgba(51,43,41,0.12);padding-top:44px;text-align:center">
+      <h2 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(24px,3.6vw,34px);line-height:1.15;letter-spacing:-0.015em;margin:0 0 14px;color:#332B29">See it on your own data.</h2>
+      <p style="font-size:16px;line-height:1.6;color:#5E524E;margin:0 0 26px">A 30-minute walkthrough of Fleet Agentic, Lighthouse, and Sentinel.</p>
       <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
         <a href="../../#book" style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;letter-spacing:0.05em;color:#332B29;background:#EEAE56;padding:15px 26px;border-radius:9px">Book a Demo &rarr;</a>
-        <a href="../../#verticals" style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;letter-spacing:0.05em;color:#F9D9CE;background:transparent;border:1px solid rgba(249,217,206,0.2);padding:15px 26px;border-radius:9px">See all verticals</a>
+        <a href="../../#verticals" style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;letter-spacing:0.05em;color:#332B29;background:transparent;border:1px solid rgba(51,43,41,0.2);padding:15px 26px;border-radius:9px">See all verticals</a>
       </div>
     </div>
   </section>
 
   <!-- footer -->
-  <footer style="position:relative;z-index:1;border-top:1px solid rgba(249,217,206,0.08);background:#2A2321">
+  <footer style="position:relative;z-index:1;border-top:1px solid rgba(249,217,206,0.08);background:#332B29">
     <div aria-hidden="true" style="overflow:hidden;height:22px;opacity:0.35"><div style="display:flex;width:200%;animation:waveDrift 30s linear infinite;font-family:'JetBrains Mono',monospace;font-size:14px;line-height:22px;color:#EEAE56;white-space:nowrap"><span>&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;</span><span>&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;&asymp;&#8767;</span></div></div>
     <div style="max-width:1280px;margin:0 auto;padding:52px 32px 40px">
       <div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;margin-bottom:40px">
         <div style="max-width:340px">
-          <span style="display:flex;align-items:center;gap:10px;margin-bottom:16px"><img src="../../assets/fleet-agentic-mark.svg" alt="" width="33" height="24" style="height:24px;width:33px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:12px;line-height:1;letter-spacing:0.04em;color:#F9D9CE;text-transform:uppercase">Fleet<br>Agentic</span></span>
+          <span style="display:flex;align-items:center;gap:10px;margin-bottom:16px"><img src="../../assets/fleet-agentic-mark-dark.svg" alt="" width="33" height="24" style="height:24px;width:33px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:12px;line-height:1;letter-spacing:0.04em;color:#F9D9CE;text-transform:uppercase">Fleet<br>Agentic</span></span>
           <p style="font-size:14.5px;line-height:1.6;color:#CDBDB5;margin:0">Sovereign intelligence for regulated verticals. The AI that lives inside your perimeter.</p>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:48px">
