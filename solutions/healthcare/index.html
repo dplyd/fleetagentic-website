@@ -40,38 +40,38 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Hanken+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: #12223B; color: #F0EBE0; font-family: 'Hanken Grotesk', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-  ::selection { background: #BD984B; color: #12223B; }
+  body { margin: 0; background: #332B29; color: #F9D9CE; font-family: 'Hanken Grotesk', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  ::selection { background: #EEAE56; color: #332B29; }
   a { text-decoration: none; }
   table { border-collapse: collapse; }
   @keyframes waveDrift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @keyframes waveDriftRev { from { transform: translateX(-50%); } to { transform: translateX(0); } }
   @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
   @keyframes floaty2 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-11px); } }
-  @keyframes pulseDot { 0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(189,152,75,0.5); } 50% { opacity: .7; box-shadow: 0 0 0 8px rgba(189,152,75,0); } }
+  @keyframes pulseDot { 0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(238,174,86,0.5); } 50% { opacity: .7; box-shadow: 0 0 0 8px rgba(238,174,86,0); } }
   @keyframes glowPulse { 0%,100% { opacity: .35; } 50% { opacity: .7; } }
   @keyframes gridPan { from { background-position: 0 0; } to { background-position: 44px 44px; } }
 
   .navlink { transition: color .2s; }
-  .navlink:hover { color: #BD984B; }
+  .navlink:hover { color: #EEAE56; }
   .btn-primary { transition: transform .15s ease, box-shadow .25s ease; }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(189,152,75,0.4); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(238,174,86,0.4); }
   .btn-ghost { transition: border-color .2s ease, color .2s ease; }
-  .btn-ghost:hover { border-color: #BD984B; color: #BD984B; }
+  .btn-ghost:hover { border-color: #EEAE56; color: #EEAE56; }
   .card-hover { transition: border-color .25s ease, transform .25s ease; }
-  .card-hover:hover { border-color: rgba(189,152,75,0.4); transform: translateY(-4px); }
+  .card-hover:hover { border-color: rgba(238,174,86,0.4); transform: translateY(-4px); }
   .foot-link { transition: color .2s; }
-  .foot-link:hover { color: #BD984B; }
-  .foot-link-sub:hover { color: #C9C4B8; }
+  .foot-link:hover { color: #EEAE56; }
+  .foot-link-sub:hover { color: #E3CFC6; }
   [data-reveal] { transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
   .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .cmp-table th, .cmp-table td { padding: 16px 18px; text-align: left; font-size: 14px; line-height: 1.5; vertical-align: top; }
-  .cmp-table th { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8C96A6; border-bottom: 1px solid rgba(240,235,224,0.10); }
-  .cmp-table td { border-bottom: 1px solid rgba(240,235,224,0.06); color: #C9C4B8; }
+  .cmp-table th { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #B3A29B; border-bottom: 1px solid rgba(249,217,206,0.10); }
+  .cmp-table td { border-bottom: 1px solid rgba(249,217,206,0.06); color: #E3CFC6; }
   .cmp-table tr:last-child td { border-bottom: none; }
-  .cmp-row-label { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #A3ABB8; white-space: nowrap; }
-  .cmp-cloud { color: #E06A5F; }
-  .cmp-fleet { color: #F0EBE0; background: rgba(189,152,75,0.045); }
+  .cmp-row-label { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #CDBDB5; white-space: nowrap; }
+  .cmp-cloud { color: #F2907D; }
+  .cmp-fleet { color: #F9D9CE; background: rgba(238,174,86,0.045); }
   @media (max-width: 1100px) {
     #desknav { display: none !important; }
     #navToggle { display: flex !important; }
@@ -85,143 +85,143 @@
 <body>
 
   <!-- ambient background -->
-  <div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(189,152,75,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(189,152,75,0.035) 1px, transparent 1px);background-size:44px 44px;animation:gridPan 32s linear infinite;mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%);-webkit-mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%)"></div>
-  <div aria-hidden="true" style="position:fixed;top:-260px;left:50%;transform:translateX(-50%);width:900px;height:600px;z-index:0;pointer-events:none;background:radial-gradient(closest-side, rgba(189,152,75,0.14), transparent);filter:blur(30px);animation:glowPulse 9s ease-in-out infinite"></div>
+  <div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(238,174,86,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(238,174,86,0.035) 1px, transparent 1px);background-size:44px 44px;animation:gridPan 32s linear infinite;mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%);-webkit-mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%)"></div>
+  <div aria-hidden="true" style="position:fixed;top:-260px;left:50%;transform:translateX(-50%);width:900px;height:600px;z-index:0;pointer-events:none;background:radial-gradient(closest-side, rgba(238,174,86,0.14), transparent);filter:blur(30px);animation:glowPulse 9s ease-in-out infinite"></div>
 
   <!-- ================= HEADER ================= -->
-  <header id="siteHeader" style="position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(18,34,59,0.55);border-bottom:1px solid rgba(240,235,224,0.07)">
+  <header id="siteHeader" style="position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(51,43,41,0.55);border-bottom:1px solid rgba(249,217,206,0.07)">
     <div style="max-width:1280px;margin:0 auto;padding:15px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px">
-      <a href="../../" aria-label="Fleet Agentic home" style="display:flex;align-items:center;gap:10px;flex-shrink:0"><img src="../../assets/fleet-agentic-mark.svg" alt="" width="42" height="30" style="height:30px;width:42px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:15px;line-height:1;letter-spacing:0.04em;color:#F0EBE0;text-transform:uppercase">Fleet<br>Agentic</span></a>
+      <a href="../../" aria-label="Fleet Agentic home" style="display:flex;align-items:center;gap:10px;flex-shrink:0"><img src="../../assets/fleet-agentic-mark.svg" alt="" width="42" height="30" style="height:30px;width:42px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:15px;line-height:1;letter-spacing:0.04em;color:#F9D9CE;text-transform:uppercase">Fleet<br>Agentic</span></a>
       <nav id="desknav" style="display:flex;align-items:center;gap:28px">
-        <a href="../../#platform" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#C9C4B8">Platform</a>
-        <a href="../../#security" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#C9C4B8">Security</a>
-        <a href="../legal/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#C9C4B8">Legal</a>
-        <a href="../healthcare/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#BD984B">Healthcare</a>
-        <a href="../defense/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#C9C4B8">Defense</a>
-        <a href="../../case-studies/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#C9C4B8">Case Studies</a>
-        <a href="../../carrier/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#C9C4B8">Partners</a>
-        <a href="#book" class="btn-primary" style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:0.06em;color:#12223B;background:#BD984B;padding:11px 20px;border-radius:8px;box-shadow:0 0 0 rgba(189,152,75,0)">Book a Demo</a>
+        <a href="../../#platform" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#E3CFC6">Platform</a>
+        <a href="../../#security" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#E3CFC6">Security</a>
+        <a href="../legal/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#E3CFC6">Legal</a>
+        <a href="../healthcare/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#EEAE56">Healthcare</a>
+        <a href="../defense/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#E3CFC6">Defense</a>
+        <a href="../../case-studies/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#E3CFC6">Case Studies</a>
+        <a href="../../carrier/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#E3CFC6">Partners</a>
+        <a href="#book" class="btn-primary" style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:0.06em;color:#332B29;background:#EEAE56;padding:11px 20px;border-radius:8px;box-shadow:0 0 0 rgba(238,174,86,0)">Book a Demo</a>
       </nav>
-      <button id="navToggle" aria-label="Menu" aria-expanded="false" style="display:none;align-items:center;justify-content:center;width:42px;height:42px;background:transparent;border:1px solid rgba(240,235,224,0.16);border-radius:8px;color:#F0EBE0;font-family:'JetBrains Mono',monospace;font-size:20px;cursor:pointer">≡</button>
+      <button id="navToggle" aria-label="Menu" aria-expanded="false" style="display:none;align-items:center;justify-content:center;width:42px;height:42px;background:transparent;border:1px solid rgba(249,217,206,0.16);border-radius:8px;color:#F9D9CE;font-family:'JetBrains Mono',monospace;font-size:20px;cursor:pointer">≡</button>
     </div>
-    <div id="mobnav" style="display:none;padding:8px 32px 22px;border-top:1px solid rgba(240,235,224,0.06);background:rgba(18,34,59,0.96)">
-      <a href="../../#platform" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#C9C4B8;border-bottom:1px solid rgba(240,235,224,0.05)">Platform</a>
-      <a href="../../#security" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#C9C4B8;border-bottom:1px solid rgba(240,235,224,0.05)">Security</a>
-      <a href="../legal/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#C9C4B8;border-bottom:1px solid rgba(240,235,224,0.05)">Legal</a>
-      <a href="../healthcare/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#BD984B;border-bottom:1px solid rgba(240,235,224,0.05)">Healthcare</a>
-      <a href="../defense/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#C9C4B8;border-bottom:1px solid rgba(240,235,224,0.05)">Defense</a>
-      <a href="../../case-studies/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#C9C4B8;border-bottom:1px solid rgba(240,235,224,0.05)">Case Studies</a>
-      <a href="../../carrier/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#C9C4B8;border-bottom:1px solid rgba(240,235,224,0.05)">Partners</a>
-      <a href="#book" style="display:block;text-align:center;margin-top:16px;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;letter-spacing:0.06em;color:#12223B;background:#BD984B;border-radius:8px">Book a Demo</a>
+    <div id="mobnav" style="display:none;padding:8px 32px 22px;border-top:1px solid rgba(249,217,206,0.06);background:rgba(51,43,41,0.96)">
+      <a href="../../#platform" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#E3CFC6;border-bottom:1px solid rgba(249,217,206,0.05)">Platform</a>
+      <a href="../../#security" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#E3CFC6;border-bottom:1px solid rgba(249,217,206,0.05)">Security</a>
+      <a href="../legal/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#E3CFC6;border-bottom:1px solid rgba(249,217,206,0.05)">Legal</a>
+      <a href="../healthcare/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#EEAE56;border-bottom:1px solid rgba(249,217,206,0.05)">Healthcare</a>
+      <a href="../defense/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#E3CFC6;border-bottom:1px solid rgba(249,217,206,0.05)">Defense</a>
+      <a href="../../case-studies/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#E3CFC6;border-bottom:1px solid rgba(249,217,206,0.05)">Case Studies</a>
+      <a href="../../carrier/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#E3CFC6;border-bottom:1px solid rgba(249,217,206,0.05)">Partners</a>
+      <a href="#book" style="display:block;text-align:center;margin-top:16px;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;letter-spacing:0.06em;color:#332B29;background:#EEAE56;border-radius:8px">Book a Demo</a>
     </div>
   </header>
 
   <!-- ================= HERO ================= -->
-  <section style="position:relative;z-index:1;background:linear-gradient(180deg, rgba(189,152,75,0.05), transparent 65%)">
+  <section style="position:relative;z-index:1;background:linear-gradient(180deg, rgba(238,174,86,0.05), transparent 65%)">
     <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,9vw,110px) 32px clamp(40px,6vw,64px)">
       <div style="display:flex;flex-wrap:wrap;gap:clamp(40px,5vw,72px);align-items:center">
         <!-- left copy -->
         <div style="flex:1 1 420px;min-width:min(100%,420px)">
-          <div style="display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#BD984B;border:1px solid rgba(189,152,75,0.28);border-radius:999px;padding:7px 14px;margin-bottom:26px">
-            <span style="width:7px;height:7px;border-radius:50%;background:#BD984B;animation:pulseDot 2.6s ease-in-out infinite"></span>Sovereign&nbsp;AI&nbsp;for&nbsp;Healthcare
+          <div style="display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#9FDDDC;border:1px solid rgba(238,174,86,0.28);border-radius:999px;padding:7px 14px;margin-bottom:26px">
+            <span style="width:7px;height:7px;border-radius:50%;background:#EEAE56;animation:pulseDot 2.6s ease-in-out infinite"></span>Sovereign&nbsp;AI&nbsp;for&nbsp;Healthcare
           </div>
-          <h1 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(36px,5.6vw,62px);line-height:1.05;letter-spacing:-0.025em;margin:0 0 22px;color:#F0EBE0">Clinical AI that never leaves <span style="color:#BD984B">the building.</span></h1>
-          <p style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:400;font-size:clamp(18px,2.4vw,23px);line-height:1.4;color:#C9C4B8;margin:0 0 18px;max-width:38ch">Every ambient scribe, copilot, and clinical assistant on the market today sends PHI to somebody else's cloud. Fleet Agentic doesn't.</p>
-          <p style="font-size:16px;line-height:1.65;color:#A3ABB8;margin:0 0 18px;max-width:50ch">The same generative AI productivity your clinicians want — running inside your own perimeter, HIPAA-compliant by construction, not by BAA.</p>
-          <p style="font-size:15px;line-height:1.65;color:#8C96A6;margin:0 0 34px;max-width:52ch;border-left:2px solid rgba(189,152,75,0.3);padding-left:14px">Fleet Agentic for healthcare is a managed on-premises AI for health systems: clinical documentation, intake, and chart search run entirely inside your network — PHI is never transmitted to a third-party API, so no model-vendor BAA is required.</p>
+          <h1 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(36px,5.6vw,62px);line-height:1.05;letter-spacing:-0.025em;margin:0 0 22px;color:#F9D9CE">Clinical AI that never leaves <span style="color:#EEAE56">the building.</span></h1>
+          <p style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:400;font-size:clamp(18px,2.4vw,23px);line-height:1.4;color:#E3CFC6;margin:0 0 18px;max-width:38ch">Every ambient scribe, copilot, and clinical assistant on the market today sends PHI to somebody else's cloud. Fleet Agentic doesn't.</p>
+          <p style="font-size:16px;line-height:1.65;color:#CDBDB5;margin:0 0 18px;max-width:50ch">The same generative AI productivity your clinicians want — running inside your own perimeter, HIPAA-compliant by construction, not by BAA.</p>
+          <p style="font-size:15px;line-height:1.65;color:#B3A29B;margin:0 0 34px;max-width:52ch;border-left:2px solid rgba(238,174,86,0.3);padding-left:14px">Fleet Agentic for healthcare is a managed on-premises AI for health systems: clinical documentation, intake, and chart search run entirely inside your network — PHI is never transmitted to a third-party API, so no model-vendor BAA is required.</p>
           <div style="display:flex;flex-wrap:wrap;gap:14px">
-            <a href="#book" class="btn-primary" style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;letter-spacing:0.05em;color:#12223B;background:#BD984B;padding:15px 26px;border-radius:9px;box-shadow:0 0 30px rgba(189,152,75,0.22)">Book a Demo <span style="font-size:15px">→</span></a>
-            <a href="#approach" class="btn-ghost" style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;letter-spacing:0.05em;color:#F0EBE0;background:transparent;border:1px solid rgba(240,235,224,0.2);padding:15px 26px;border-radius:9px">See the Architecture <span>↓</span></a>
+            <a href="#book" class="btn-primary" style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;letter-spacing:0.05em;color:#332B29;background:#EEAE56;padding:15px 26px;border-radius:9px;box-shadow:0 0 30px rgba(238,174,86,0.22)">Book a Demo <span style="font-size:15px">→</span></a>
+            <a href="#approach" class="btn-ghost" style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;letter-spacing:0.05em;color:#F9D9CE;background:transparent;border:1px solid rgba(249,217,206,0.2);padding:15px 26px;border-radius:9px">See the Architecture <span>↓</span></a>
           </div>
         </div>
 
         <!-- right: waterline diagram, healthcare-flavored -->
         <div style="flex:1 1 400px;min-width:min(100%,360px)">
-          <div style="position:relative;border:1px solid rgba(240,235,224,0.1);border-radius:18px;overflow:hidden;background:linear-gradient(180deg, rgba(224,106,95,0.06) 0%, rgba(18,34,59,0) 40%, rgba(189,152,75,0.07) 100%);padding:22px 22px 24px">
-            <span aria-hidden="true" style="position:absolute;top:9px;left:11px;font-family:'JetBrains Mono',monospace;color:rgba(240,235,224,0.25);font-size:14px">┌</span>
-            <span aria-hidden="true" style="position:absolute;top:9px;right:11px;font-family:'JetBrains Mono',monospace;color:rgba(240,235,224,0.25);font-size:14px">┐</span>
-            <span aria-hidden="true" style="position:absolute;bottom:9px;left:11px;font-family:'JetBrains Mono',monospace;color:rgba(240,235,224,0.25);font-size:14px">└</span>
-            <span aria-hidden="true" style="position:absolute;bottom:9px;right:11px;font-family:'JetBrains Mono',monospace;color:rgba(240,235,224,0.25);font-size:14px">┘</span>
+          <div style="position:relative;border:1px solid rgba(249,217,206,0.1);border-radius:18px;overflow:hidden;background:linear-gradient(180deg, rgba(242,144,125,0.06) 0%, rgba(51,43,41,0) 40%, rgba(238,174,86,0.07) 100%);padding:22px 22px 24px">
+            <span aria-hidden="true" style="position:absolute;top:9px;left:11px;font-family:'JetBrains Mono',monospace;color:rgba(249,217,206,0.25);font-size:14px">┌</span>
+            <span aria-hidden="true" style="position:absolute;top:9px;right:11px;font-family:'JetBrains Mono',monospace;color:rgba(249,217,206,0.25);font-size:14px">┐</span>
+            <span aria-hidden="true" style="position:absolute;bottom:9px;left:11px;font-family:'JetBrains Mono',monospace;color:rgba(249,217,206,0.25);font-size:14px">└</span>
+            <span aria-hidden="true" style="position:absolute;bottom:9px;right:11px;font-family:'JetBrains Mono',monospace;color:rgba(249,217,206,0.25);font-size:14px">┘</span>
 
             <!-- above -->
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#E06A5F">▲ ABOVE&nbsp;·&nbsp;THE&nbsp;CLOUD</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;color:rgba(224,106,95,0.55)">vendor&nbsp;cloud&nbsp;+&nbsp;BAA</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#F2907D">▲ ABOVE&nbsp;·&nbsp;THE&nbsp;CLOUD</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;color:rgba(242,144,125,0.55)">vendor&nbsp;cloud&nbsp;+&nbsp;BAA</span>
             </div>
             <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;opacity:0.85">
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(236,150,140,0.9);border:1px dashed rgba(224,106,95,0.4);border-radius:6px;padding:6px 10px;animation:floaty 6s ease-in-out infinite">◇ ambient&nbsp;scribe</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(236,150,140,0.9);border:1px dashed rgba(224,106,95,0.4);border-radius:6px;padding:6px 10px;animation:floaty2 7s ease-in-out infinite 0.6s">◇ public&nbsp;cloud</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(236,150,140,0.9);border:1px dashed rgba(224,106,95,0.4);border-radius:6px;padding:6px 10px;animation:floaty 6.5s ease-in-out infinite 0.3s">◇ shared&nbsp;tenancy</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(248,170,155,0.9);border:1px dashed rgba(242,144,125,0.4);border-radius:6px;padding:6px 10px;animation:floaty 6s ease-in-out infinite">◇ ambient&nbsp;scribe</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(248,170,155,0.9);border:1px dashed rgba(242,144,125,0.4);border-radius:6px;padding:6px 10px;animation:floaty2 7s ease-in-out infinite 0.6s">◇ public&nbsp;cloud</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(248,170,155,0.9);border:1px dashed rgba(242,144,125,0.4);border-radius:6px;padding:6px 10px;animation:floaty 6.5s ease-in-out infinite 0.3s">◇ shared&nbsp;tenancy</span>
             </div>
 
             <!-- waterline -->
-            <div style="position:relative;overflow:hidden;height:30px;border-top:1px solid rgba(189,152,75,0.25);border-bottom:1px solid rgba(189,152,75,0.25);margin-bottom:6px">
-              <div style="display:flex;width:200%;animation:waveDrift 18s linear infinite;font-family:'JetBrains Mono',monospace;font-size:17px;line-height:30px;color:rgba(189,152,75,0.55);white-space:nowrap">
+            <div style="position:relative;overflow:hidden;height:30px;border-top:1px solid rgba(238,174,86,0.25);border-bottom:1px solid rgba(238,174,86,0.25);margin-bottom:6px">
+              <div style="display:flex;width:200%;animation:waveDrift 18s linear infinite;font-family:'JetBrains Mono',monospace;font-size:17px;line-height:30px;color:rgba(238,174,86,0.55);white-space:nowrap">
                 <span>≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿</span><span>≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿</span>
               </div>
-              <span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.28em;color:#BD984B;background:#0C1829;padding:2px 10px;border-radius:4px">WATERLINE</span>
+              <span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.28em;color:#EEAE56;background:#2A2321;padding:2px 10px;border-radius:4px">WATERLINE</span>
             </div>
-            <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#8C96A6;margin-bottom:16px">↑ your&nbsp;health&nbsp;system's&nbsp;boundary&nbsp;↑</div>
+            <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#B3A29B;margin-bottom:16px">↑ your&nbsp;health&nbsp;system's&nbsp;boundary&nbsp;↑</div>
 
             <!-- below: Fleet Agentic -->
-            <div style="border:1px solid rgba(189,152,75,0.4);border-radius:12px;background:rgba(189,152,75,0.05);padding:16px;box-shadow:0 0 40px rgba(189,152,75,0.08) inset">
+            <div style="border:1px solid rgba(159,221,220,0.4);border-radius:12px;background:rgba(159,221,220,0.05);padding:16px;box-shadow:0 0 40px rgba(159,221,220,0.08) inset">
               <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
-                <span style="width:11px;height:11px;border-radius:50%;background:#BD984B;animation:pulseDot 2.4s ease-in-out infinite;flex-shrink:0"></span>
-                <span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;color:#F0EBE0;letter-spacing:0.01em">Fleet Agentic</span>
-                <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#BD984B;border:1px solid rgba(189,152,75,0.3);border-radius:5px;padding:3px 8px">ON-PREM</span>
+                <span style="width:11px;height:11px;border-radius:50%;background:#9FDDDC;animation:pulseDot 2.4s ease-in-out infinite;flex-shrink:0"></span>
+                <span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;color:#F9D9CE;letter-spacing:0.01em">Fleet Agentic</span>
+                <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#9FDDDC;border:1px solid rgba(159,221,220,0.3);border-radius:5px;padding:3px 8px">ON-PREM</span>
               </div>
-              <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;color:#8C96A6;margin-bottom:9px">▾ YOUR PATIENTS — STAY HOME</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;color:#B3A29B;margin-bottom:9px">▾ YOUR PATIENTS — STAY HOME</div>
               <div style="display:flex;flex-wrap:wrap;gap:7px">
-                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#BD984B;border:1px solid rgba(189,152,75,0.35);border-radius:5px;padding:5px 9px">PHI</span>
-                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#BD984B;border:1px solid rgba(189,152,75,0.35);border-radius:5px;padding:5px 9px">clinical&nbsp;notes</span>
-                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#BD984B;border:1px solid rgba(189,152,75,0.35);border-radius:5px;padding:5px 9px">patient&nbsp;records</span>
-                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#BD984B;border:1px solid rgba(189,152,75,0.35);border-radius:5px;padding:5px 9px">intake&nbsp;data</span>
+                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9FDDDC;border:1px solid rgba(159,221,220,0.35);border-radius:5px;padding:5px 9px">PHI</span>
+                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9FDDDC;border:1px solid rgba(159,221,220,0.35);border-radius:5px;padding:5px 9px">clinical&nbsp;notes</span>
+                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9FDDDC;border:1px solid rgba(159,221,220,0.35);border-radius:5px;padding:5px 9px">patient&nbsp;records</span>
+                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9FDDDC;border:1px solid rgba(159,221,220,0.35);border-radius:5px;padding:5px 9px">intake&nbsp;data</span>
               </div>
             </div>
-            <p style="text-align:center;font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;font-size:13.5px;color:#C9C4B8;margin:16px 4px 2px">"What's beneath the waterline is your business."</p>
+            <p style="text-align:center;font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;font-size:13.5px;color:#E3CFC6;margin:16px 4px 2px">"What's beneath the waterline is your business."</p>
           </div>
         </div>
       </div>
 
       <!-- subhead strip -->
-      <div style="margin-top:clamp(44px,6vw,68px);display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;padding-top:26px;border-top:1px solid rgba(240,235,224,0.07)">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#8C96A6">BUILT&nbsp;TO&nbsp;THE&nbsp;STANDARD&nbsp;OF</span>
-        <a href="../../#posture" style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#C9C4B8"><span style="color:#BD984B">◆</span> HIPAA</a>
-        <a href="../../#posture" style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#C9C4B8"><span style="color:#BD984B">◆</span> NIST&nbsp;800-171</a>
+      <div style="margin-top:clamp(44px,6vw,68px);display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;padding-top:26px;border-top:1px solid rgba(249,217,206,0.07)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#B3A29B">BUILT&nbsp;TO&nbsp;THE&nbsp;STANDARD&nbsp;OF</span>
+        <a href="../../#posture" style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#E3CFC6"><span style="color:#9FDDDC">◆</span> HIPAA</a>
+        <a href="../../#posture" style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#E3CFC6"><span style="color:#9FDDDC">◆</span> NIST&nbsp;800-171</a>
       </div>
     </div>
   </section>
 
   <!-- divider -->
-  <div aria-hidden="true" style="position:relative;z-index:1;overflow:hidden;height:26px;opacity:0.4"><div style="display:flex;width:200%;animation:waveDriftRev 26s linear infinite;font-family:'JetBrains Mono',monospace;font-size:15px;line-height:26px;color:#BD984B;white-space:nowrap"><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span></div></div>
+  <div aria-hidden="true" style="position:relative;z-index:1;overflow:hidden;height:26px;opacity:0.4"><div style="display:flex;width:200%;animation:waveDriftRev 26s linear infinite;font-family:'JetBrains Mono',monospace;font-size:15px;line-height:26px;color:#EEAE56;white-space:nowrap"><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span></div></div>
 
   <!-- ================= 01 / THE TENSION ================= -->
   <section style="position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:clamp(64px,9vw,110px) 32px">
-    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#E06A5F;margin-bottom:22px">01&nbsp;/&nbsp;The&nbsp;Tension</div>
-    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,52px);line-height:1.06;letter-spacing:-0.02em;margin:0 0 28px;color:#F0EBE0;max-width:24ch">Every "HIPAA-compliant" AI scribe still means a BAA with someone else's cloud.</h2>
-    <p data-reveal style="font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:#A3ABB8;margin:0 0 24px;max-width:68ch">Abridge, Nuance DAX, Suki, Nabla, Ambience, Epic's own AI Charting — the entire ambient-documentation market runs the same way: audio leaves the exam room, a vendor transcribes it, structures it, indexes it, and hands you a signed BAA as the compliance answer.</p>
-    <div data-reveal style="position:relative;border-left:2px solid #B22A2D;padding:20px 0 20px 26px;max-width:62ch">
-      <span aria-hidden="true" style="position:absolute;top:12px;left:-9px;font-family:'JetBrains Mono',monospace;color:#E06A5F;font-size:14px;background:#12223B;padding:2px 0">▚</span>
-      <p style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:500;font-size:clamp(18px,2.4vw,24px);line-height:1.35;color:#F0EBE0;margin:0">That's a legal instrument, not an architecture. The BAA tells you who's liable if something goes wrong. It says nothing about whether PHI ever left your walls in the first place. <span style="color:#BD984B">For most health systems, it never had to.</span></p>
+    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#F2907D;margin-bottom:22px">01&nbsp;/&nbsp;The&nbsp;Tension</div>
+    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,52px);line-height:1.06;letter-spacing:-0.02em;margin:0 0 28px;color:#F9D9CE;max-width:24ch">Every "HIPAA-compliant" AI scribe still means a BAA with someone else's cloud.</h2>
+    <p data-reveal style="font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:#CDBDB5;margin:0 0 24px;max-width:68ch">Abridge, Nuance DAX, Suki, Nabla, Ambience, Epic's own AI Charting — the entire ambient-documentation market runs the same way: audio leaves the exam room, a vendor transcribes it, structures it, indexes it, and hands you a signed BAA as the compliance answer.</p>
+    <div data-reveal style="position:relative;border-left:2px solid #E0705E;padding:20px 0 20px 26px;max-width:62ch">
+      <span aria-hidden="true" style="position:absolute;top:12px;left:-9px;font-family:'JetBrains Mono',monospace;color:#F2907D;font-size:14px;background:#332B29;padding:2px 0">▚</span>
+      <p style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:500;font-size:clamp(18px,2.4vw,24px);line-height:1.35;color:#F9D9CE;margin:0">That's a legal instrument, not an architecture. The BAA tells you who's liable if something goes wrong. It says nothing about whether PHI ever left your walls in the first place. <span style="color:#EEAE56">For most health systems, it never had to.</span></p>
     </div>
   </section>
 
   <!-- ================= 02 / THE LANDSCAPE ================= -->
   <section style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:clamp(40px,6vw,72px) 32px">
     <div style="max-width:1080px;margin:0 auto 40px">
-      <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#BD984B;margin-bottom:22px">02&nbsp;/&nbsp;The&nbsp;Landscape</div>
-      <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,48px);line-height:1.07;letter-spacing:-0.02em;margin:0 0 22px;color:#F0EBE0;max-width:24ch">The incumbents solved documentation. Not sovereignty.</h2>
-      <p data-reveal style="font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:#A3ABB8;margin:0;max-width:68ch">The ambient-scribe category matured fast — real KLAS-ranked winners, real time-back-to-clinicians, real revenue lift. That's not in dispute. What's in dispute is where the data lives while it happens.</p>
+      <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#9FDDDC;margin-bottom:22px">02&nbsp;/&nbsp;The&nbsp;Landscape</div>
+      <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,48px);line-height:1.07;letter-spacing:-0.02em;margin:0 0 22px;color:#F9D9CE;max-width:24ch">The incumbents solved documentation. Not sovereignty.</h2>
+      <p data-reveal style="font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:#CDBDB5;margin:0;max-width:68ch">The ambient-scribe category matured fast — real KLAS-ranked winners, real time-back-to-clinicians, real revenue lift. That's not in dispute. What's in dispute is where the data lives while it happens.</p>
     </div>
 
-    <div data-reveal class="table-wrap" style="border:1px solid rgba(240,235,224,0.10);border-radius:14px;background:rgba(240,235,224,0.015);margin-bottom:28px">
+    <div data-reveal class="table-wrap" style="border:1px solid rgba(249,217,206,0.10);border-radius:14px;background:rgba(249,217,206,0.015);margin-bottom:28px">
       <table class="cmp-table" style="width:100%;min-width:760px">
         <thead>
           <tr>
             <th style="width:20%"></th>
             <th>Abridge / Nuance DAX / Suki / Nabla / Ambience</th>
             <th>Epic AI Charting (bundled)</th>
-            <th style="color:#BD984B">Fleet Agentic Healthcare</th>
+            <th style="color:#EEAE56">Fleet Agentic Healthcare</th>
           </tr>
         </thead>
         <tbody>
@@ -259,71 +259,71 @@
       </table>
     </div>
 
-    <p data-reveal style="font-size:16px;line-height:1.65;color:#A3ABB8;margin:0;max-width:70ch">The independents compete on note quality and specialty depth. Epic competes on being free. Neither one answers the question a compliance officer actually asks: <em>where does the data go?</em> Fleet Agentic is the only entry in the category where the honest answer is <span style="color:#BD984B">"nowhere."</span></p>
+    <p data-reveal style="font-size:16px;line-height:1.65;color:#CDBDB5;margin:0;max-width:70ch">The independents compete on note quality and specialty depth. Epic competes on being free. Neither one answers the question a compliance officer actually asks: <em>where does the data go?</em> Fleet Agentic is the only entry in the category where the honest answer is <span style="color:#EEAE56">"nowhere."</span></p>
   </section>
 
   <!-- ================= 03 / THE HIDDEN LEAK ================= -->
   <section style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:clamp(40px,6vw,72px) 32px">
     <div style="max-width:1080px;margin:0 auto 32px">
-      <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#E06A5F;margin-bottom:22px">03&nbsp;/&nbsp;The&nbsp;Hidden&nbsp;Leak</div>
-      <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,48px);line-height:1.07;letter-spacing:-0.02em;margin:0 0 22px;color:#F0EBE0;max-width:22ch">De-identification isn't the boundary you think it is.</h2>
-      <p data-reveal style="font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:#A3ABB8;margin:0;max-width:68ch">Most "privacy-preserving" healthcare AI stops at de-identifying content before it leaves your network — stripping the eighteen HIPAA identifiers, then shipping the rest to a cloud model. But clinical narrative re-identifies easily: rare diagnoses, unusual drug combinations, visit timing, and free-text notes can fingerprint a patient even with names removed.</p>
+      <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#F2907D;margin-bottom:22px">03&nbsp;/&nbsp;The&nbsp;Hidden&nbsp;Leak</div>
+      <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,48px);line-height:1.07;letter-spacing:-0.02em;margin:0 0 22px;color:#F9D9CE;max-width:22ch">De-identification isn't the boundary you think it is.</h2>
+      <p data-reveal style="font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:#CDBDB5;margin:0;max-width:68ch">Most "privacy-preserving" healthcare AI stops at de-identifying content before it leaves your network — stripping the eighteen HIPAA identifiers, then shipping the rest to a cloud model. But clinical narrative re-identifies easily: rare diagnoses, unusual drug combinations, visit timing, and free-text notes can fingerprint a patient even with names removed.</p>
     </div>
 
     <!-- flow diagram -->
     <div data-reveal style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;margin-bottom:36px;font-family:'JetBrains Mono',monospace;font-size:13px">
-      <span style="color:#BD984B;border:1px solid rgba(189,152,75,0.35);border-radius:7px;padding:9px 14px">clinical&nbsp;note</span>
-      <span style="color:#8C96A6">→</span>
-      <span style="color:#C9C4B8;border:1px solid rgba(240,235,224,0.14);border-radius:7px;padding:9px 14px">de-identification</span>
-      <span style="color:#E06A5F">→</span>
-      <span style="color:#E06A5F;border:1px solid rgba(224,106,95,0.45);border-radius:7px;padding:9px 14px;background:rgba(224,106,95,0.06)">cloud&nbsp;model&nbsp;·&nbsp;still&nbsp;reconstructable</span>
+      <span style="color:#EEAE56;border:1px solid rgba(238,174,86,0.35);border-radius:7px;padding:9px 14px">clinical&nbsp;note</span>
+      <span style="color:#B3A29B">→</span>
+      <span style="color:#E3CFC6;border:1px solid rgba(249,217,206,0.14);border-radius:7px;padding:9px 14px">de-identification</span>
+      <span style="color:#F2907D">→</span>
+      <span style="color:#F2907D;border:1px solid rgba(242,144,125,0.45);border-radius:7px;padding:9px 14px;background:rgba(242,144,125,0.06)">cloud&nbsp;model&nbsp;·&nbsp;still&nbsp;reconstructable</span>
     </div>
 
-    <p data-reveal style="font-size:16px;line-height:1.65;color:#A3ABB8;margin:0 0 32px;max-width:68ch">An index built from de-identified notes is still a second copy of your patients' clinical reality, sitting outside your walls.</p>
+    <p data-reveal style="font-size:16px;line-height:1.65;color:#CDBDB5;margin:0 0 32px;max-width:68ch">An index built from de-identified notes is still a second copy of your patients' clinical reality, sitting outside your walls.</p>
 
-    <div data-reveal style="position:relative;border-left:2px solid #BD984B;padding:22px 0 22px 26px;max-width:70ch">
-      <span aria-hidden="true" style="position:absolute;top:14px;left:-9px;font-family:'JetBrains Mono',monospace;color:#BD984B;font-size:14px;background:#12223B;padding:2px 0">◆</span>
-      <p style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:500;font-size:clamp(17px,2.2vw,22px);line-height:1.4;color:#F0EBE0;margin:0">Fleet Agentic skips the trade entirely — the model and the index stay on your hardware, so <span style="color:#BD984B">there's no de-identification pipeline to get wrong.</span></p>
+    <div data-reveal style="position:relative;border-left:2px solid #EEAE56;padding:22px 0 22px 26px;max-width:70ch">
+      <span aria-hidden="true" style="position:absolute;top:14px;left:-9px;font-family:'JetBrains Mono',monospace;color:#EEAE56;font-size:14px;background:#332B29;padding:2px 0">◆</span>
+      <p style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:500;font-size:clamp(17px,2.2vw,22px);line-height:1.4;color:#F9D9CE;margin:0">Fleet Agentic skips the trade entirely — the model and the index stay on your hardware, so <span style="color:#EEAE56">there's no de-identification pipeline to get wrong.</span></p>
     </div>
   </section>
 
   <!-- ================= 04 / THE APPROACH ================= -->
   <section id="approach" style="position:relative;z-index:1;scroll-margin-top:90px;max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,88px) 32px">
     <div style="max-width:1080px;margin:0 auto 40px">
-      <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#BD984B;margin-bottom:22px">04&nbsp;/&nbsp;The&nbsp;Approach</div>
-      <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,52px);line-height:1.06;letter-spacing:-0.02em;margin:0 0 24px;color:#F0EBE0;max-width:20ch">Bring the AI to the chart. <span style="color:#BD984B">Not the chart to the cloud.</span></h2>
-      <p data-reveal style="font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:#A3ABB8;margin:0;max-width:62ch">Fully managed AI, deployed inside your data center or colo, running the clinical workflows your staff already wants:</p>
+      <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#9FDDDC;margin-bottom:22px">04&nbsp;/&nbsp;The&nbsp;Approach</div>
+      <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,52px);line-height:1.06;letter-spacing:-0.02em;margin:0 0 24px;color:#F9D9CE;max-width:20ch">Bring the AI to the chart. <span style="color:#EEAE56">Not the chart to the cloud.</span></h2>
+      <p data-reveal style="font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:#CDBDB5;margin:0;max-width:62ch">Fully managed AI, deployed inside your data center or colo, running the clinical workflows your staff already wants:</p>
     </div>
     <div data-reveal style="display:flex;flex-direction:column;gap:16px;max-width:1080px;margin:0 auto 36px">
-      <span style="font-size:16px;color:#F0EBE0;display:flex;gap:12px;line-height:1.5"><span style="color:#BD984B;font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span><span><strong style="color:#F0EBE0">Clinical documentation</strong> — ambient and dictated note generation, structured to your templates</span></span>
-      <span style="font-size:16px;color:#F0EBE0;display:flex;gap:12px;line-height:1.5"><span style="color:#BD984B;font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span><span><strong style="color:#F0EBE0">Patient intake &amp; triage</strong> — structured intake from unstructured patient input, before it ever leaves the building</span></span>
-      <span style="font-size:16px;color:#F0EBE0;display:flex;gap:12px;line-height:1.5"><span style="color:#BD984B;font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span><span><strong style="color:#F0EBE0">Chart &amp; knowledge-base search</strong> — ask questions across your own record system, answered from your own data</span></span>
-      <span style="font-size:16px;color:#F0EBE0;display:flex;gap:12px;line-height:1.5"><span style="color:#BD984B;font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span><span><strong style="color:#F0EBE0">Coding assist</strong> — ICD-10/CPT support grounded in the note that never left your network</span></span>
+      <span style="font-size:16px;color:#F9D9CE;display:flex;gap:12px;line-height:1.5"><span style="color:#EEAE56;font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span><span><strong style="color:#F9D9CE">Clinical documentation</strong> — ambient and dictated note generation, structured to your templates</span></span>
+      <span style="font-size:16px;color:#F9D9CE;display:flex;gap:12px;line-height:1.5"><span style="color:#EEAE56;font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span><span><strong style="color:#F9D9CE">Patient intake &amp; triage</strong> — structured intake from unstructured patient input, before it ever leaves the building</span></span>
+      <span style="font-size:16px;color:#F9D9CE;display:flex;gap:12px;line-height:1.5"><span style="color:#EEAE56;font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span><span><strong style="color:#F9D9CE">Chart &amp; knowledge-base search</strong> — ask questions across your own record system, answered from your own data</span></span>
+      <span style="font-size:16px;color:#F9D9CE;display:flex;gap:12px;line-height:1.5"><span style="color:#EEAE56;font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span><span><strong style="color:#F9D9CE">Coding assist</strong> — ICD-10/CPT support grounded in the note that never left your network</span></span>
     </div>
-    <p data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:500;font-size:clamp(17px,2.2vw,21px);line-height:1.4;color:#F0EBE0;margin:0;max-width:1080px">Same category of workflow as the incumbents. <span style="color:#BD984B">Different side of the boundary.</span></p>
+    <p data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:500;font-size:clamp(17px,2.2vw,21px);line-height:1.4;color:#F9D9CE;margin:0;max-width:1080px">Same category of workflow as the incumbents. <span style="color:#EEAE56">Different side of the boundary.</span></p>
   </section>
 
   <!-- ================= 05 / COMPLIANCE, BY CONSTRUCTION ================= -->
-  <section style="position:relative;z-index:1;border-top:1px solid rgba(240,235,224,0.06);border-bottom:1px solid rgba(240,235,224,0.06);background:linear-gradient(180deg, rgba(189,152,75,0.03), transparent 60%)">
+  <section style="position:relative;z-index:1;border-top:1px solid rgba(249,217,206,0.06);border-bottom:1px solid rgba(249,217,206,0.06);background:linear-gradient(180deg, rgba(238,174,86,0.03), transparent 60%)">
     <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,9vw,110px) 32px">
       <div style="display:flex;flex-wrap:wrap;gap:clamp(36px,5vw,64px);align-items:center">
         <div style="flex:1 1 400px;min-width:min(100%,360px)">
-          <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#BD984B;margin-bottom:22px">05&nbsp;/&nbsp;Compliance,&nbsp;By&nbsp;Construction</div>
-          <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,52px);line-height:1.06;letter-spacing:-0.02em;margin:0 0 22px;color:#F0EBE0">HIPAA out of the box — <span style="color:#BD984B">because there's no box for PHI to leave.</span></h2>
-          <p data-reveal style="font-size:clamp(16px,2.1vw,20px);line-height:1.6;color:#A3ABB8;margin:0 0 22px;max-width:54ch">Every Fleet Agentic healthcare deployment inherits Lighthouse, the platform's hardened base — zero-trust identity, workload isolation, signed supply chain, continuous policy enforcement — and Sentinel, which turns "we're compliant" into an exportable, immutable audit log.</p>
-          <p data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:500;font-size:clamp(17px,2.2vw,21px);line-height:1.4;color:#F0EBE0;margin:0">You're not buying a scribe with a compliance page. <span style="color:#BD984B">You're buying compliance as the platform underneath the scribe.</span></p>
+          <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#9FDDDC;margin-bottom:22px">05&nbsp;/&nbsp;Compliance,&nbsp;By&nbsp;Construction</div>
+          <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,52px);line-height:1.06;letter-spacing:-0.02em;margin:0 0 22px;color:#F9D9CE">HIPAA out of the box — <span style="color:#EEAE56">because there's no box for PHI to leave.</span></h2>
+          <p data-reveal style="font-size:clamp(16px,2.1vw,20px);line-height:1.6;color:#CDBDB5;margin:0 0 22px;max-width:54ch">Every Fleet Agentic healthcare deployment inherits Lighthouse, the platform's hardened base — zero-trust identity, workload isolation, signed supply chain, continuous policy enforcement — and Sentinel, which turns "we're compliant" into an exportable, immutable audit log.</p>
+          <p data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:500;font-size:clamp(17px,2.2vw,21px);line-height:1.4;color:#F9D9CE;margin:0">You're not buying a scribe with a compliance page. <span style="color:#EEAE56">You're buying compliance as the platform underneath the scribe.</span></p>
         </div>
         <div data-reveal style="flex:1 1 360px;min-width:min(100%,320px)">
-          <div style="border:1px solid rgba(189,152,75,0.28);border-radius:14px;background:rgba(189,152,75,0.03);padding:22px;font-family:'JetBrains Mono',monospace;font-size:12.5px;line-height:2">
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(240,235,224,0.08)">
-              <span style="color:#BD984B;letter-spacing:0.16em">SENTINEL&nbsp;·&nbsp;AUDIT&nbsp;LOG</span>
-              <span style="color:#8C96A6">immutable</span>
+          <div style="border:1px solid rgba(238,174,86,0.28);border-radius:14px;background:rgba(238,174,86,0.03);padding:22px;font-family:'JetBrains Mono',monospace;font-size:12.5px;line-height:2">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(249,217,206,0.08)">
+              <span style="color:#EEAE56;letter-spacing:0.16em">SENTINEL&nbsp;·&nbsp;AUDIT&nbsp;LOG</span>
+              <span style="color:#B3A29B">immutable</span>
             </div>
-            <div style="color:#A3ABB8"><span style="color:#5FBF8F">✔</span> policy_check&nbsp;&nbsp;<span style="color:#8C96A6">passed</span></div>
-            <div style="color:#A3ABB8"><span style="color:#5FBF8F">✔</span> access_scope&nbsp;&nbsp;<span style="color:#8C96A6">verified</span></div>
-            <div style="color:#A3ABB8"><span style="color:#5FBF8F">✔</span> artifact_sig&nbsp;&nbsp;<span style="color:#8C96A6">valid</span></div>
-            <div style="color:#A3ABB8"><span style="color:#5FBF8F">✔</span> data_boundary&nbsp;&nbsp;<span style="color:#8C96A6">enforced</span></div>
-            <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(240,235,224,0.08);color:#BD984B">▸ export&nbsp;evidence&nbsp;<span style="animation:pulseDot 1.4s ease-in-out infinite">▮</span></div>
+            <div style="color:#CDBDB5"><span style="color:#9FD79A">✔</span> policy_check&nbsp;&nbsp;<span style="color:#B3A29B">passed</span></div>
+            <div style="color:#CDBDB5"><span style="color:#9FD79A">✔</span> access_scope&nbsp;&nbsp;<span style="color:#B3A29B">verified</span></div>
+            <div style="color:#CDBDB5"><span style="color:#9FD79A">✔</span> artifact_sig&nbsp;&nbsp;<span style="color:#B3A29B">valid</span></div>
+            <div style="color:#CDBDB5"><span style="color:#9FD79A">✔</span> data_boundary&nbsp;&nbsp;<span style="color:#B3A29B">enforced</span></div>
+            <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(249,217,206,0.08);color:#EEAE56">▸ export&nbsp;evidence&nbsp;<span style="animation:pulseDot 1.4s ease-in-out infinite">▮</span></div>
           </div>
         </div>
       </div>
@@ -331,31 +331,31 @@
   </section>
 
   <!-- divider -->
-  <div aria-hidden="true" style="position:relative;z-index:1;overflow:hidden;height:26px;opacity:0.4"><div style="display:flex;width:200%;animation:waveDrift 24s linear infinite;font-family:'JetBrains Mono',monospace;font-size:15px;line-height:26px;color:#BD984B;white-space:nowrap"><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span></div></div>
+  <div aria-hidden="true" style="position:relative;z-index:1;overflow:hidden;height:26px;opacity:0.4"><div style="display:flex;width:200%;animation:waveDrift 24s linear infinite;font-family:'JetBrains Mono',monospace;font-size:15px;line-height:26px;color:#EEAE56;white-space:nowrap"><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span><span>·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~</span></div></div>
 
   <!-- ================= FAQ ================= -->
   <section style="position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:clamp(48px,7vw,80px) 32px">
-    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#BD984B;margin-bottom:22px">FAQ</div>
-    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,44px);line-height:1.08;letter-spacing:-0.02em;margin:0 0 32px;color:#F0EBE0;max-width:20ch">Straight answers.</h2>
-    <div data-reveal style="border:1px solid rgba(240,235,224,0.10);border-radius:13px;padding:22px 24px;background:rgba(240,235,224,0.015);margin-bottom:12px">
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#F0EBE0;margin:0 0 10px"><span style="color:#BD984B">Q ▸</span> Is Fleet Agentic HIPAA-compliant without a BAA?</h3>
-      <p style="font-size:14.5px;line-height:1.65;color:#A3ABB8;margin:0">A BAA exists to govern PHI you hand to a business associate. Fleet Agentic's architecture means no model vendor ever receives PHI — it is processed on hardware inside your network — so there is no third-party disclosure for a model-vendor BAA to paper over.</p>
+    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#9FDDDC;margin-bottom:22px">FAQ</div>
+    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,44px);line-height:1.08;letter-spacing:-0.02em;margin:0 0 32px;color:#F9D9CE;max-width:20ch">Straight answers.</h2>
+    <div data-reveal style="border:1px solid rgba(249,217,206,0.10);border-radius:13px;padding:22px 24px;background:rgba(249,217,206,0.015);margin-bottom:12px">
+      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#F9D9CE;margin:0 0 10px"><span style="color:#EEAE56">Q ▸</span> Is Fleet Agentic HIPAA-compliant without a BAA?</h3>
+      <p style="font-size:14.5px;line-height:1.65;color:#CDBDB5;margin:0">A BAA exists to govern PHI you hand to a business associate. Fleet Agentic's architecture means no model vendor ever receives PHI — it is processed on hardware inside your network — so there is no third-party disclosure for a model-vendor BAA to paper over.</p>
     </div>
-    <div data-reveal style="border:1px solid rgba(240,235,224,0.10);border-radius:13px;padding:22px 24px;background:rgba(240,235,224,0.015);margin-bottom:12px">
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#F0EBE0;margin:0 0 10px"><span style="color:#BD984B">Q ▸</span> Isn't de-identification enough to use cloud AI?</h3>
-      <p style="font-size:14.5px;line-height:1.65;color:#A3ABB8;margin:0">De-identification is fragile: quasi-identifiers, rare conditions, and free-text context re-identify patients more often than teams expect, and the de-identification step itself usually happens in someone's cloud. Keeping PHI on-prem removes the gamble.</p>
+    <div data-reveal style="border:1px solid rgba(249,217,206,0.10);border-radius:13px;padding:22px 24px;background:rgba(249,217,206,0.015);margin-bottom:12px">
+      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#F9D9CE;margin:0 0 10px"><span style="color:#EEAE56">Q ▸</span> Isn't de-identification enough to use cloud AI?</h3>
+      <p style="font-size:14.5px;line-height:1.65;color:#CDBDB5;margin:0">De-identification is fragile: quasi-identifiers, rare conditions, and free-text context re-identify patients more often than teams expect, and the de-identification step itself usually happens in someone's cloud. Keeping PHI on-prem removes the gamble.</p>
     </div>
-    <div data-reveal style="border:1px solid rgba(240,235,224,0.10);border-radius:13px;padding:22px 24px;background:rgba(240,235,224,0.015);margin-bottom:12px">
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#F0EBE0;margin:0 0 10px"><span style="color:#BD984B">Q ▸</span> Can it do clinical documentation?</h3>
-      <p style="font-size:14.5px;line-height:1.65;color:#A3ABB8;margin:0">Yes — visit documentation, summarization, and chart search run on Fleet Agentic. Clinicians get the workflow they've seen in cloud scribes, without PHI transmission.</p>
+    <div data-reveal style="border:1px solid rgba(249,217,206,0.10);border-radius:13px;padding:22px 24px;background:rgba(249,217,206,0.015);margin-bottom:12px">
+      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#F9D9CE;margin:0 0 10px"><span style="color:#EEAE56">Q ▸</span> Can it do clinical documentation?</h3>
+      <p style="font-size:14.5px;line-height:1.65;color:#CDBDB5;margin:0">Yes — visit documentation, summarization, and chart search run on Fleet Agentic. Clinicians get the workflow they've seen in cloud scribes, without PHI transmission.</p>
     </div>
-    <div data-reveal style="border:1px solid rgba(240,235,224,0.10);border-radius:13px;padding:22px 24px;background:rgba(240,235,224,0.015);margin-bottom:12px">
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#F0EBE0;margin:0 0 10px"><span style="color:#BD984B">Q ▸</span> How does IT deploy and secure it?</h3>
-      <p style="font-size:14.5px;line-height:1.65;color:#A3ABB8;margin:0">Fleet Agentic installs managed AI inside your network segment of choice. Identity integrates with your directory; access, isolation, and audit logging are enforced on-box and exportable for your compliance team.</p>
+    <div data-reveal style="border:1px solid rgba(249,217,206,0.10);border-radius:13px;padding:22px 24px;background:rgba(249,217,206,0.015);margin-bottom:12px">
+      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#F9D9CE;margin:0 0 10px"><span style="color:#EEAE56">Q ▸</span> How does IT deploy and secure it?</h3>
+      <p style="font-size:14.5px;line-height:1.65;color:#CDBDB5;margin:0">Fleet Agentic installs managed AI inside your network segment of choice. Identity integrates with your directory; access, isolation, and audit logging are enforced on-box and exportable for your compliance team.</p>
     </div>
-    <div data-reveal style="border:1px solid rgba(240,235,224,0.10);border-radius:13px;padding:22px 24px;background:rgba(240,235,224,0.015)">
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#F0EBE0;margin:0 0 10px"><span style="color:#BD984B">Q ▸</span> What does it cost?</h3>
-      <p style="font-size:14.5px;line-height:1.65;color:#A3ABB8;margin:0">Two options. Leased: one flat $5,000/month per appliance with as many clinician seats as the hardware supports, including hardware. On your own hardware: $500/month including 1 seat, then $25 per additional seat. No per-note metering on either.</p>
+    <div data-reveal style="border:1px solid rgba(249,217,206,0.10);border-radius:13px;padding:22px 24px;background:rgba(249,217,206,0.015)">
+      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#F9D9CE;margin:0 0 10px"><span style="color:#EEAE56">Q ▸</span> What does it cost?</h3>
+      <p style="font-size:14.5px;line-height:1.65;color:#CDBDB5;margin:0">Two options. Leased: one flat $5,000/month per appliance with as many clinician seats as the hardware supports, including hardware. On your own hardware: $500/month including 1 seat, then $25 per additional seat. No per-note metering on either.</p>
     </div>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -371,61 +371,61 @@
   <!-- ================= CLOSING CTA ================= -->
   <section id="book" style="position:relative;z-index:1;scroll-margin-top:80px;max-width:900px;margin:0 auto;padding:clamp(64px,9vw,110px) 32px">
     <div style="text-align:center;margin-bottom:44px">
-      <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5.4vw,50px);line-height:1.05;letter-spacing:-0.025em;margin:0 0 20px;color:#F0EBE0">Stop sending PHI somewhere else to get an answer from it.</h2>
-      <p data-reveal style="font-size:clamp(17px,2.4vw,21px);line-height:1.5;color:#A3ABB8;margin:0">See Fleet Agentic running against a sample of your own clinical documentation — 30 minutes, on your data, not a sales deck.</p>
+      <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5.4vw,50px);line-height:1.05;letter-spacing:-0.025em;margin:0 0 20px;color:#F9D9CE">Stop sending PHI somewhere else to get an answer from it.</h2>
+      <p data-reveal style="font-size:clamp(17px,2.4vw,21px);line-height:1.5;color:#CDBDB5;margin:0">See Fleet Agentic running against a sample of your own clinical documentation — 30 minutes, on your data, not a sales deck.</p>
     </div>
-    <div data-reveal style="border:1px solid rgba(189,152,75,0.28);border-radius:16px;padding:34px 30px;background:linear-gradient(160deg, rgba(189,152,75,0.06), transparent);display:flex;flex-direction:column">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#BD984B;margin-bottom:20px">▸ BOOK A DEMO</div>
-      <div id="cal-inline-healthcare" style="height:560px;flex:none;overflow:auto;border:1px solid rgba(189,152,75,0.3);border-radius:10px;background:#12223B;margin-bottom:22px"></div>
+    <div data-reveal style="border:1px solid rgba(238,174,86,0.28);border-radius:16px;padding:34px 30px;background:linear-gradient(160deg, rgba(238,174,86,0.06), transparent);display:flex;flex-direction:column">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#EEAE56;margin-bottom:20px">▸ BOOK A DEMO</div>
+      <div id="cal-inline-healthcare" style="height:560px;flex:none;overflow:auto;border:1px solid rgba(238,174,86,0.3);border-radius:10px;background:#332B29;margin-bottom:22px"></div>
       <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center">
-        <a href="https://cal.com/kdplyd/30min" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;letter-spacing:0.05em;color:#12223B;background:#BD984B;padding:15px 26px;border-radius:9px">Book a Demo <span>→</span></a>
-        <a href="../../#contact" class="btn-ghost" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;letter-spacing:0.05em;color:#F0EBE0;background:transparent;border:1px solid rgba(240,235,224,0.2);padding:15px 26px;border-radius:9px">Talk to Sales</a>
+        <a href="https://cal.com/kdplyd/30min" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;letter-spacing:0.05em;color:#332B29;background:#EEAE56;padding:15px 26px;border-radius:9px">Book a Demo <span>→</span></a>
+        <a href="../../#contact" class="btn-ghost" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;letter-spacing:0.05em;color:#F9D9CE;background:transparent;border:1px solid rgba(249,217,206,0.2);padding:15px 26px;border-radius:9px">Talk to Sales</a>
       </div>
     </div>
   </section>
 
   <!-- ================= FOOTER ================= -->
-  <footer style="position:relative;z-index:1;border-top:1px solid rgba(240,235,224,0.08);background:#0C1829">
+  <footer style="position:relative;z-index:1;border-top:1px solid rgba(249,217,206,0.08);background:#2A2321">
     <!-- waterline top edge -->
-    <div aria-hidden="true" style="overflow:hidden;height:22px;opacity:0.35"><div style="display:flex;width:200%;animation:waveDrift 30s linear infinite;font-family:'JetBrains Mono',monospace;font-size:14px;line-height:22px;color:#BD984B;white-space:nowrap"><span>≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿</span><span>≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿</span></div></div>
+    <div aria-hidden="true" style="overflow:hidden;height:22px;opacity:0.35"><div style="display:flex;width:200%;animation:waveDrift 30s linear infinite;font-family:'JetBrains Mono',monospace;font-size:14px;line-height:22px;color:#EEAE56;white-space:nowrap"><span>≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿</span><span>≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿</span></div></div>
     <div style="max-width:1280px;margin:0 auto;padding:52px 32px 40px">
       <div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;margin-bottom:40px">
         <div style="max-width:340px">
-          <span style="display:flex;align-items:center;gap:10px;margin-bottom:16px"><img src="../../assets/fleet-agentic-mark.svg" alt="" width="33" height="24" style="height:24px;width:33px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:12px;line-height:1;letter-spacing:0.04em;color:#F0EBE0;text-transform:uppercase">Fleet<br>Agentic</span></span>
-          <p style="font-size:14.5px;line-height:1.6;color:#A3ABB8;margin:0">HIPAA-compliant AI for health systems. The AI that keeps PHI inside your perimeter.</p>
+          <span style="display:flex;align-items:center;gap:10px;margin-bottom:16px"><img src="../../assets/fleet-agentic-mark.svg" alt="" width="33" height="24" style="height:24px;width:33px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:12px;line-height:1;letter-spacing:0.04em;color:#F9D9CE;text-transform:uppercase">Fleet<br>Agentic</span></span>
+          <p style="font-size:14.5px;line-height:1.6;color:#CDBDB5;margin:0">HIPAA-compliant AI for health systems. The AI that keeps PHI inside your perimeter.</p>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:48px">
           <div style="display:flex;flex-direction:column;gap:12px">
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#8C96A6">PLATFORM</span>
-            <a href="../../#platform" class="foot-link" style="font-size:14px;color:#C9C4B8">Lighthouse (Security &amp; Compliance)</a>
-            <a href="../../#platform" class="foot-link" style="font-size:14px;color:#C9C4B8">Sentinel (Audit Log)</a>
-            <a href="../../#pricing" class="foot-link" style="font-size:14px;color:#C9C4B8">Pricing</a>
-            <a href="../defense/" class="foot-link" style="font-size:14px;color:#C9C4B8">Defense AI</a>
-            <a href="../../#verticals" class="foot-link" style="font-size:14px;color:#C9C4B8">Other verticals</a>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#B3A29B">PLATFORM</span>
+            <a href="../../#platform" class="foot-link" style="font-size:14px;color:#E3CFC6">Lighthouse (Security &amp; Compliance)</a>
+            <a href="../../#platform" class="foot-link" style="font-size:14px;color:#E3CFC6">Sentinel (Audit Log)</a>
+            <a href="../../#pricing" class="foot-link" style="font-size:14px;color:#E3CFC6">Pricing</a>
+            <a href="../defense/" class="foot-link" style="font-size:14px;color:#E3CFC6">Defense AI</a>
+            <a href="../../#verticals" class="foot-link" style="font-size:14px;color:#E3CFC6">Other verticals</a>
           </div>
           <div style="display:flex;flex-direction:column;gap:12px">
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#8C96A6">COMPANY</span>
-            <a href="../../about/" class="foot-link" style="font-size:14px;color:#C9C4B8">About</a>
-            <a href="../../carrier/" class="foot-link" style="font-size:14px;color:#C9C4B8">Carrier Partner Program</a>
-            <a href="#book" class="foot-link" style="font-size:14px;color:#C9C4B8">Book a Demo</a>
-            <a href="../../#contact" class="foot-link" style="font-size:14px;color:#C9C4B8">Contact Sales</a>
-            <a href="mailto:info@fleetagentic.ai" class="foot-link" style="font-size:14px;color:#C9C4B8">info@fleetagentic.ai</a>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#B3A29B">COMPANY</span>
+            <a href="../../about/" class="foot-link" style="font-size:14px;color:#E3CFC6">About</a>
+            <a href="../../carrier/" class="foot-link" style="font-size:14px;color:#E3CFC6">Carrier Partner Program</a>
+            <a href="#book" class="foot-link" style="font-size:14px;color:#E3CFC6">Book a Demo</a>
+            <a href="../../#contact" class="foot-link" style="font-size:14px;color:#E3CFC6">Contact Sales</a>
+            <a href="mailto:info@fleetagentic.ai" class="foot-link" style="font-size:14px;color:#E3CFC6">info@fleetagentic.ai</a>
           </div>
         </div>
       </div>
       <!-- trust badge strip -->
-      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;padding:20px 0;border-top:1px solid rgba(240,235,224,0.07);border-bottom:1px solid rgba(240,235,224,0.07);margin-bottom:24px">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#8C96A6">BUILT&nbsp;TO&nbsp;THE&nbsp;STANDARD&nbsp;OF</span>
-        <a href="../../#posture" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#C9C4B8;border:1px solid rgba(240,235,224,0.12);border-radius:6px;padding:6px 12px">HIPAA</a>
-        <a href="../../#posture" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#C9C4B8;border:1px solid rgba(240,235,224,0.12);border-radius:6px;padding:6px 12px">NIST 800-171</a>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;padding:20px 0;border-top:1px solid rgba(249,217,206,0.07);border-bottom:1px solid rgba(249,217,206,0.07);margin-bottom:24px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#B3A29B">BUILT&nbsp;TO&nbsp;THE&nbsp;STANDARD&nbsp;OF</span>
+        <a href="../../#posture" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#E3CFC6;border:1px solid rgba(249,217,206,0.12);border-radius:6px;padding:6px 12px">HIPAA</a>
+        <a href="../../#posture" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#E3CFC6;border:1px solid rgba(249,217,206,0.12);border-radius:6px;padding:6px 12px">NIST 800-171</a>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8C96A6">© 2026 Fleet Agentic</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B3A29B">© 2026 Fleet Agentic</span>
         <div style="display:flex;gap:24px">
-          <a href="../../#security" class="foot-link-sub" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8C96A6">Security</a>
-          <a href="../../terms/" class="foot-link-sub" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8C96A6">Terms</a>
-          <a href="../../privacy/" class="foot-link-sub" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8C96A6">Privacy</a>
-          <a href="mailto:info@fleetagentic.ai" class="foot-link-sub" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8C96A6">Contact</a>
+          <a href="../../#security" class="foot-link-sub" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B3A29B">Security</a>
+          <a href="../../terms/" class="foot-link-sub" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B3A29B">Terms</a>
+          <a href="../../privacy/" class="foot-link-sub" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B3A29B">Privacy</a>
+          <a href="mailto:info@fleetagentic.ai" class="foot-link-sub" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B3A29B">Contact</a>
         </div>
       </div>
     </div>
@@ -468,14 +468,14 @@
           config: { layout: "month_view" },
           calLink: "kdplyd/30min",
         });
-        Cal.ns["30min"]("ui", { hideEventTypeDetails: false, layout: "month_view", theme: "dark", cssVarsPerTheme: { dark: { "cal-brand": "#BD984B" } } });
+        Cal.ns["30min"]("ui", { hideEventTypeDetails: false, layout: "month_view", theme: "dark", cssVarsPerTheme: { dark: { "cal-brand": "#EEAE56" } } });
       }
 
       // header scrolled state
       var header = q('#siteHeader');
       var onScroll = function () {
         if (!header) return;
-        header.style.background = window.scrollY > 24 ? 'rgba(18,34,59,0.9)' : 'rgba(18,34,59,0.55)';
+        header.style.background = window.scrollY > 24 ? 'rgba(51,43,41,0.9)' : 'rgba(51,43,41,0.55)';
       };
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
