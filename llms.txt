@@ -15,7 +15,7 @@
 - [Healthcare AI](https://fleetagentic.ai/solutions/healthcare/): HIPAA-compliant AI for health systems — clinical documentation, intake, and chart search without transmitting PHI.
 - [Defense AI](https://fleetagentic.ai/solutions/defense/): CMMC 2.0-ready on-prem AI for defense contractors — keeps CUI and its derived index inside the assessed boundary.
 - [Carrier Partner Program](https://fleetagentic.ai/carrier/): For AI software vendors — Fleet Agentic deploys and manages an appliance at the vendor's customer site so the vendor's product runs inside the customer's network boundary, without the vendor building on-prem infrastructure.
-- [About](https://fleetagentic.ai/about/): Company background and founder.
+- [About](https://fleetagentic.ai/about/): Company background and founders.
 - [The Index Is the Leak](https://fleetagentic.ai/learn/the-index-is-the-leak/): Explainer on why shipping a search index to the cloud is a privacy leak even when the source file stays local.
 - [Case Studies](https://fleetagentic.ai/case-studies/): Deployment write-ups from regulated environments.
 - [Defense/CMMC 2.0 Case Study](https://fleetagentic.ai/case-studies/defense-cmmc/): AI infrastructure for a defense contractor preparing for CMMC 2.0 compliance, deployed without controlled documents or their derived index leaving the perimeter.
