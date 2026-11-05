@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#081E3A">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -84,620 +85,817 @@
 <script src="assets/site-config.js" defer></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Hanken+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
-  html { scroll-behavior: smooth; }
-  body { margin: 0; background: #FFF8F4; color: #332B29; font-family: 'Hanken Grotesk', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-  ::selection { background: #EEAE56; color: #332B29; }
-  a { text-decoration: none; }
-  table { border-collapse: collapse; }
-  @keyframes waveDrift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  @keyframes waveDriftRev { from { transform: translateX(-50%); } to { transform: translateX(0); } }
-  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
-  @keyframes floaty2 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-11px); } }
-  @keyframes pulseDot { 0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(238,174,86,0.5); } 50% { opacity: .7; box-shadow: 0 0 0 8px rgba(238,174,86,0); } }
-  @keyframes glowPulse { 0%,100% { opacity: .35; } 50% { opacity: .7; } }
-  @keyframes gridPan { from { background-position: 0 0; } to { background-position: 44px 44px; } }
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+/* Layout: a navy chart-room page. Dark bands carry the story; two sailcloth bands carry the detail.
+   A red "data security line" is the recurring device. Single committed brand look (dark-first). */
+:root {
+  --navy: #0B2545;
+  --navy-deep: #081E3A;
+  --navy-card: #12305A;
+  --navy-line: #2C5080;
+  --sail: #F3EEE3;
+  --sail-2: #E8E1D2;
+  --ink: #0B2545;
+  --ink-soft: #3E5573;
+  --red: #C8102E;
+  --red-soft: #F0687C;
+  --brass: #C9A24B;
+  --brass-ink: #7A5C17;
+  --chart: #8DA9C4;
+  --mist: #A9BDD3;
+  --display: "Barlow Semi Condensed", "Arial Narrow", Arial, sans-serif;
+  --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Courier New", monospace;
+  --wrap: 1180px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+body { background: var(--navy); color: var(--sail); font-family: var(--body); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--navy-deep); }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.05; text-wrap: balance; margin: 0; }
+h2 { font-size: clamp(2rem, 4.4vw, 3.4rem); }
+h3 { font-size: 1.45rem; font-weight: 600; line-height: 1.15; }
+p { margin: 0; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.band { padding-block: clamp(64px, 9vw, 120px); }
+.band.deep { background: var(--navy-deep); }
+.band.sail { background: var(--sail); color: var(--ink); }
+.eyebrow { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass); }
+.sail .eyebrow { color: var(--brass-ink); }
+.head { display: grid; gap: 16px; max-width: 760px; margin-bottom: clamp(36px, 5vw, 56px); }
+.lede { font-size: 1.15rem; color: var(--mist); max-width: 62ch; }
+.sail .lede { color: var(--ink-soft); }
 
-  .navlink { transition: color .2s; }
-  .navlink:hover { color: #8F5406; }
-  .btn-primary { transition: transform .15s ease, box-shadow .25s ease; }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(238,174,86,0.4); }
-  .btn-ghost { transition: border-color .2s ease, color .2s ease; }
-  .btn-ghost:hover { border-color: #EEAE56; color: #8F5406; }
-  .card-hover { transition: border-color .25s ease, transform .25s ease; }
-  .card-hover:hover { border-color: rgba(238,174,86,0.4); transform: translateY(-4px); }
-  .foot-link { transition: color .2s; }
-  .foot-link:hover { color: #EEAE56; }
-  .foot-link-sub:hover { color: #E3CFC6; }
-  [data-reveal] { transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
-  .cell-hover { transition: background .25s ease; }
-  .cell-hover:hover { background: #FFF8F4; }
-  .link-arrow { transition: gap .2s ease; }
-  .link-arrow:hover { gap: 11px; }
-  .field { transition: border-color .2s; }
-  .field:focus { border-color: #EEAE56; outline: none; }
-  .btn-outline { transition: background .2s ease, color .2s ease; }
-  .btn-outline:hover { background: #EEAE56; color: #332B29; }
-  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .cmp-table th, .cmp-table td { padding: 16px 20px; text-align: left; font-size: 14.5px; line-height: 1.5; vertical-align: top; }
-  .cmp-table th { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6B5C56; border-bottom: 1px solid rgba(51,43,41,0.18); }
-  .cmp-table td { border-bottom: 1px solid rgba(51,43,41,0.06); color: #4A403D; }
-  .cmp-table tr:last-child td { border-bottom: none; }
-  .cmp-row-label { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #5E524E; white-space: nowrap; }
-  .cmp-cloud { color: #B0381F; }
-  .cmp-fleet { color: #332B29; background: rgba(238,174,86,0.045); }
-  @media (max-width: 1100px) {
-    #desknav { display: none !important; }
-    #navToggle { display: flex !important; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation: none !important; transition: none !important; }
-    html { scroll-behavior: auto; }
-  }
+/* Nav */
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--navy-deep) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(141,169,196,0.16); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 14px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand svg { width: 40px; height: 28px; flex: none; }
+.wordmark { font-family: var(--display); font-weight: 700; letter-spacing: 0.12em; font-size: 1.15rem; line-height: 0.9; }
+.nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; font-size: 0.95rem; }
+.nav ul a { text-decoration: none; color: var(--mist); }
+.nav ul a:hover { color: var(--sail); }
+.btn { display: inline-flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 600; font-size: 1.05rem; letter-spacing: 0.04em; text-decoration: none; padding: 12px 22px; border-radius: 4px; background: var(--brass); color: var(--navy); border: 2px solid var(--brass); transition: background .2s, color .2s; }
+.btn:hover { background: transparent; color: var(--brass); }
+.btn.ghost { background: transparent; color: var(--sail); border-color: rgba(243,238,227,0.4); }
+.btn.ghost:hover { border-color: var(--sail); }
+@media (max-width: 860px) { .nav ul { display: none; } }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; padding-block: clamp(72px, 11vw, 140px) clamp(72px, 9vw, 120px); }
+.hero .grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); gap: 48px; align-items: center; }
+.hero h1 { font-size: clamp(2.9rem, 7.4vw, 6rem); letter-spacing: -0.005em; }
+.hero h1 span { color: var(--brass); }
+.hero .lede { margin-top: 28px; font-size: clamp(1.1rem, 1.8vw, 1.35rem); color: #C9D6E3; }
+.hero .ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
+.hero .motto { margin-top: 56px; }
+.formation { width: 100%; max-width: 440px; justify-self: end; }
+.formation .ship { animation: sail 6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.formation .ship:nth-of-type(2), .formation .ship:nth-of-type(3) { animation-delay: .4s; }
+.formation .ship:nth-of-type(4), .formation .ship:nth-of-type(5) { animation-delay: .8s; }
+@keyframes sail { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-1.5px); } }
+@media (max-width: 760px) { .hero .grid { grid-template-columns: 1fr; } .formation { justify-self: start; max-width: 220px; order: -1; } }
+
+/* Problem */
+.problem { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.problem article { border-left: 3px solid var(--red); padding-left: 22px; display: grid; gap: 10px; align-content: start; }
+.problem p { color: var(--mist); }
+@media (max-width: 760px) { .problem { grid-template-columns: 1fr; } }
+
+/* Line diagram */
+.diagram { background: var(--navy-card); border: 1px solid var(--navy-line); border-radius: 10px; padding: clamp(20px, 4vw, 44px); display: grid; gap: 0; }
+.zone-label { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--chart); }
+.outside { display: grid; gap: 14px; padding-bottom: 28px; }
+.lane { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.9fr) minmax(0, 1.1fr); gap: 14px; }
+.chips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.chip { position: relative; text-align: center; font-size: 0.92rem; padding: 8px 10px; border-radius: 999px; background: #163A66; border: 1px solid var(--navy-line); }
+.chip::after { content: ""; position: absolute; left: calc(50% - 1px); top: 100%; width: 2px; height: 72px; background: var(--brass); }
+.chip::before { content: ""; position: absolute; left: calc(50% - 5px); top: calc(100% + 1px); border: 5px solid transparent; border-bottom: 7px solid var(--brass); border-top: 0; }
+.line { position: relative; height: 4px; background: var(--red); margin: 6px 0 34px; }
+.line span { position: absolute; right: 0; bottom: 10px; font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.18em; color: var(--red-soft); text-transform: uppercase; }
+.line i { position: absolute; top: -28px; width: 2px; height: 60px; background: var(--brass); }
+.line i::after { content: ""; position: absolute; left: -4px; top: -2px; border: 5px solid transparent; border-bottom: 7px solid var(--brass); border-top: 0; }
+.inside { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.9fr) minmax(0, 1.1fr); gap: 14px; }
+.node { border-radius: 8px; padding: 18px 20px; background: var(--navy-deep); border: 1px solid var(--navy-line); display: grid; gap: 4px; align-content: center; }
+.node small { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass); }
+.node p { color: var(--mist); font-size: 0.95rem; }
+.node.home { background: linear-gradient(135deg, #1F4E99, var(--navy-card)); border: 2px solid var(--brass); }
+.agents { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.agents .node { border: 2px solid var(--brass); text-align: center; }
+.below { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1.1fr); gap: 14px; margin-top: 14px; }
+.below .node { background: transparent; border-style: dashed; }
+@media (max-width: 760px) { .inside, .below, .lane { grid-template-columns: 1fr; } .lane > span { display: none; } .chip::before, .chip::after { display: none; } }
+
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 24px; }
+.pair article { background: var(--navy-card); border: 1px solid var(--navy-line); border-radius: 10px; padding: 28px; display: grid; gap: 10px; align-content: start; }
+.pair p { color: var(--mist); }
+@media (max-width: 760px) { .pair { grid-template-columns: 1fr; } }
+
+/* Responsibilities (sail band) */
+.config { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 2px solid var(--ink); }
+.config article { padding: 24px 20px 8px 0; display: grid; gap: 10px; align-content: start; }
+.config article + article { padding-left: 20px; border-left: 1px solid rgba(11,37,69,0.18); }
+.config .tag { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass-ink); }
+.config p { color: var(--ink-soft); font-size: 0.97rem; }
+.rule { margin-top: 44px; font-family: var(--display); font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 700; }
+.rule span { color: var(--red); }
+@media (max-width: 980px) { .config { grid-template-columns: repeat(2, minmax(0, 1fr)); } .config article, .config article + article { padding: 22px 0; padding-left: 0; border-left: 0; border-bottom: 1px solid rgba(11,37,69,0.18); } .config article:nth-child(even) { padding-left: 20px; border-left: 1px solid rgba(11,37,69,0.18); } }
+@media (max-width: 560px) { .config { grid-template-columns: 1fr; } .config article:nth-child(even) { padding-left: 0; border-left: 0; } }
+
+/* CAO */
+.cao { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 48px; align-items: start; }
+.role { border: 2px solid var(--brass); border-radius: 10px; padding: 36px; display: grid; gap: 14px; background: linear-gradient(160deg, #163A66, var(--navy-deep)); }
+.role h3 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; }
+.role p { color: #C9D6E3; }
+.role .foot { font-family: var(--display); font-weight: 600; color: var(--brass); font-size: 1.25rem; margin-top: 8px; }
+.list { display: grid; }
+.list div { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 14px; padding: 18px 0; border-bottom: 1px solid rgba(141,169,196,0.18); }
+.list div:first-child { padding-top: 0; }
+.list svg { width: 22px; height: 22px; margin-top: 3px; }
+.list p { color: var(--mist); font-size: 0.97rem; }
+.list h3 { font-size: 1.25rem; margin-bottom: 4px; }
+@media (max-width: 860px) { .cao { grid-template-columns: 1fr; } }
+
+/* Security */
+.regs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.regs span { font-family: var(--mono); font-size: 0.82rem; padding: 6px 12px; border: 1px solid var(--chart); border-radius: 3px; color: var(--sail); }
+.sec { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; margin-top: 40px; }
+.shot { background: var(--sail); border-radius: 10px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; color: var(--ink); }
+.shot .cap { padding: 22px 24px; display: grid; gap: 6px; }
+.shot .cap p { color: var(--ink-soft); font-size: 0.95rem; }
+.shot figure { margin: 0; background: #fff; border-top: 1px solid var(--sail-2); display: grid; place-items: center; padding: 18px; }
+.shot img { display: block; width: 100%; height: auto; max-height: 420px; object-fit: contain; }
+.shot.wide { grid-column: 1 / -1; grid-template-columns: minmax(0, 0.8fr) minmax(0, 2fr); grid-template-rows: auto; }
+.shot.wide figure { border-top: 0; border-left: 1px solid var(--sail-2); }
+@media (max-width: 760px) { .sec { grid-template-columns: 1fr; } .shot.wide { grid-template-columns: 1fr; } .shot.wide figure { border-left: 0; border-top: 1px solid var(--sail-2); } }
+
+/* Tokens (sail band) */
+.tokens { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 48px; align-items: center; }
+.levers { display: grid; gap: 26px; }
+.levers article { display: grid; gap: 6px; padding-left: 22px; border-left: 3px solid var(--brass); }
+.levers p { color: var(--ink-soft); }
+.chart { background: #fff; border: 1px solid var(--sail-2); border-radius: 10px; padding: 20px; box-shadow: 0 18px 40px -24px rgba(11,37,69,0.35); }
+.chart img { display: block; width: 100%; height: auto; }
+.chart figcaption { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); margin-top: 12px; }
+@media (max-width: 860px) { .tokens { grid-template-columns: 1fr; } }
+
+/* Start */
+.friction { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.friction article { border-top: 3px solid var(--brass); background: var(--navy-card); border-radius: 0 0 8px 8px; padding: 22px; display: grid; gap: 6px; align-content: start; }
+.friction p { color: var(--mist); font-size: 0.97rem; }
+.steps { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; counter-reset: s; }
+.steps li { counter-increment: s; position: relative; padding: 22px 24px 22px 0; border-top: 2px solid var(--brass); font-family: var(--display); font-weight: 600; font-size: 1.4rem; line-height: 1.15; }
+.steps li::before { content: "0" counter(s); display: block; font-family: var(--mono); font-size: 0.8rem; font-weight: 500; color: var(--brass); letter-spacing: 0.14em; margin-bottom: 8px; }
+.steps li::after { content: ""; position: absolute; top: -7px; left: 0; width: 12px; height: 12px; background: var(--navy-deep); border: 2px solid var(--brass); border-radius: 50%; }
+.steps li:last-child { color: var(--brass); }
+.steps li:last-child::after { background: var(--brass); }
+@media (max-width: 760px) { .friction { grid-template-columns: 1fr; } .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 20px; } }
+.paralysis { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: baseline; padding: 22px 26px; border-left: 3px solid var(--red); background: rgba(200,16,46,0.08); }
+.paralysis p { color: #C9D6E3; flex: 1 1 380px; min-width: 0; }
+.paralysis strong { font-family: var(--display); font-size: 1.3rem; color: var(--brass); font-weight: 600; }
+
+/* Partners */
+.partners { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; }
+.partners .col h3 { font-family: var(--mono); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--chart); margin-bottom: 4px; }
+.prow { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(141,169,196,0.18); }
+.prow dt { font-family: var(--display); font-weight: 600; font-size: 1.1rem; }
+.prow dd { margin: 0; color: var(--mist); font-size: 0.97rem; }
+@media (max-width: 860px) { .partners { grid-template-columns: 1fr; gap: 32px; } }
+@media (max-width: 480px) { .prow { grid-template-columns: 1fr; gap: 2px; } }
+
+/* Platform stack */
+.stack { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.stack article { border-radius: 10px; padding: 28px; display: grid; gap: 10px; align-content: start; border: 1px solid rgba(11,37,69,0.2); background: #FBF8F1; }
+.stack article.lead { background: var(--navy); color: var(--sail); border-color: var(--navy); }
+.stack .kind { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass-ink); }
+.stack .lead .kind { color: var(--brass); }
+.stack h3 { font-size: 2rem; font-weight: 700; }
+.stack p { color: var(--ink-soft); }
+.stack .lead p { color: #C9D6E3; }
+.stack .note { margin-top: 18px; color: var(--ink-soft); font-size: 0.95rem; }
+@media (max-width: 860px) { .stack { grid-template-columns: 1fr; } }
+
+/* Close */
+.close { text-align: left; }
+.close h2 { font-size: clamp(2.6rem, 6.4vw, 5rem); }
+.close h2 span { display: block; color: var(--brass); }
+.close .lede { margin-top: 22px; font-size: 1.25rem; }
+.close .row { display: flex; flex-wrap: wrap; gap: 14px 32px; align-items: center; margin-top: 44px; }
+.domain { font-family: var(--mono); letter-spacing: 0.2em; color: var(--chart); }
+/* Index leak */
+.leak { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 56px; align-items: start; }
+.leak .head { margin-bottom: 0; }
+.leak .punch { margin-top: 28px; font-family: var(--display); font-weight: 700; font-size: clamp(1.4rem, 2.6vw, 1.9rem); line-height: 1.15; }
+.leak .punch span { color: var(--red-soft); }
+.leak dl { margin: 0; border-top: 2px solid var(--red); }
+.leak dl div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(141,169,196,0.18); }
+.leak dt { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.18em; color: var(--red-soft); padding-top: 3px; }
+.leak dd { margin: 0; color: var(--mist); }
+.leak .fix { margin-top: 22px; color: #C9D6E3; }
+@media (max-width: 860px) { .leak { grid-template-columns: 1fr; gap: 32px; } }
+@media (max-width: 480px) { .leak dl div { grid-template-columns: 1fr; gap: 4px; } }
+
+/* Pricing */
+.plans { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.plan { border-radius: 10px; padding: 32px; display: grid; gap: 14px; align-content: start; background: var(--navy-card); border: 1px solid var(--navy-line); }
+.plan.leased { border: 2px solid var(--brass); background: linear-gradient(160deg, #163A66, var(--navy-deep)); }
+.plan .price { font-family: var(--display); font-weight: 700; font-size: clamp(2.6rem, 5vw, 3.6rem); line-height: 1; font-variant-numeric: tabular-nums; }
+.plan .price small { font-size: 1.1rem; font-weight: 600; color: var(--mist); margin-left: 4px; }
+.plan p { color: var(--mist); }
+.plan ul { margin: 6px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.plan li { padding-left: 22px; position: relative; color: #C9D6E3; font-size: 0.97rem; }
+.plan li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 10px; height: 2px; background: var(--brass); }
+.pricenote { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 10px 32px; color: var(--mist); font-size: 0.97rem; }
+.pricenote strong { color: var(--sail); font-weight: 600; }
+@media (max-width: 760px) { .plans { grid-template-columns: 1fr; } }
+
+/* Industries */
+.verticals { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.verticals article { border-top: 3px solid var(--chart); background: var(--navy-card); border-radius: 0 0 8px 8px; padding: 24px; display: grid; gap: 10px; align-content: start; }
+.verticals .kind { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass); }
+.verticals ul { margin: 4px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; color: var(--mist); font-size: 0.95rem; }
+.verticals li::before { content: "— "; color: var(--chart); }
+.case { margin-top: 24px; display: grid; grid-template-columns: minmax(0, 0.35fr) minmax(0, 1fr); gap: 24px; align-items: center; padding: 26px 28px; border: 1px solid var(--navy-line); border-left: 3px solid var(--brass); border-radius: 0 8px 8px 0; }
+.case p { color: var(--mist); }
+.case h3 { margin-bottom: 6px; }
+@media (max-width: 980px) { .verticals { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .verticals { grid-template-columns: 1fr; } .case { grid-template-columns: 1fr; gap: 10px; } }
+
+/* FAQ */
+.faq { max-width: 860px; border-top: 1px solid rgba(141,169,196,0.25); }
+.faq details { border-bottom: 1px solid rgba(141,169,196,0.25); }
+.faq summary { cursor: pointer; list-style: none; padding: 20px 40px 20px 0; position: relative; font-family: var(--display); font-weight: 600; font-size: 1.3rem; line-height: 1.2; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 4px; top: 16px; font-family: var(--mono); font-size: 1.4rem; color: var(--brass); }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { padding: 0 0 22px; color: var(--mist); max-width: 68ch; }
+
+/* Contact */
+.contact { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 10px 36px; color: var(--mist); font-size: 0.97rem; }
+.contact code { font-family: var(--mono); color: var(--sail); user-select: all; }
+
+/* Book + contact */
+.reach { margin-top: 48px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: stretch; }
+.panel { background: var(--navy-card); border: 1px solid var(--navy-line); border-radius: 10px; padding: clamp(22px, 3vw, 34px); display: grid; gap: 16px; align-content: start; min-width: 0; }
+.panel.book { border: 2px solid var(--brass); }
+.panel h3 { font-size: 1.8rem; font-weight: 700; }
+.muted { color: var(--mist); }
+.small { font-size: 0.92rem; }
+.mono { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.14em; color: var(--chart); }
+.cal { background: var(--navy-deep); border: 1px solid var(--navy-line); border-radius: 8px; padding: 18px; display: grid; gap: 14px; }
+.cal-head { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: space-between; align-items: baseline; font-family: var(--display); font-weight: 600; font-size: 1.15rem; }
+.days { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.day { display: grid; gap: 2px; justify-items: center; padding: 10px 4px; border-radius: 6px; border: 1px solid var(--navy-line); background: var(--navy-card); color: var(--sail); text-decoration: none; font-variant-numeric: tabular-nums; transition: border-color .15s, background .15s; }
+.day span { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.14em; color: var(--chart); }
+.day b { font-family: var(--display); font-size: 1.5rem; line-height: 1; }
+.day:hover, .day:focus-visible { border-color: var(--brass); background: #163A66; }
+.cal-note { font-size: 0.88rem; color: var(--chart); }
+.panel .btn { justify-self: start; }
+.field { display: grid; gap: 6px; }
+.field label { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--chart); }
+.field input, .field textarea { width: 100%; font: inherit; font-size: 1rem; color: var(--sail); background: var(--navy-deep); border: 1px solid var(--navy-line); border-radius: 6px; padding: 11px 12px; }
+.field textarea { resize: vertical; min-height: 110px; }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--brass); box-shadow: 0 0 0 2px rgba(201,162,75,0.25); }
+.field input[aria-invalid="true"], .field textarea[aria-invalid="true"] { border-color: var(--red-soft); }
+.form-msg { font-size: 0.95rem; min-height: 0; }
+.form-msg:empty { display: none; }
+.form-msg.ok { color: #9FD3B0; }
+.form-msg.err { color: var(--red-soft); }
+.panel code { font-family: var(--mono); color: var(--sail); user-select: all; }
+.copy { font: inherit; font-size: 0.82rem; color: var(--brass); background: none; border: 1px solid rgba(201,162,75,0.5); border-radius: 4px; padding: 2px 8px; margin-left: 6px; cursor: pointer; }
+button.btn { cursor: pointer; font-family: var(--display); }
+button.btn[disabled] { opacity: 0.6; cursor: progress; }
+@media (max-width: 860px) { .reach { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .days { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 5px; } .day b { font-size: 1.2rem; } }
+
+footer { border-top: 1px solid rgba(141,169,196,0.16); background: var(--navy-deep); }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; align-items: center; padding-block: 28px; color: var(--chart); font-size: 0.88rem; }
+
+/* Site additions: mobile nav, links, embed, footer */
+:root { padding: 0; }
+html { scroll-behavior: smooth; }
+section[id], [id="posture"], [id="contact"], [id="case-studies"] { scroll-margin-top: 80px; }
+.navr { display: flex; align-items: center; gap: 12px; }
+.navtoggle { display: none; width: 42px; height: 42px; border: 1px solid var(--navy-line); border-radius: 6px; background: transparent; cursor: pointer; padding: 11px 10px; flex-direction: column; justify-content: space-between; }
+.navtoggle span { display: block; height: 2px; background: var(--sail); border-radius: 2px; }
+.mobnav { border-top: 1px solid rgba(141,169,196,0.16); padding: 8px max(20px, env(safe-area-inset-left, 0px)) 16px; display: grid; }
+.mobnav a { text-decoration: none; padding: 12px 0; border-bottom: 1px solid rgba(141,169,196,0.12); color: var(--sail); font-family: var(--display); font-size: 1.2rem; font-weight: 600; }
+@media (max-width: 860px) { .navtoggle { display: flex; } }
+@media (max-width: 520px) { .navr .btn { display: none; } }
+@media (min-width: 861px) { .mobnav { display: none !important; } }
+.more { display: inline-block; margin-top: 6px; font-family: var(--display); font-weight: 600; font-size: 1.05rem; color: var(--brass); text-decoration: none; }
+.more:hover { text-decoration: underline; text-underline-offset: 3px; }
+a.case { text-decoration: none; color: inherit; }
+a.case:hover h3 { color: var(--brass); }
+.calembed { height: 560px; overflow: auto; border: 1px solid var(--navy-line); border-radius: 8px; background: var(--navy-deep); }
+.gotcha { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.panel a { color: var(--sail); }
+.site-foot { border-top: 1px solid rgba(141,169,196,0.16); background: var(--navy-deep); }
+.site-foot .wrap { display: grid; gap: 32px; padding-block: 56px 32px; color: var(--chart); font-size: 0.92rem; justify-content: stretch; }
+.foot-top { display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; }
+.foot-brand { max-width: 340px; display: grid; gap: 14px; }
+.foot-brand p { color: var(--mist); }
+.foot-brand .motto { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass); }
+.foot-cols { display: flex; flex-wrap: wrap; gap: 48px; }
+.foot-cols div { display: grid; gap: 10px; align-content: start; }
+.foot-cols h4 { margin: 0 0 4px; font-family: var(--mono); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--chart); }
+.foot-cols a { color: var(--sail); text-decoration: none; }
+.foot-cols a:hover, .foot-bottom a:hover { color: var(--brass); }
+.foot-badges { display: flex; flex-wrap: wrap; gap: 10px 12px; align-items: center; padding-block: 18px; border-top: 1px solid rgba(141,169,196,0.14); border-bottom: 1px solid rgba(141,169,196,0.14); }
+.foot-badges .lbl { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; }
+.foot-badges a { font-family: var(--mono); font-size: 0.78rem; color: var(--sail); text-decoration: none; border: 1px solid var(--navy-line); border-radius: 4px; padding: 5px 10px; }
+.foot-bottom { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; font-family: var(--mono); font-size: 0.78rem; }
+.foot-bottom .links { display: flex; flex-wrap: wrap; gap: 20px; }
+.foot-bottom a { color: var(--chart); text-decoration: none; }
 </style>
 </head>
 <body>
-<div id="top" style="position:relative;background:#FFF8F4">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="mark">
+      <path d="M48 33 L60 15 L72 33 L60 27 Z" fill="#C8102E"/>
+      <path d="M28 61 L40 43 L52 61 L40 55 Z" fill="#F3EEE3"/>
+      <path d="M68 61 L80 43 L92 61 L80 55 Z" fill="#F3EEE3"/>
+      <path d="M8 89 L20 71 L32 89 L20 83 Z" fill="#C9A24B"/>
+      <path d="M88 89 L100 71 L112 89 L100 83 Z" fill="#C9A24B"/>
+    </g>
+    <symbol id="check" viewBox="0 0 24 24"><path d="M4 12.5 L10 18 L20 6" fill="none" stroke="#C9A24B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
 
-  <!-- ambient background -->
-  <div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(238,174,86,0.067) 1px, transparent 1px), linear-gradient(90deg, rgba(238,174,86,0.067) 1px, transparent 1px);background-size:44px 44px;animation:gridPan 32s linear infinite;mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%);-webkit-mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%)"></div>
-  <div aria-hidden="true" style="position:fixed;top:-260px;left:50%;transform:translateX(-50%);width:900px;height:600px;z-index:0;pointer-events:none;background:radial-gradient(closest-side, rgba(238,174,86,0.266), transparent);filter:blur(30px);animation:glowPulse 9s ease-in-out infinite"></div>
-
-  <!-- ================= HEADER ================= -->
-  <header id="siteHeader" style="position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(253,241,234,0.55);border-bottom:1px solid rgba(51,43,41,0.12);transition:background .3s ease">
-    <div style="max-width:1280px;margin:0 auto;padding:15px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px">
-      <a href="#top" aria-label="Fleet Agentic home" style="display:flex;align-items:center;gap:10px;flex-shrink:0"><img src="assets/fleet-agentic-mark.svg" alt="" width="42" height="30" style="height:30px;width:42px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:15px;line-height:1;letter-spacing:0.04em;color:#332B29;text-transform:uppercase">Fleet<br>Agentic</span></a>
-      <nav id="desknav" style="display:flex;align-items:center;gap:28px">
-        <a href="#platform" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#4A403D">Platform</a>
-        <a href="/blog/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#4A403D">Blog</a>
-        <a href="solutions/legal/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#4A403D">Legal</a>
-        <a href="solutions/healthcare/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#4A403D">Healthcare</a>
-        <a href="solutions/defense/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#4A403D">Defense</a>
-        <a href="case-studies/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#4A403D">Case Studies</a>
-        <a href="carrier/" class="navlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#4A403D">Partners</a>
-        <a href="#book" class="btn-primary" style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:0.06em;color:#332B29;background:#EEAE56;padding:11px 20px;border-radius:8px;box-shadow:0 0 0 rgba(238,174,86,0)">Book a Demo</a>
-      </nav>
-      <button id="navToggle" aria-label="Menu" aria-expanded="false" style="display:none;align-items:center;justify-content:center;width:42px;height:42px;background:transparent;border:1px solid rgba(51,43,41,0.16);border-radius:8px;color:#332B29;font-family:'JetBrains Mono',monospace;font-size:20px;cursor:pointer">≡</button>
-    </div>
-    <div id="mobnav" style="display:none;padding:8px 32px 22px;border-top:1px solid rgba(51,43,41,0.06);background:rgba(253,241,234,0.96)">
-      <a href="#platform" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#4A403D;border-bottom:1px solid rgba(51,43,41,0.05)">Platform</a>
-      <a href="/blog/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#4A403D;border-bottom:1px solid rgba(51,43,41,0.05)">Blog</a>
-      <a href="solutions/legal/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#4A403D;border-bottom:1px solid rgba(51,43,41,0.05)">Legal</a>
-      <a href="solutions/healthcare/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#4A403D;border-bottom:1px solid rgba(51,43,41,0.05)">Healthcare</a>
-      <a href="solutions/defense/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#4A403D;border-bottom:1px solid rgba(51,43,41,0.05)">Defense</a>
-      <a href="case-studies/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#4A403D;border-bottom:1px solid rgba(51,43,41,0.05)">Case Studies</a>
-      <a href="carrier/" style="display:block;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:15px;color:#4A403D;border-bottom:1px solid rgba(51,43,41,0.05)">Partners</a>
-      <a href="#book" style="display:block;text-align:center;margin-top:16px;padding:13px 0;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;letter-spacing:0.06em;color:#332B29;background:#EEAE56;border-radius:8px">Book a Demo</a>
-    </div>
-  </header>
-
-  <section style="position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:clamp(56px,9vw,110px) 32px clamp(40px,6vw,64px)">
-    <div style="display:flex;flex-wrap:wrap;gap:clamp(40px,5vw,72px);align-items:center">
-      <!-- left copy -->
-      <div style="flex:1 1 420px;min-width:min(100%,420px)">
-        <div style="display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#17625F;border:1px solid rgba(238,174,86,0.28);border-radius:999px;padding:7px 14px;margin-bottom:26px">
-          <span style="width:7px;height:7px;border-radius:50%;background:#EEAE56;animation:pulseDot 2.6s ease-in-out infinite"></span>Sovereign&nbsp;AI
-        </div>
-        <h1 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(38px,6.2vw,68px);line-height:1.02;letter-spacing:-0.025em;margin:0 0 22px;color:#332B29;max-width:16ch">Private AI inside your firewall. <span style="box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 0.14em;border-radius:7px;color:#332B29;background:#EEAE56">Starts at <span data-cfg="prices.entry.amount">$500/month</span>.</span></h1>
-        <p style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:400;font-size:clamp(18px,2.4vw,23px);line-height:1.4;color:#4A403D;margin:0 0 34px;max-width:52ch">Sovereign AI and agent teams for CMMC, HIPAA, FERPA, and other regulated environments. Your data and its search index never leave the building.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:14px">
-          <a href="#book" class="btn-primary" style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;letter-spacing:0.05em;color:#332B29;background:#EEAE56;padding:15px 26px;border-radius:9px;box-shadow:0 0 30px rgba(238,174,86,0.22)">Book a Demo <span style="font-size:15px">→</span></a>
-          <a href="#contact" class="btn-ghost" style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;letter-spacing:0.05em;color:#332B29;background:transparent;border:1px solid rgba(51,43,41,0.2);padding:15px 26px;border-radius:9px">Contact Sales</a>
-        </div>
-      </div>
-
-      <!-- right: waterline diagram -->
-      <div style="flex:1 1 400px;min-width:min(100%,360px)">
-        <div style="position:relative;border:1px solid rgba(51,43,41,0.1);border-radius:18px;overflow:hidden;background:linear-gradient(180deg, rgba(242,144,125,0.06) 0%, rgba(253,241,234,0) 40%, rgba(238,174,86,0.133) 100%);padding:22px 22px 24px">
-          <span aria-hidden="true" style="position:absolute;top:9px;left:11px;font-family:'JetBrains Mono',monospace;color:rgba(51,43,41,0.25);font-size:14px">┌</span>
-          <span aria-hidden="true" style="position:absolute;top:9px;right:11px;font-family:'JetBrains Mono',monospace;color:rgba(51,43,41,0.25);font-size:14px">┐</span>
-          <span aria-hidden="true" style="position:absolute;bottom:9px;left:11px;font-family:'JetBrains Mono',monospace;color:rgba(51,43,41,0.25);font-size:14px">└</span>
-          <span aria-hidden="true" style="position:absolute;bottom:9px;right:11px;font-family:'JetBrains Mono',monospace;color:rgba(51,43,41,0.25);font-size:14px">┘</span>
-
-          <!-- above -->
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#B0381F">▲ ABOVE&nbsp;·&nbsp;THE&nbsp;CLOUD</span>
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;color:rgba(242,144,125,0.55)">third-party&nbsp;API</span>
-          </div>
-          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;opacity:0.85">
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(176,56,31,0.9);border:1px dashed rgba(242,144,125,0.4);border-radius:6px;padding:6px 10px;animation:floaty 6s ease-in-out infinite">◇ frontier&nbsp;LLM</span>
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(176,56,31,0.9);border:1px dashed rgba(242,144,125,0.4);border-radius:6px;padding:6px 10px;animation:floaty2 7s ease-in-out infinite 0.6s">◇ public&nbsp;cloud</span>
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(176,56,31,0.9);border:1px dashed rgba(242,144,125,0.4);border-radius:6px;padding:6px 10px;animation:floaty 6.5s ease-in-out infinite 0.3s">◇ shared&nbsp;tenancy</span>
-          </div>
-
-          <!-- waterline -->
-          <div style="position:relative;overflow:hidden;height:30px;border-top:1px solid rgba(238,174,86,0.25);border-bottom:1px solid rgba(238,174,86,0.25);margin-bottom:6px">
-            <div style="display:flex;width:200%;animation:waveDrift 18s linear infinite;font-family:'JetBrains Mono',monospace;font-size:17px;line-height:30px;color:rgba(238,174,86,0.55);white-space:nowrap">
-              <span>≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿</span><span>≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿</span>
-            </div>
-            <span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.28em;color:#8F5406;background:#F9D9CE;padding:2px 10px;border-radius:4px">WATERLINE</span>
-          </div>
-          <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#6B5C56;margin-bottom:16px">↑ your&nbsp;boundary&nbsp;↑</div>
-
-          <!-- below: Fleet Agentic -->
-          <div style="border:1px solid rgba(159,221,220,0.4);border-radius:12px;background:rgba(159,221,220,0.05);padding:16px;box-shadow:0 0 40px rgba(159,221,220,0.08) inset">
-            <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
-              <span style="width:11px;height:11px;border-radius:50%;background:#9FDDDC;animation:pulseDot 2.4s ease-in-out infinite;flex-shrink:0"></span>
-              <span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:15px;color:#332B29;letter-spacing:0.01em">Fleet Agentic</span>
-              <span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#17625F;border:1px solid rgba(159,221,220,0.3);border-radius:5px;padding:3px 8px">ON-PREM</span>
-            </div>
-            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;color:#6B5C56;margin-bottom:9px">▾ YOUR DATA — STAYS HOME</div>
-            <div style="display:flex;flex-wrap:wrap;gap:7px">
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#17625F;border:1px solid rgba(159,221,220,0.35);border-radius:5px;padding:5px 9px">privileged</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#17625F;border:1px solid rgba(159,221,220,0.35);border-radius:5px;padding:5px 9px">PHI</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#17625F;border:1px solid rgba(159,221,220,0.35);border-radius:5px;padding:5px 9px">FERPA</span>
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#17625F;border:1px solid rgba(159,221,220,0.35);border-radius:5px;padding:5px 9px">classified</span>
-            </div>
-          </div>
-          <p style="text-align:center;font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;font-size:13.5px;color:#4A403D;margin:16px 4px 2px">"What's beneath the waterline is your business."</p>
-          <p style="text-align:center;font-size:13.5px;line-height:1.55;color:#4A403D;margin:8px 4px 2px">Your data and index sit on hardware in your building. Nothing crosses the waterline.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- trust strip -->
-    <div data-reveal style="margin-top:clamp(44px,6vw,68px);display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;padding-top:26px;border-top:1px solid rgba(51,43,41,0.12)">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#6B5C56">BUILT&nbsp;TO&nbsp;THE&nbsp;STANDARD&nbsp;OF</span>
-      <a href="#posture" style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#4A403D"><span style="color:#17625F">◆</span> CMMC&nbsp;L2</a>
-      <a href="#posture" style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#4A403D"><span style="color:#17625F">◆</span> HIPAA</a>
-      <a href="#posture" style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#4A403D"><span style="color:#17625F">◆</span> FERPA</a>
-      <a href="#posture" style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#4A403D"><span style="color:#17625F">◆</span> NIST&nbsp;800-171</a>
-    </div>
-  </section>
-
-  <!-- ================= VALUE BLOCK ================= -->
-  <section style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:clamp(24px,4vw,48px) 32px clamp(24px,4vw,40px)">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:18px;max-width:1080px;margin:0 auto">
-      <div data-reveal class="card-hover" style="position:relative;border:1px solid rgba(51,43,41,0.18);border-radius:14px;border-top:5px solid #EEAE56;padding:30px 26px;background:rgba(255,255,255,0.75)">
-        <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:20px;color:#332B29;margin:0 0 10px">Data and index stay inside.</h3>
-        <p style="font-size:15px;line-height:1.6;color:#5E524E;margin:0">No third-party APIs. No off-site copy of your files or your search index.</p>
-      </div>
-      <div data-reveal class="card-hover" style="position:relative;border:1px solid rgba(51,43,41,0.18);border-radius:14px;border-top:5px solid #9FDDDC;padding:30px 26px;background:rgba(255,255,255,0.75)">
-        <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:20px;color:#332B29;margin:0 0 10px">Managed end to end.</h3>
-        <p style="font-size:15px;line-height:1.6;color:#5E524E;margin:0">We patch, monitor, and maintain the software stack, and the hardware too when you lease. Your team does not run an AI stack.</p>
-      </div>
-      <div data-reveal class="card-hover" style="position:relative;border:1px solid rgba(51,43,41,0.18);border-radius:14px;border-top:5px solid #9FD79A;padding:30px 26px;background:rgba(255,255,255,0.75)">
-        <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:20px;color:#332B29;margin:0 0 10px">Audit-ready.</h3>
-        <p style="font-size:15px;line-height:1.6;color:#5E524E;margin:0">Built to the standard of CMMC L2, HIPAA, FERPA, and NIST 800-171.</p>
-      </div>
-      <div data-reveal class="card-hover" style="position:relative;border:1px solid rgba(51,43,41,0.18);border-radius:14px;border-top:5px solid #F2907D;padding:30px 26px;background:rgba(255,255,255,0.75)">
-        <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:20px;color:#332B29;margin:0 0 10px">Predictable cost.</h3>
-        <p style="font-size:15px;line-height:1.6;color:#5E524E;margin:0">No per-token billing and no surprise overages. Pay per seat on your own hardware, or one flat fee with a leased appliance.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ================= THE INDEX IS THE LEAK ================= -->
-  <section style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:clamp(24px,4vw,40px) 32px clamp(24px,4vw,40px)">
-    <div data-reveal style="max-width:1080px;margin:0 auto;border:1px solid rgba(242,144,125,0.3);border-radius:14px;padding:clamp(28px,4vw,44px) clamp(22px,4vw,40px);background:rgba(255,255,255,0.75)">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#B0381F;margin-bottom:22px">The&nbsp;hidden&nbsp;leak</div>
-      <h2 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,48px);line-height:1.07;letter-spacing:-0.02em;margin:0 0 22px;color:#332B29;max-width:20ch">Keeping the file local isn't enough. <span style="box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 0.14em;border-radius:7px;color:#332B29;background:#F2907D">The index is the leak.</span></h2>
-      <p style="font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:#5E524E;margin:0 0 16px;max-width:62ch">Keeping your files local is not enough if your AI ships the search index to the cloud. Most "on-prem" AI creates a second, queryable copy of your sensitive data off-site. Fleet Agentic runs on physical hardware inside your perimeter. Your data and your index stay behind your firewall.</p>
-      <a href="learn/the-index-is-the-leak/" class="link-arrow" style="display:inline-flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:0.05em;color:#8F5406">Read the full explainer →</a>
-    </div>
-  </section>
-
-
-  <!-- ================= PRICING ================= -->
-  <section id="pricing" style="position:relative;z-index:1;scroll-margin-top:90px;max-width:1080px;margin:0 auto;padding:clamp(48px,7vw,80px) 32px">
-    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#17625F;margin-bottom:22px">01&nbsp;/&nbsp;Pricing</div>
-    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,44px);line-height:1.08;letter-spacing:-0.02em;margin:0 0 22px;color:#332B29;max-width:20ch">Two ways to run it.</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px;margin-bottom:18px">
-      <div data-reveal class="card-hover" style="position:relative;border:1px solid rgba(51,43,41,0.18);border-radius:14px;padding:30px 26px;background:rgba(255,255,255,0.75)">
-        <h3 data-cfg="prices.entry.title" style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(22px,3vw,28px);color:#332B29;margin:0 0 12px">Starts at $500/month</h3>
-        <p data-cfg="prices.entry.body" style="font-size:15px;line-height:1.6;color:#5E524E;margin:0">Includes 1 seat, then $25 per additional seat per month. Software, models, and management on hardware you buy and own.</p>
-      </div>
-      <div data-reveal class="card-hover" style="position:relative;border:1px solid rgba(51,43,41,0.18);border-radius:14px;padding:30px 26px;background:rgba(255,255,255,0.75)">
-        <h3 data-cfg="prices.full.title" style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(22px,3vw,28px);color:#332B29;margin:0 0 12px">$5,000/month, fully leased</h3>
-        <p data-cfg="prices.full.body" style="font-size:15px;line-height:1.6;color:#5E524E;margin:0">As many seats as the hardware supports. Hardware, models, maintenance, patching, and support. No CapEx.</p>
-      </div>
-    </div>
-    <p data-reveal style="font-size:15px;line-height:1.6;color:#4A403D;margin:0 0 10px">No per-token metering, ever. No surprise overages.</p>
-    <p data-reveal style="font-size:15px;line-height:1.6;color:#4A403D;margin:0 0 34px">Example: a 10-person team on your own hardware is $725/month. Leased is $5,000/month, all-in, with as many seats as the hardware supports.</p>
-    <div data-reveal class="table-wrap" style="border:1px solid rgba(51,43,41,0.18);border-radius:14px;margin-bottom:28px">
-      <table class="cmp-table" style="width:100%;min-width:520px">
-        <thead><tr><th></th><th>CLOUD AI</th><th>Fleet Agentic</th></tr></thead>
-        <tbody>
-          <tr><td class="cmp-row-label">billing unit</td><td class="cmp-cloud">per seat × per token × egress</td><td class="cmp-fleet">per seat on your hardware, or one flat fee leased. Never per token</td></tr>
-          <tr><td class="cmp-row-label">budget shape</td><td class="cmp-cloud">grows with usage, unpredictable</td><td class="cmp-fleet">predictable — seats and price are known up front, no usage-based surprises</td></tr>
-          <tr><td class="cmp-row-label">capex</td><td class="cmp-cloud">none, but perpetual metering</td><td class="cmp-fleet">none if leased; you buy the hardware on the $500 tier</td></tr>
-          <tr><td class="cmp-row-label">who can use it</td><td class="cmp-cloud">licensed seats only</td><td class="cmp-fleet">leased: as many seats as the hardware supports. Own hardware: $25/seat</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-
-
-  <!-- ================= PRODUCT PREVIEW ================= -->
-  <section style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:clamp(20px,3vw,40px) 32px clamp(24px,4vw,40px)">
-    <div data-reveal style="text-align:center;max-width:640px;margin:0 auto 34px">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#17625F;margin-bottom:18px">Inside&nbsp;Fleet Agentic</div>
-      <h2 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(26px,4vw,40px);line-height:1.08;letter-spacing:-0.02em;margin:0 0 14px;color:#332B29">A workspace your team already knows how to use.</h2>
-      <p style="font-size:clamp(15px,2vw,18px);line-height:1.6;color:#5E524E;margin:0">Skills, tools and knowledge-base search, all on your own hardware.</p>
-    </div>
-    <div data-reveal style="position:relative;max-width:760px;margin:0 auto;border:1px solid rgba(238,174,86,0.28);border-radius:16px;overflow:hidden;background:#F9D9CE;box-shadow:0 30px 80px rgba(0,0,0,0.5), 0 0 60px rgba(238,174,86,0.08)">
-      <!-- window chrome -->
-      <div style="display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid rgba(51,43,41,0.12);background:rgba(51,43,41,0.02)">
-        <span style="width:11px;height:11px;border-radius:50%;background:#E0705E;opacity:0.7"></span>
-        <span style="width:11px;height:11px;border-radius:50%;background:#EEAE56;opacity:0.7"></span>
-        <span style="width:11px;height:11px;border-radius:50%;background:#EEAE56;opacity:0.7"></span>
-        <span style="margin-left:12px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#6B5C56">fleet agentic&nbsp;·&nbsp;secure&nbsp;ai&nbsp;workspace</span>
-      </div>
-      <img src="assets/product-screenshot-web.jpg" alt="Fleet Agentic secure workspace interface" loading="lazy" width="1520" height="1398" style="display:block;width:100%;height:auto">
-    </div>
-  </section>
-  <!-- ================= AGENTS & KNOWLEDGE CONTROL PLANE ================= -->
-  <section style="position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:clamp(24px,4vw,40px) 32px clamp(24px,4vw,40px)">
-    <div style="max-width:1080px;margin:0 auto">
-      <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#17625F;margin-bottom:22px">Agents&nbsp;&amp;&nbsp;control</div>
-      <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(26px,4vw,40px);line-height:1.08;letter-spacing:-0.02em;margin:0 0 28px;color:#332B29;max-width:22ch">Agents that know your business. <span style="box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 0.14em;border-radius:7px;color:#332B29;background:#EEAE56">Only what they're allowed to know.</span></h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:18px">
-        <div data-reveal class="card-hover" style="position:relative;border:1px solid rgba(51,43,41,0.18);border-radius:14px;padding:30px 26px;background:rgba(255,255,255,0.75)">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#8F5406;margin-bottom:14px">AGENT TEAMS</div>
-          <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:20px;color:#332B29;margin:0 0 10px">A fleet of agents with the context to do real work.</h3>
-          <p style="font-size:15px;line-height:1.6;color:#5E524E;margin:0">Give agents the right context and they work on finances, your sales CRM, and the rest of the business. It's the always-on agent experience, all on your own hardware, with nothing sent to anyone else's cloud.</p>
-        </div>
-        <div data-reveal class="card-hover" style="position:relative;border:1px solid rgba(51,43,41,0.18);border-radius:14px;padding:30px 26px;background:rgba(255,255,255,0.75)">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#8F5406;margin-bottom:14px">KNOWLEDGE CONTROL PLANE</div>
-          <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:20px;color:#332B29;margin:0 0 10px">AI that only knows what you're allowed to know.</h3>
-          <p style="font-size:15px;line-height:1.6;color:#5E524E;margin:0 0 16px">Fleet Agentic decides who your AI agent answers and where your data goes. Before the AI looks at anything, it narrows to what that person may see. Every outside AI service or tool gets a sensitivity limit: Public, Internal or Restricted. Default is no.</p>
-          <a href="https://safesilo.ai" rel="noopener" class="link-arrow" style="display:inline-flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:0.05em;color:#8F5406">See the Knowledge Control Plane →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= LIGHTHOUSE / PLATFORM ================= -->
-  <section id="platform" style="position:relative;z-index:1;scroll-margin-top:90px;border-top:1px solid rgba(51,43,41,0.06);border-bottom:1px solid rgba(51,43,41,0.06);background:linear-gradient(180deg, rgba(238,174,86,0.057), transparent 60%)">
-    <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,9vw,110px) 32px">
-      <div style="max-width:1080px;margin:0 auto 52px">
-        <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#17625F;margin-bottom:22px">02&nbsp;/&nbsp;Security&nbsp;&amp;&nbsp;Compliance</div>
-        <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,52px);line-height:1.06;letter-spacing:-0.02em;margin:0 0 20px;color:#332B29">Compliance is a property of the platform — <span style="box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 0.14em;border-radius:7px;color:#332B29;background:#EEAE56">not a feature we bolt on.</span></h2>
-        <p data-reveal style="font-size:16px;line-height:1.65;color:#5E524E;margin:0;max-width:64ch">Every deployment inherits the same hardened base — identity, isolation, segmentation, audit — via <span style="color:#332B29">Lighthouse</span>, our compliance layer. <span style="color:#332B29">Sentinel</span> records every check in an immutable audit log, so compliance is evidence on demand, not "trust us."</p>
-      </div>
-      <div id="security" style="scroll-margin-top:90px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:rgba(51,43,41,0.12);border:1px solid rgba(51,43,41,0.12);border-radius:14px;overflow:hidden">
-        <div data-reveal class="cell-hover" style="padding:28px 26px;background:#F9D9CE"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8F5406;margin-bottom:16px">01</div><h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:17px;color:#332B29;margin:0 0 8px">Identity &amp; access</h3><p style="font-size:14.5px;line-height:1.55;color:#5E524E;margin:0">Zero-trust by default.</p></div>
-        <div data-reveal class="cell-hover" style="padding:28px 26px;background:#F9D9CE"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8F5406;margin-bottom:16px">02</div><h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:17px;color:#332B29;margin:0 0 8px">Data isolation</h3><p style="font-size:14.5px;line-height:1.55;color:#5E524E;margin:0">Strict separation of workloads and secrets.</p></div>
-        <div data-reveal class="cell-hover" style="padding:28px 26px;background:#F9D9CE"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8F5406;margin-bottom:16px">03</div><h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:17px;color:#332B29;margin:0 0 8px">Network segmentation</h3><p style="font-size:14.5px;line-height:1.55;color:#5E524E;margin:0">Narrow, enforced communication paths.</p></div>
-        <div data-reveal class="cell-hover" style="padding:28px 26px;background:#F9D9CE"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8F5406;margin-bottom:16px">04</div><h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:17px;color:#332B29;margin:0 0 8px">Supply-chain provenance</h3><p style="font-size:14.5px;line-height:1.55;color:#5E524E;margin:0">Signed artifacts, verified integrity.</p></div>
-        <div data-reveal class="cell-hover" style="padding:28px 26px;background:#F9D9CE"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8F5406;margin-bottom:16px">05</div><h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:17px;color:#332B29;margin:0 0 8px">Content policy enforcement</h3><p style="font-size:14.5px;line-height:1.55;color:#5E524E;margin:0">Continuous oversight of every AI interaction.</p></div>
-        <div data-reveal class="cell-hover" style="padding:28px 26px;background:#F9D9CE"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#8F5406;margin-bottom:16px">06</div><h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:17px;color:#332B29;margin:0 0 8px">Managed lifecycle</h3><p style="font-size:14.5px;line-height:1.55;color:#5E524E;margin:0">Auto-reconciled updates, always consistent.</p></div>
-      </div>
-
-      <!-- ================= COMPLIANCE POSTURE ================= -->
-      <div id="posture" data-reveal style="scroll-margin-top:90px;margin-top:28px;border:1px solid rgba(51,43,41,0.18);border-radius:14px;padding:26px 26px;background:rgba(255,255,255,0.75)">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#8F5406;margin-bottom:16px">▸ WHAT "BUILT TO THE STANDARD OF" MEANS</div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px 24px;font-size:14.5px;line-height:1.6;color:#5E524E">
-          <p style="margin:0"><span style="color:#332B29;font-family:'JetBrains Mono',monospace;font-size:12.5px">CMMC 2.0 L2 —</span> deployed inside contractor environments preparing for Level 2 assessment; Fleet Agentic keeps CUI and every derived index within the assessed boundary. <a href="case-studies/defense-cmmc/" style="color:#8F5406">See the case study →</a></p>
-          <p style="margin:0"><span style="color:#332B29;font-family:'JetBrains Mono',monospace;font-size:12.5px">HIPAA —</span> PHI is processed on hardware inside your network and never transmitted to a third-party model API, so no model-vendor BAA is required. Access control, audit logging, and isolation map to the Security Rule safeguards.</p>
-          <p style="margin:0"><span style="color:#332B29;font-family:'JetBrains Mono',monospace;font-size:12.5px">FERPA —</span> student records never leave district infrastructure; the district remains the sole custodian of education records and their derived data.</p>
-          <p style="margin:0"><span style="color:#332B29;font-family:'JetBrains Mono',monospace;font-size:12.5px">NIST 800-171 —</span> the platform's identity, segmentation, and audit architecture is built against 800-171 control families; Sentinel exports the evidence.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ================= FIELD RESULTS ================= -->
-  <section style="position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:clamp(48px,7vw,80px) 32px">
-    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#17625F;margin-bottom:22px">Field&nbsp;Results</div>
-    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,44px);line-height:1.08;letter-spacing:-0.02em;margin:0 0 32px;color:#332B29;max-width:20ch">Proof from the field.</h2>
-    <a data-reveal href="case-studies/defense-cmmc/" class="card-hover" style="display:block;position:relative;border:1px solid rgba(51,43,41,0.1);border-radius:16px;padding:32px 30px;background:rgba(255,255,255,0.75)">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#6B5C56;display:block;margin-bottom:14px">DEFENSE&nbsp;&amp;&nbsp;AEROSPACE</span>
-      <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:clamp(19px,2.6vw,24px);color:#332B29;margin:0 0 12px;line-height:1.25">AI Infrastructure for a Defense Contractor Preparing for CMMC 2.0</h3>
-      <p style="font-size:15px;line-height:1.6;color:#5E524E;margin:0 0 20px;max-width:64ch">Deploy generative AI on 20 years of BD content without violating CMMC Level 2 posture or exposing controlled data to frontier models.</p>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:0.05em;color:#8F5406">Read the case study →</span>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Fleet Agentic home">
+      <svg viewBox="8 15 104 74" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="wordmark">FLEET<br>AGENTIC</span>
     </a>
-    <a data-reveal href="case-studies/" class="navlink" style="display:inline-flex;margin-top:20px;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.05em;color:#4A403D">View all case studies →</a>
-  </section>
-  <!-- divider -->
-  <div aria-hidden="true" style="max-width:1080px;margin:0 auto;padding:0 32px;font-family:'JetBrains Mono',monospace;font-size:13px;color:rgba(238,174,86,0.25);overflow:hidden;white-space:nowrap">· ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ ·</div>
-
-  <!-- ================= VERTICALS ================= -->
-  <section id="verticals" style="position:relative;z-index:1;scroll-margin-top:90px;max-width:1280px;margin:0 auto;padding:clamp(64px,9vw,110px) 32px">
-    <div style="max-width:1080px;margin:0 auto 52px">
-      <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#17625F;margin-bottom:22px">03&nbsp;/&nbsp;Who&nbsp;It's&nbsp;For</div>
-      <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,52px);line-height:1.06;letter-spacing:-0.02em;margin:0;color:#332B29;max-width:20ch">Built exclusively for regulated verticals.</h2>
+    <ul id="navlinks">
+      <li><a href="#model">How it works</a></li>
+      <li><a href="#agents">Agents</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#verticals">Industries</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+    <div class="navr">
+      <a class="btn" href="#book">Schedule a Demo</a>
+      <button class="navtoggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobnav" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px">
-      <!-- Defense -->
-      <a href="solutions/defense/" data-reveal class="card-hover" style="position:relative;display:block;border:1px solid rgba(51,43,41,0.1);border-radius:16px;padding:30px 28px;background:rgba(255,255,255,0.75);overflow:hidden">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
-          <span style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#8F5406">[✖]</span>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#6B5C56">DEFENSE&nbsp;&amp;&nbsp;AEROSPACE</span>
+  </div>
+  <nav class="mobnav" id="mobnav" hidden>
+    <a href="#model">How it works</a><a href="#agents">Agents</a><a href="#security">Security</a><a href="#pricing">Pricing</a><a href="#verticals">Industries</a><a href="#faq">FAQ</a><a href="/blog/">Blog</a><a href="about/">About</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap grid">
+      <div>
+        <p class="eyebrow">Fleet Agentic · Private AI agents</p>
+        <h1 style="margin-top:20px">Your AI agent fleet, <span>reporting to you.</span></h1>
+        <p class="lede">Secure, cost-controlled agents that work beside every employee and multiply what your team can do. Private AI inside your firewall: your data and its search index never leave the building.</p>
+        <div class="ctas">
+          <a class="btn" href="#book">Schedule a Demo</a>
+          <a class="btn ghost" href="#model">See how it works</a>
         </div>
-        <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:22px;color:#332B29;margin:0 0 18px;line-height:1.2">Frontier-grade AI, air-gapped.</h3>
-        <div style="display:flex;flex-direction:column;gap:9px;margin-bottom:18px">
-          <span style="font-size:14.5px;color:#4A403D;display:flex;gap:9px"><span style="color:#8F5406;font-family:'JetBrains Mono',monospace">▸</span>CMMC L2-ready</span>
-          <span style="font-size:14.5px;color:#4A403D;display:flex;gap:9px"><span style="color:#8F5406;font-family:'JetBrains Mono',monospace">▸</span>Deep data segmentation</span>
-          <span style="font-size:14.5px;color:#4A403D;display:flex;gap:9px"><span style="color:#8F5406;font-family:'JetBrains Mono',monospace">▸</span>Continuous audit logging &amp; evidence export</span>
-        </div>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:700;letter-spacing:0.06em;color:#8F5406">Learn more →</span>
-      </a>
-      <!-- Legal -->
-      <a href="solutions/legal/" data-reveal class="card-hover" style="position:relative;display:block;border:1px solid rgba(51,43,41,0.1);border-radius:16px;padding:30px 28px;background:rgba(255,255,255,0.75);overflow:hidden">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
-          <span style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#8F5406">[§]</span>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#6B5C56">LEGAL</span>
-        </div>
-        <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:22px;color:#332B29;margin:0 0 18px;line-height:1.2">ROI without malpractice exposure.</h3>
-        <div style="display:flex;flex-direction:column;gap:9px;margin-bottom:18px">
-          <span style="font-size:14.5px;color:#4A403D;display:flex;gap:9px"><span style="color:#8F5406;font-family:'JetBrains Mono',monospace">▸</span>Integrates with practice management</span>
-          <span style="font-size:14.5px;color:#4A403D;display:flex;gap:9px"><span style="color:#8F5406;font-family:'JetBrains Mono',monospace">▸</span>Issue-spot large matter sets · assist motion drafting</span>
-          <span style="font-size:14.5px;color:#4A403D;display:flex;gap:9px"><span style="color:#8F5406;font-family:'JetBrains Mono',monospace">▸</span>Accelerate triage</span>
-        </div>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:700;letter-spacing:0.06em;color:#8F5406">Learn more →</span>
-      </a>
-      <!-- Healthcare -->
-      <a href="solutions/healthcare/" data-reveal class="card-hover" style="position:relative;display:block;border:1px solid rgba(51,43,41,0.1);border-radius:16px;padding:30px 28px;background:rgba(255,255,255,0.75);overflow:hidden">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
-          <span style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#8F5406">[+]</span>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#6B5C56">HEALTHCARE</span>
-        </div>
-        <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:22px;color:#332B29;margin:0 0 18px;line-height:1.2">Clinical AI, HIPAA out of the box.</h3>
-        <div style="display:flex;flex-direction:column;gap:9px;margin-bottom:18px">
-          <span style="font-size:14.5px;color:#4A403D;display:flex;gap:9px"><span style="color:#8F5406;font-family:'JetBrains Mono',monospace">▸</span>Clinical documentation</span>
-          <span style="font-size:14.5px;color:#4A403D;display:flex;gap:9px"><span style="color:#8F5406;font-family:'JetBrains Mono',monospace">▸</span>Patient intake triage</span>
-          <span style="font-size:14.5px;color:#4A403D;display:flex;gap:9px"><span style="color:#8F5406;font-family:'JetBrains Mono',monospace">▸</span>PHI-safe by default</span>
-        </div>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:700;letter-spacing:0.06em;color:#8F5406">Learn more →</span>
-      </a>
-      <!-- Education -->
-      <div data-reveal class="card-hover" style="position:relative;border:1px solid rgba(51,43,41,0.1);border-radius:16px;padding:30px 28px;background:rgba(255,255,255,0.75);overflow:hidden">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
-          <span style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#8F5406">[↗]</span>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#6B5C56">EDUCATION</span>
-        </div>
-        <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:22px;color:#332B29;margin:0 0 18px;line-height:1.2">Scale AI across districts.</h3>
-        <div style="display:flex;flex-direction:column;gap:9px">
-          <span style="font-size:14.5px;color:#4A403D;display:flex;gap:9px"><span style="color:#8F5406;font-family:'JetBrains Mono',monospace">▸</span>FERPA-protected</span>
-          <span style="font-size:14.5px;color:#4A403D;display:flex;gap:9px"><span style="color:#8F5406;font-family:'JetBrains Mono',monospace">▸</span>Predictable annual budgets</span>
-          <span style="font-size:14.5px;color:#4A403D;display:flex;gap:9px"><span style="color:#8F5406;font-family:'JetBrains Mono',monospace">▸</span>K-12 and higher ed</span>
-        </div>
-        <a href="#book" class="link-arrow" style="display:inline-flex;align-items:center;gap:7px;margin-top:20px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:0.05em;color:#8F5406">Talk to us about districts →</a>
+        <p class="eyebrow motto">Explore further. Arrive safely.</p>
+      </div>
+      <svg class="formation" viewBox="0 8 120 88" role="img" aria-label="Fleet Agentic formation mark: five pennant ships in a V, the lead ship in red">
+        <path d="M20 96 L60 36 L100 96" stroke="#8DA9C4" stroke-opacity="0.45" stroke-width="0.6" stroke-dasharray="1.5 2.5" fill="none"/>
+        <path class="ship" d="M48 33 L60 15 L72 33 L60 27 Z" fill="#C8102E"/>
+        <path class="ship" d="M28 61 L40 43 L52 61 L40 55 Z" fill="#F3EEE3"/>
+        <path class="ship" d="M68 61 L80 43 L92 61 L80 55 Z" fill="#F3EEE3"/>
+        <path class="ship" d="M8 89 L20 71 L32 89 L20 83 Z" fill="#C9A24B"/>
+        <path class="ship" d="M88 89 L100 71 L112 89 L100 83 Z" fill="#C9A24B"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="band deep" id="problem">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">The current model</p>
+        <h2>Every employee wires up AI alone. It doesn’t scale.</h2>
+        <p class="lede">Each person connects straight to public models and SaaS tools. Every one of those connections crosses the data security line.</p>
+      </div>
+      <div class="problem">
+        <article><h3>Sensitive files cross the line</h3><p>Secure and unsecure company files travel to public models with no guardrails.</p></article>
+        <article><h3>Off-grid means offline</h3><p>Travelling or disconnected employees lose their AI entirely.</p></article>
+        <article><h3>Spend nobody can see</h3><p>Every person buys their own tools and tokens. Costs multiply and stay hidden.</p></article>
       </div>
     </div>
   </section>
-  <!-- ================= FAQ ================= -->
-  <section style="position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:clamp(48px,7vw,80px) 32px">
-    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#17625F;margin-bottom:22px">FAQ</div>
-    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,44px);line-height:1.08;letter-spacing:-0.02em;margin:0 0 32px;color:#332B29;max-width:20ch">Straight answers.</h2>
-    <div data-reveal style="border:1px solid rgba(51,43,41,0.18);border-radius:13px;padding:22px 24px;background:rgba(255,255,255,0.75);margin-bottom:12px">
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#332B29;margin:0 0 10px"><span style="color:#8F5406">Q ▸</span> Does any data leave my network?</h3>
-      <p style="font-size:14.5px;line-height:1.65;color:#5E524E;margin:0">No. The model, the retrieval index, the embeddings, and the logs all live on-premises, inside your perimeter. Nothing derived from your documents is transmitted to a third-party API.</p>
-    </div>
-    <div data-reveal style="border:1px solid rgba(51,43,41,0.18);border-radius:13px;padding:22px 24px;background:rgba(255,255,255,0.75);margin-bottom:12px">
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#332B29;margin:0 0 10px"><span style="color:#8F5406">Q ▸</span> What is a knowledge control plane?</h3>
-      <p style="font-size:14.5px;line-height:1.65;color:#5E524E;margin:0">The layer that decides who your AI agent answers and where your data goes. It narrows what the AI can see to what that person may see, and it limits what leaves by sensitivity: Public, Internal or Restricted. It runs on your own hardware.</p>
-    </div>
-    <div data-reveal style="border:1px solid rgba(51,43,41,0.18);border-radius:13px;padding:22px 24px;background:rgba(255,255,255,0.75);margin-bottom:12px">
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#332B29;margin:0 0 10px"><span style="color:#8F5406">Q ▸</span> How is this different from a private cloud or GovCloud AI service?</h3>
-      <p style="font-size:14.5px;line-height:1.65;color:#5E524E;margin:0">GovCloud and "private cloud" AI is still someone else's computer — your content and its search index are processed and stored outside your walls, under someone else's controls. Fleet Agentic moves the computer to you instead.</p>
-    </div>
-    <div data-reveal style="border:1px solid rgba(51,43,41,0.18);border-radius:13px;padding:22px 24px;background:rgba(255,255,255,0.75)">
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#332B29;margin:0 0 10px"><span style="color:#8F5406">Q ▸</span> What does it cost?</h3>
-      <p style="font-size:14.5px;line-height:1.65;color:#5E524E;margin:0">Two options. On hardware you own: $500/month including 1 seat, then $25 per additional seat per month. Fully leased: $5,000/month flat with as many seats as the hardware supports, including hardware, maintenance, patching, and support. There is no per-token metering on either.</p>
-    </div>
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-      {"@type":"Question","name":"Does any data leave my network?","acceptedAnswer":{"@type":"Answer","text":"No. The model, the retrieval index, the embeddings, and the logs all live on-premises, inside your perimeter. Nothing derived from your documents is transmitted to a third-party API."}},
-      {"@type":"Question","name":"What is a knowledge control plane?","acceptedAnswer":{"@type":"Answer","text":"The layer that decides who your AI agent answers and where your data goes. It narrows what the AI can see to what that person may see, and it limits what leaves by sensitivity: Public, Internal or Restricted. It runs on your own hardware."}},
-      {"@type":"Question","name":"How is this different from a private cloud or GovCloud AI service?","acceptedAnswer":{"@type":"Answer","text":"GovCloud and \"private cloud\" AI is still someone else's computer — your content and its search index are processed and stored outside your walls, under someone else's controls. Fleet Agentic moves the computer to you instead."}},
-      {"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"Two options. On hardware you own: $500/month including 1 seat, then $25 per additional seat per month. Fully leased: $5,000/month flat with as many seats as the hardware supports, including hardware, maintenance, patching, and support. There is no per-token metering on either."}}
-    ]}
-    </script>
-  </section>
 
-  <!-- ================= BUYER QUESTIONS ================= -->
-  <section id="buyer-questions" style="position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:clamp(48px,7vw,80px) 32px">
-    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#17625F;margin-bottom:22px">Buyer&nbsp;Questions</div>
-    <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,44px);line-height:1.08;letter-spacing:-0.02em;margin:0 0 22px;color:#332B29;margin-bottom:32px;max-width:24ch">Questions your security team will ask</h2>
-    <div data-reveal style="border:1px solid rgba(51,43,41,0.18);border-radius:13px;padding:22px 24px;background:rgba(255,255,255,0.75);margin-bottom:12px">
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#332B29;margin:0 0 10px"><span style="color:#8F5406">Q ▸</span> Who patches and audits Fleet Agentic?</h3>
-      <p style="font-size:14.5px;line-height:1.65;color:#5E524E;margin:0">Fleet Agentic manages patching, monitoring, and updates of the software under the monthly fee, and of the hardware on the leased tier. Audit logs are available to your team and your assessor.</p>
-    </div>
-    <div data-reveal style="border:1px solid rgba(51,43,41,0.18);border-radius:13px;padding:22px 24px;background:rgba(255,255,255,0.75);margin-bottom:12px">
-      <h3 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.04em;color:#332B29;margin:0 0 10px"><span style="color:#8F5406">Q ▸</span> Does it work in an air-gapped or restricted network?</h3>
-      <p style="font-size:14.5px;line-height:1.65;color:#5E524E;margin:0">Yes, on request. Fleet Agentic can be deployed fully disconnected. Managed updates are delivered on a schedule and by a mechanism that fits your environment, including offline transfer for air-gapped enclaves.</p>
-    </div>
-  </section>
-
-  <!-- ================= FINAL CTA ================= -->
-  <section id="book" style="position:relative;z-index:1;scroll-margin-top:80px;max-width:1280px;margin:0 auto;padding:clamp(64px,9vw,110px) 32px">
-    <div style="max-width:900px;margin:0 auto 52px;text-align:center">
-      <h2 data-reveal style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5.4vw,56px);line-height:1.05;letter-spacing:-0.025em;margin:0 0 20px;color:#332B29">Stop exposing your most sensitive data to the cloud.</h2>
-      <p data-reveal style="font-size:clamp(17px,2.4vw,22px);line-height:1.5;color:#5E524E;margin:0">Bring AI productivity to where your value lives.</p>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;align-items:stretch">
-      <!-- calendar -->
-      <div data-reveal style="border:1px solid rgba(238,174,86,0.28);border-radius:16px;padding:34px 30px;background:linear-gradient(160deg, rgba(238,174,86,0.114), transparent);display:flex;flex-direction:column">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#8F5406;margin-bottom:20px">▸ BOOK A DEMO</div>
-        <div id="cal-inline" style="height:560px;flex:none;overflow:auto;border:1px solid rgba(238,174,86,0.3);border-radius:10px;background:#FFF8F4;margin-bottom:22px"></div>
-        <h3 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:20px;color:#332B29;margin:0 0 8px">See it on your own data.</h3>
-        <p style="font-size:15px;line-height:1.55;color:#5E524E;margin:0 0 22px">A 30-minute walkthrough with the founder — Fleet Agentic, Lighthouse, and Sentinel, on your own data.</p>
-        <a id="calendarBtn" href="https://cal.com/kdplyd/30min" target="_blank" rel="noopener" class="btn-primary" style="margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;letter-spacing:0.05em;color:#332B29;background:#EEAE56;padding:15px 24px;border-radius:9px">Open scheduling calendar →</a>
+  <section class="band" id="model">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">The new model</p>
+        <h2>A fleet of agents guards the line.</h2>
+        <p class="lede">Fleet Agentic runs on Lighthouse, inside your walls. Only agents reach out to third-party products, public data and models, under rules you set. Employees work through their agents, and local data stays local.</p>
       </div>
-      <!-- contact form -->
-      <div id="contact" data-reveal style="scroll-margin-top:90px;display:flex;flex-direction:column;border:1px solid rgba(51,43,41,0.1);border-radius:16px;padding:34px 30px;background:rgba(255,255,255,0.75)">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:#4A403D;margin-bottom:20px">▸ CONTACT SALES</div>
-        <form id="leadForm" style="flex:1;display:flex;flex-direction:column;gap:14px">
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-          <label style="display:flex;flex-direction:column;gap:7px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;color:#5E524E">NAME</span><input id="cf-name" type="text" required autocomplete="name" class="field" style="background:#FFFFFF;border:1px solid rgba(51,43,41,0.28);border-radius:8px;padding:13px 14px;color:#332B29;font-family:'Hanken Grotesk',sans-serif;font-size:15px;outline:none"></label>
-          <label style="display:flex;flex-direction:column;gap:7px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;color:#5E524E">WORK EMAIL</span><input id="cf-email" type="email" required autocomplete="email" class="field" style="background:#FFFFFF;border:1px solid rgba(51,43,41,0.28);border-radius:8px;padding:13px 14px;color:#332B29;font-family:'Hanken Grotesk',sans-serif;font-size:15px;outline:none"></label>
-          <label style="display:flex;flex-direction:column;gap:7px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;color:#5E524E">COMPANY</span><input id="cf-company" type="text" autocomplete="organization" class="field" style="background:#FFFFFF;border:1px solid rgba(51,43,41,0.28);border-radius:8px;padding:13px 14px;color:#332B29;font-family:'Hanken Grotesk',sans-serif;font-size:15px;outline:none"></label>
-          <label style="flex:1;display:flex;flex-direction:column;gap:7px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;color:#5E524E">TELL US ABOUT YOUR NEED</span><textarea id="cf-need" rows="3" class="field" style="flex:1;min-height:120px;background:#F9D9CE;border:1px solid rgba(51,43,41,0.14);border-radius:8px;padding:13px 14px;color:#332B29;font-family:'Hanken Grotesk',sans-serif;font-size:15px;outline:none;resize:vertical"></textarea></label>
-          <button type="submit" class="btn-outline" style="margin-top:4px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;letter-spacing:0.05em;color:#332B29;background:transparent;border:1px solid #EEAE56;padding:15px 24px;border-radius:9px;cursor:pointer">Send message →</button>
-          <span id="formNote" style="display:none;font-family:'JetBrains Mono',monospace;font-size:12px;color:#8F5406;text-align:center"></span>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#6B5C56;text-align:center">or email <a href="mailto:kendall@fleetagentic.ai" style="color:#4A403D">kendall@fleetagentic.ai</a></span>
+
+      <div class="diagram" role="img" aria-label="Diagram: third-party apps and public models sit above a red data security line. Below it, Lighthouse, a fleet of Sales, Marketing and Finance agents, and local data. Only the agents cross the line.">
+        <div class="outside">
+          <p class="zone-label">Outside · third-party apps, public data and models</p>
+          <div class="lane">
+            <span></span>
+            <div class="chips"><span class="chip">HubSpot</span><span class="chip">Public models</span><span class="chip">QuickBooks</span></div>
+            <span></span>
+          </div>
+        </div>
+        <div class="line"><span>Data security line</span></div>
+        <div class="inside">
+          <div class="node home"><small>Lighthouse</small><h3>Home base</h3><p>The installed platform the fleet runs on.</p></div>
+          <div class="agents">
+            <div class="node"><small>Agent</small><h3>Sales</h3></div>
+            <div class="node"><small>Agent</small><h3>Marketing</h3></div>
+            <div class="node"><small>Agent</small><h3>Finance</h3></div>
+          </div>
+          <div class="node"><h3>Local data</h3><p>Secure + unsecure files stay inside.</p></div>
+        </div>
+        <div class="below">
+          <div class="node"><h3>Employees, more productive</h3><p>Teams hand work to agents instead of to public tools.</p></div>
+          <div class="node"><h3>Off-grid employees</h3><p>Keep working with agents.</p></div>
+        </div>
+      </div>
+
+      <div class="pair">
+        <article>
+          <p class="eyebrow">Agent to agent</p>
+          <h3>Onboard automated agents that support your agents.</h3>
+          <p>Assistant agents hand repeatable work to a team of fully automated workflow agents. The fleet supports itself, all inside the security line, so capacity grows without adding risk.</p>
+        </article>
+        <article>
+          <p class="eyebrow">Multiple Lighthouses</p>
+          <h3>One fleet across every office.</h3>
+          <p>Each office runs its own Lighthouse: leadership in New York, engineering in San Francisco and Denver. Together they run as one secure fleet.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band deep" id="leak">
+    <div class="wrap leak">
+      <div>
+        <div class="head">
+          <p class="eyebrow">The hidden leak</p>
+          <h2>Keeping the file local isn’t enough. The index is the leak.</h2>
+          <p class="lede">Most “on-prem” AI keeps the document local, then ships a search index of it to the cloud. That creates a second, queryable copy of your sensitive data off-site.</p>
+        </div>
+        <p class="punch">The original file never moved. <span>The sensitive information did.</span></p>
+      </div>
+      <div>
+        <dl aria-label="What a search index contains">
+          <div><dt>CHUNKS</dt><dd>Verbatim passages lifted straight out of the document. Not a summary. The text itself.</dd></div>
+          <div><dt>EMBEDDINGS</dt><dd>Encode the meaning, and are reversible enough to reconstruct the source.</dd></div>
+          <div><dt>KEYWORDS</dt><dd>Client names, matter numbers, program names and codenames, in plaintext.</dd></div>
+          <div><dt>METADATA</dt><dd>Authors, dates, case IDs, file paths: a map of everything you hold.</dd></div>
+          <div><dt>RELATIONSHIPS</dt><dd>Which parties, entities and documents connect. Disclosure without a single sentence leaving.</dd></div>
+        </dl>
+        <p class="fix">Fleet Agentic runs on physical hardware inside your perimeter. The model, the index, the embeddings and the logs all stay on the same side of the boundary as your files.</p>
+        <p class="fix"><a class="more" href="learn/the-index-is-the-leak/">Read the full explainer →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band sail" id="agents">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Agent responsibilities</p>
+        <h2>Build your agent to be a leader.</h2>
+        <p class="lede">Every agent is configured with five things. You set the rules once, and every agent follows them.</p>
+      </div>
+      <div class="config">
+        <article><span class="tag">Model</span><h3>Set the model</h3><p>Plug in public API keys, or let Sonar find available private models and install them. Proprietary models work too.</p></article>
+        <article><span class="tag">Knowledge</span><h3>Give access to knowledge</h3><p>RAG-enabled connections to files on shared drives or local machines, with strict, agent-specific access.</p></article>
+        <article><span class="tag">Tools</span><h3>Allow tool use</h3><p>Connect third-party apps through curated MCP skills, with a skill importer built on Anthropic standards.</p></article>
+        <article><span class="tag">Workflows</span><h3>Workflow automation</h3><p>Connect agents to workflow engines like n8n to run multi-step automations.</p></article>
+        <article><span class="tag">Reporting</span><h3>Leadership reports</h3><p>Agents team up to brief leadership on progress, outcomes and any custom metrics you need.</p></article>
+      </div>
+      <p class="rule">You set the rules. <span>Agents do the work.</span></p>
+    </div>
+  </section>
+
+  <section class="band" id="cao">
+    <div class="wrap cao">
+      <div>
+        <div class="head" style="margin-bottom:32px">
+          <p class="eyebrow">Agent management</p>
+          <h2>No-code agent administration.</h2>
+        </div>
+        <div class="role">
+          <p class="eyebrow">One role</p>
+          <h3>Chief Agent Officer</h3>
+          <p>Manages the whole agent workforce. No computer science engineers, no coding. Any technical leader runs everything from a single, secure interface.</p>
+          <p class="foot">One person. One secure interface. Every agent.</p>
+        </div>
+      </div>
+      <div class="list">
+        <div><svg aria-hidden="true"><use href="#check"/></svg><div style="display:block;padding:0;border:0"><h3>One leader runs the entire agent team</h3><p>Create, configure and adjust every agent from one place, without a development team.</p></div></div>
+        <div><svg aria-hidden="true"><use href="#check"/></svg><div style="display:block;padding:0;border:0"><h3>A clear, step-by-step process</h3><p>Guided setup walks through each agent, one decision at a time.</p></div></div>
+        <div><svg aria-hidden="true"><use href="#check"/></svg><div style="display:block;padding:0;border:0"><h3>Every agent type</h3><p>Assistant, automated, customer service and more, all managed in one place.</p></div></div>
+        <div><svg aria-hidden="true"><use href="#check"/></svg><div style="display:block;padding:0;border:0"><h3>Easy audits</h3><p>Agents deliver their own reports on resources, tokens and skills.</p></div></div>
+        <div><svg aria-hidden="true"><use href="#check"/></svg><div style="display:block;padding:0;border:0"><h3>Proactive monitoring</h3><p>Sentinel watches all activity and reports on it, so issues surface before they spread.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band deep" id="security">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Zero-trust, defense-grade security</p>
+        <h2>Zero trust. Built for defense. Ready for everyone.</h2>
+        <p class="lede">No user, agent or connection is trusted by default, and every request is verified. Compliance is designed into the architecture, giving your team the controls and evidence trail for the frameworks you answer to.</p>
+        <div class="regs" id="posture" aria-label="Compliance frameworks">
+          <span>GDPR</span><span>FERPA</span><span>HIPAA</span><span>DFARS</span><span>CCPA</span><span>AML/CFT</span><span>NIST 800-171</span><span>EU AI Act</span><span>CMMC 2.0</span>
+        </div>
+      </div>
+      <div class="sec">
+        <div class="shot wide">
+          <div class="cap"><p class="eyebrow" style="color:var(--brass-ink)">Audit trail</p><h3>Evidence for every action.</h3><p>A detailed record of identity, logins, admin changes, conversations, app events and violations.</p></div>
+          <figure><img src="assets/audit-trail.png" alt="Fleet Agentic Audit and Evidence screen with identity, login, admin, audit log, conversation, app event and violation tabs" loading="lazy"></figure>
+        </div>
+        <div class="shot">
+          <div class="cap"><p class="eyebrow" style="color:var(--brass-ink)">Reach Visualizer</p><h3>See every agent’s data journey.</h3><p>Guardrails stop internal agents from ever crossing public and internal data or models.</p></div>
+        </div>
+        <div class="shot" style="background:var(--navy-card);color:var(--sail);border:1px solid var(--navy-line)">
+          <div class="cap" style="align-content:start;gap:14px">
+            <p class="eyebrow">Sentinel</p>
+            <h3>Watching the whole fleet.</h3>
+            <p style="color:var(--mist)">Sentinel monitors what every agent does and reports on it, so the Chief Agent Officer sees issues before they spread.</p>
+            <p style="color:var(--mist)">Fleet Agentic and the Lighthouse platform hold the bar set by CMMC 2.0 for aerospace and defense contractors, and bring it to every organization.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band sail" id="cost">
+    <div class="wrap tokens">
+      <div>
+        <div class="head">
+          <p class="eyebrow">Token consumption control</p>
+          <h2>Predictable AI costs, down to the token.</h2>
+        </div>
+        <div class="levers">
+          <article><h3>Local models, fixed costs</h3><p>Run local and proprietary models on Lighthouse. Variable, hidden public token costs become fixed hardware costs, and Sonar opens a large library of open models.</p></article>
+          <article><h3>Optimized MCP connections</h3><p>Third-party MCP connections waste tokens on unnecessary calls. Agent MCP connection skills tune each agent and cut that spend dramatically.</p></article>
+          <article><h3>Complete usage monitoring</h3><p>Every lane of usage is tracked: third-party tools, skills, conversations and more. Agents can report on their own consumption.</p></article>
+        </div>
+      </div>
+      <figure class="chart" style="margin:0">
+        <img src="assets/token-usage.png" alt="Fleet Agentic token usage chart broken down by tool definitions, skill instructions, tool activity, conversation, completion and unattributed" loading="lazy">
+        <figcaption>Token usage by lane, in Fleet Agentic</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band" id="pricing">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Pricing</p>
+        <h2>Two ways to run it. Never per token.</h2>
+        <p class="lede">No per-token metering and no surprise overages. Seats and price are known up front.</p>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <p class="eyebrow">Your hardware</p>
+          <p class="price">$500<small>/month</small></p>
+          <p data-cfg="prices.entry.body">Includes 1 seat, then $25 per additional seat per month. Software, models, and management on hardware you buy and own.</p>
+          <ul><li>Fits inside your own accreditation boundary</li><li>We patch, monitor and maintain the software stack</li></ul>
+        </article>
+        <article class="plan leased">
+          <p class="eyebrow">Fully leased</p>
+          <p class="price">$5,000<small>/month</small></p>
+          <p data-cfg="prices.full.body">As many seats as the hardware supports. Hardware, models, maintenance, patching, and support. No CapEx.</p>
+          <ul><li>One flat fee for the whole team</li><li>We own the hardware, updates and lifecycle</li></ul>
+        </article>
+      </div>
+      <div class="pricenote">
+        <span><strong>Example:</strong> a 10-person team on your own hardware is $725/month.</span>
+        <span><strong>Leased:</strong> $5,000/month all-in, however many people use it.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="band deep" id="verticals">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Who it’s for</p>
+        <h2>Built for regulated industries.</h2>
+        <p class="lede">For organizations whose data can’t leave the building: defense contractors, law firms, health systems and school districts.</p>
+      </div>
+      <div class="verticals">
+        <article><p class="kind">Defense &amp; aerospace</p><h3>Frontier-grade AI, air-gapped.</h3><ul><li>Built for CMMC 2.0 Level 2 environments</li><li>CUI and every derived index stay in your enclave</li><li>Proposal and BD drafting on past performance</li></ul><a class="more" href="solutions/defense/">Learn more →</a></article>
+        <article><p class="kind">Legal</p><h3>AI for lawyers, without sending privilege to the cloud.</h3><ul><li>Draft, redline and summarize matter sets</li><li>Issue-spot and triage productions</li><li>Search your own precedent bank</li></ul><a class="more" href="solutions/legal/">Learn more →</a></article>
+        <article><p class="kind">Healthcare</p><h3>Clinical AI that never leaves the building.</h3><ul><li>Clinical documentation and chart search</li><li>Patient intake and triage</li><li>PHI is never sent to a third-party model</li></ul><a class="more" href="solutions/healthcare/">Learn more →</a></article>
+        <article><p class="kind">Education</p><h3>Scale AI across districts.</h3><ul><li>Student records stay on district infrastructure</li><li>Built to FERPA requirements</li><li>Predictable annual budgets, K-12 and higher ed</li></ul><a class="more" href="#book">Talk to us about districts →</a></article>
+      </div>
+      <a class="case" id="case-studies" href="case-studies/defense-cmmc/">
+        <p class="eyebrow">Field result · Defense &amp; aerospace</p>
+        <div>
+          <h3>AI infrastructure for a defense contractor preparing for CMMC 2.0</h3>
+          <p>Generative AI deployed on 20 years of BD content without breaking CMMC Level 2 posture or exposing controlled data to frontier models.</p>
+          <span class="more">Read the case study →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="band" id="start">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Getting started</p>
+        <h2>Too many choices. One low-risk first step.</h2>
+        <p class="lede">Stand up a single Lighthouse instance running Fleet Agentic. Nothing about your current setup has to change.</p>
+      </div>
+      <div class="friction">
+        <article><h3>No code</h3><p>Set up and run agents without developers.</p></article>
+        <article><h3>No re-architecture</h3><p>Your current systems stay as they are.</p></article>
+        <article><h3>Runs alongside</h3><p>Fleet Agentic runs next to your current AI setup.</p></article>
+      </div>
+      <ol class="steps" aria-label="Start small, then scale">
+        <li>Stand up one instance</li>
+        <li>Build an agent team</li>
+        <li>Prove the model</li>
+        <li>Scale across the business</li>
+      </ol>
+      <div class="paralysis">
+        <p>Buyers are flooded with AI options, and every one looks like a big bet on code, architecture and budget. So the decision stalls.</p>
+        <strong>Fleet Agentic takes the bet off the table.</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="band deep" id="partners">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Integration partners</p>
+        <h2>Ready to run with the stack you already have.</h2>
+        <p class="lede">Fleet Agentic and Lighthouse work with these products out of the box, and the list keeps growing.</p>
+      </div>
+      <div class="partners">
+        <div class="col">
+          <h3>What the platform runs on</h3>
+          <dl style="margin:0">
+            <div class="prow"><dt>Hardware</dt><dd>NVIDIA, AMD</dd></div>
+            <div class="prow"><dt>Infrastructure</dt><dd>Kubernetes, Pulumi, Prometheus, Rust, TypeScript, CloudEvents, Cloudflare</dd></div>
+            <div class="prow"><dt>Inference engines</dt><dd>vLLM</dd></div>
+            <div class="prow"><dt>Default models</dt><dd>ChatGPT, Claude, Grok, Qwen, Muse, Gemma, Hugging Face</dd></div>
+          </dl>
+        </div>
+        <div class="col">
+          <h3>What agents connect to</h3>
+          <dl style="margin:0">
+            <div class="prow"><dt>Identity</dt><dd>Keycloak, OpenID, OAuth</dd></div>
+            <div class="prow"><dt>Databases</dt><dd>MySQL, MongoDB</dd></div>
+            <div class="prow"><dt>MCP connectors</dt><dd>MCP, QuickBooks, HubSpot, Rippling, EspoCRM</dd></div>
+            <div class="prow"><dt>Workflow engines</dt><dd>n8n</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band sail" id="platform">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">How it fits together</p>
+        <h2>The product your team uses, and the platform it runs on.</h2>
+      </div>
+      <div class="stack">
+        <article class="lead"><p class="kind">Product</p><h3>Fleet Agentic</h3><p>Configures and manages your agents, with no code. Create automated agents that do the work for you: customer service agents, workflow agents and more.</p></article>
+        <article><p class="kind">Platform</p><h3>Lighthouse · Sentinel</h3><p>Lighthouse is the installed platform everything runs on. Sentinel watches every agent and reports on its activity.</p></article>
+        <article><p class="kind">Product</p><h3>Sonar</h3><p>Turns token costs into fixed hardware costs. Choose from a library of private models and pick the best one for each agent.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band deep" id="faq">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Questions</p>
+        <h2>What security teams ask first.</h2>
+      </div>
+      <div class="faq">
+        <details open><summary>Does any data leave my network?</summary><p>No. The model, the retrieval index, the embeddings and the logs all live on-premises, inside your perimeter. Nothing derived from your documents is sent to a third-party API.</p></details>
+        <details><summary>How is this different from private cloud or GovCloud AI?</summary><p>GovCloud and private-cloud AI still run on someone else’s computer. Your content and its search index are processed and stored outside your walls, under someone else’s controls. Fleet Agentic moves the computer to you instead.</p></details>
+        <details><summary>Does it work in an air-gapped network?</summary><p>Yes, on request. Fleet Agentic can be deployed fully disconnected. Managed updates arrive on a schedule and by a method that fits your environment, including offline transfer for air-gapped enclaves.</p></details>
+        <details><summary>Who patches and audits it?</summary><p>We manage patching, monitoring and updates of the software under the monthly fee, and of the hardware on the leased plan. Sentinel’s audit logs are available to your team and your assessor.</p></details>
+        <details><summary>What does it cost?</summary><p>On hardware you own: $500/month including 1 seat, then $25 per additional seat. Fully leased: $5,000/month flat with as many seats as the hardware supports, including hardware, maintenance, patching and support. No per-token metering on either.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band close" id="book">
+    <div class="wrap">
+      <h2>You are not the product. <span>You are the leader.</span></h2>
+      <p class="lede">Of a new agent fleet: secure, cost-controlled and built to supercharge your workforce. See it in a 30-minute walkthrough with the founder, on your own data.</p>
+      <p class="domain" style="margin-top:28px">FLEETAGENTIC.AI</p>
+
+      <div class="reach">
+        <div class="panel book">
+          <p class="eyebrow">Schedule a demo</p>
+          <h3>See it on your own data.</h3>
+          <p class="muted">A 30-minute walkthrough with the founder: Fleet Agentic, Lighthouse and Sentinel, on your own data.</p>
+          <div id="cal-inline" class="calembed"></div>
+          <a class="btn" id="calendarBtn" href="https://cal.com/kdplyd/30min" target="_blank" rel="noopener">Open scheduling calendar →</a>
+        </div>
+
+        <form class="panel form" id="contact" novalidate>
+          <p class="eyebrow">Contact sales</p>
+          <h3>Tell us what you need.</h3>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="gotcha">
+          <div class="field"><label for="cf-name">Name</label><input id="cf-name" name="name" autocomplete="name" required maxlength="120"></div>
+          <div class="field"><label for="cf-email">Work email</label><input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="200"></div>
+          <div class="field"><label for="cf-company">Company</label><input id="cf-company" name="company" autocomplete="organization" maxlength="160"></div>
+          <div class="field"><label for="cf-need">Tell us about your need</label><textarea id="cf-need" name="message" rows="4" maxlength="4000"></textarea></div>
+          <p class="form-msg" id="formNote" role="status" aria-live="polite"></p>
+          <button class="btn" type="submit" id="cfSend">Send message →</button>
+          <p class="muted small">Or email <a href="mailto:kendall@fleetagentic.ai">kendall@fleetagentic.ai</a></p>
         </form>
       </div>
     </div>
   </section>
+</main>
 
-  <!-- ================= FOOTER ================= -->
-  <footer style="position:relative;z-index:1;border-top:1px solid rgba(249,217,206,0.08);background:#332B29">
-    <!-- waterline top edge -->
-    <div aria-hidden="true" style="overflow:hidden;height:22px;opacity:0.35"><div style="display:flex;width:200%;animation:waveDrift 30s linear infinite;font-family:'JetBrains Mono',monospace;font-size:14px;line-height:22px;color:#EEAE56;white-space:nowrap"><span>≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿</span><span>≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿</span></div></div>
-    <div style="max-width:1280px;margin:0 auto;padding:52px 32px 40px">
-      <div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;margin-bottom:40px">
-        <div style="max-width:340px">
-          <span style="display:flex;align-items:center;gap:10px;margin-bottom:16px"><img src="assets/fleet-agentic-mark-dark.svg" alt="" width="33" height="24" style="height:24px;width:33px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:12px;line-height:1;letter-spacing:0.04em;color:#F9D9CE;text-transform:uppercase">Fleet<br>Agentic</span></span>
-          <p style="font-size:14.5px;line-height:1.6;color:#CDBDB5;margin:0">Sovereign intelligence for regulated verticals. The AI that lives inside your perimeter.</p>
-        </div>
-        <div style="display:flex;flex-wrap:wrap;gap:48px">
-          <div style="display:flex;flex-direction:column;gap:12px">
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#B3A29B">PRODUCT</span>
-            <a href="#platform" class="foot-link" style="font-size:14px;color:#E3CFC6">Platform</a>
-            <a href="#verticals" class="foot-link" style="font-size:14px;color:#E3CFC6">Verticals</a>
-            <a href="#security" class="foot-link" style="font-size:14px;color:#E3CFC6">Security</a>
-            <a href="#pricing" class="foot-link" style="font-size:14px;color:#E3CFC6">Pricing</a>
-            <a href="solutions/legal/" class="foot-link" style="font-size:14px;color:#E3CFC6">Legal AI</a>
-            <a href="solutions/healthcare/" class="foot-link" style="font-size:14px;color:#E3CFC6">Healthcare AI</a>
-            <a href="solutions/defense/" class="foot-link" style="font-size:14px;color:#E3CFC6">Defense AI</a>
-            <a href="learn/the-index-is-the-leak/" class="foot-link" style="font-size:14px;color:#E3CFC6">The Index Is the Leak</a>
-            <a href="case-studies/" class="foot-link" style="font-size:14px;color:#E3CFC6">Case Studies</a>
-            <a href="/blog/" class="foot-link" style="font-size:14px;color:#E3CFC6">Blog</a>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:12px">
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#B3A29B">COMPANY</span>
-            <a href="about/" class="foot-link" style="font-size:14px;color:#E3CFC6">About</a>
-            <a href="carrier/" class="foot-link" style="font-size:14px;color:#E3CFC6">Carrier Partner Program</a>
-            <a href="#book" class="foot-link" style="font-size:14px;color:#E3CFC6">Book a Demo</a>
-            <a href="#contact" class="foot-link" style="font-size:14px;color:#E3CFC6">Contact Sales</a>
-            <a href="mailto:info@fleetagentic.ai" class="foot-link" style="font-size:14px;color:#E3CFC6">info@fleetagentic.ai</a>
-          </div>
-        </div>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/" aria-label="Fleet Agentic home">
+          <svg viewBox="8 15 104 74" aria-hidden="true"><use href="#mark"/></svg>
+          <span class="wordmark">FLEET<br>AGENTIC</span>
+        </a>
+        <p>Sovereign intelligence for regulated verticals. The AI that lives inside your perimeter.</p>
+        <p class="motto">Explore further. Arrive safely.</p>
       </div>
-      <!-- trust badge strip -->
-      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;padding:20px 0;border-top:1px solid rgba(249,217,206,0.07);border-bottom:1px solid rgba(249,217,206,0.07);margin-bottom:24px">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#B3A29B">BUILT&nbsp;TO&nbsp;THE&nbsp;STANDARD&nbsp;OF</span>
-        <a href="#posture" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#E3CFC6;border:1px solid rgba(249,217,206,0.12);border-radius:6px;padding:6px 12px">CMMC L2</a>
-        <a href="#posture" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#E3CFC6;border:1px solid rgba(249,217,206,0.12);border-radius:6px;padding:6px 12px">HIPAA</a>
-        <a href="#posture" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#E3CFC6;border:1px solid rgba(249,217,206,0.12);border-radius:6px;padding:6px 12px">FERPA</a>
-        <a href="#posture" style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#E3CFC6;border:1px solid rgba(249,217,206,0.12);border-radius:6px;padding:6px 12px">NIST 800-171</a>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B3A29B">© 2026 Fleet Agentic</span>
-        <div style="display:flex;gap:24px">
-          <a href="#security" class="foot-link-sub" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B3A29B">Security</a>
-          <a href="terms/" class="foot-link-sub" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B3A29B">Terms</a>
-          <a href="privacy/" class="foot-link-sub" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B3A29B">Privacy</a>
-          <a href="mailto:info@fleetagentic.ai" class="foot-link-sub" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B3A29B">Contact</a>
-        </div>
+      <div class="foot-cols">
+        <div><h4>Product</h4><a href="#model">How it works</a><a href="#security">Security</a><a href="#pricing">Pricing</a><a href="#verticals">Industries</a><a href="solutions/legal/">Legal AI</a><a href="solutions/healthcare/">Healthcare AI</a><a href="solutions/defense/">Defense AI</a></div>
+        <div><h4>Learn</h4><a href="learn/the-index-is-the-leak/">The Index Is the Leak</a><a href="case-studies/">Case Studies</a><a href="/blog/">Blog</a><a href="#faq">FAQ</a></div>
+        <div><h4>Company</h4><a href="about/">About</a><a href="carrier/">Carrier Partner Program</a><a href="#book">Book a Demo</a><a href="#contact">Contact Sales</a><a href="mailto:info@fleetagentic.ai">info@fleetagentic.ai</a></div>
       </div>
     </div>
-  </footer>
+    <div class="foot-badges"><span class="lbl">Built to the standard of</span><a href="#posture">CMMC L2</a><a href="#posture">HIPAA</a><a href="#posture">FERPA</a><a href="#posture">NIST 800-171</a></div>
+    <div class="foot-bottom"><span>© 2026 Fleet Agentic</span><span class="links"><a href="#security">Security</a><a href="terms/">Terms</a><a href="privacy/">Privacy</a><a href="mailto:info@fleetagentic.ai">Contact</a></span></div>
+  </div>
+</footer>
 
-</div>
+
 <script>
-  (function () {
-    var q = function (s) { return document.querySelector(s); };
-    var qa = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
-
-    // scroll reveals
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          e.target.style.opacity = '1';
-          e.target.style.transform = 'none';
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -7% 0px' });
-
-    qa('[data-reveal]').forEach(function (el) {
-      var r = el.getBoundingClientRect();
-      if (r.top < window.innerHeight * 0.92) {
-        el.style.opacity = '1';
-        el.style.transform = 'none';
-      } else {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(24px)';
-        io.observe(el);
-      }
+(function () {
+  var q = function (s) { return document.querySelector(s); };
+  // mobile nav
+  var t = q('#navToggle'), m = q('#mobnav');
+  if (t && m) {
+    t.addEventListener('click', function () { var open = !m.hidden; m.hidden = open; t.setAttribute('aria-expanded', String(!open)); });
+    m.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { m.hidden = true; t.setAttribute('aria-expanded', 'false'); }); });
+  }
+  // cal.com inline embed
+  (function (C, A, L) { var p = function (a, ar) { a.q.push(ar); }; var d = C.document; C.Cal = C.Cal || function () { var cal = C.Cal; var ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { var api = function () { p(api, arguments); }; var namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  if (q('#cal-inline')) {
+    Cal("init", "30min", { origin: "https://cal.com" });
+    Cal.ns["30min"]("inline", { elementOrSelector: "#cal-inline", config: { layout: "month_view" }, calLink: "kdplyd/30min" });
+    Cal.ns["30min"]("ui", { hideEventTypeDetails: false, layout: "month_view", theme: "dark", cssVarsPerTheme: { dark: { "cal-brand": "#C9A24B" } } });
+  }
+  // contact form -> Formspree
+  var FORM_ENDPOINT = 'https://formspree.io/f/myegqzyn';
+  var form = q('#contact'), note = q('#formNote'), btn = q('#cfSend');
+  function show(text, kind) { note.textContent = text; note.className = 'form-msg ' + (kind || ''); }
+  if (form) form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = function (id) { return q('#' + id).value.trim(); };
+    var name = v('cf-name'), email = v('cf-email'), company = v('cf-company'), need = v('cf-need');
+    var bad = null;
+    [['cf-name', !!name], ['cf-email', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)]].forEach(function (p) {
+      var el = q('#' + p[0]); el.setAttribute('aria-invalid', p[1] ? 'false' : 'true'); if (!p[1] && !bad) bad = el;
     });
-
-    // cal.com inline embed
-    (function (C, A, L) { var p = function (a, ar) { a.q.push(ar); }; var d = C.document; C.Cal = C.Cal || function () { var cal = C.Cal; var ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { var api = function () { p(api, arguments); }; var namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    if (q('#cal-inline')) {
-      Cal("init", "30min", { origin: "https://cal.com" });
-      Cal.ns["30min"]("inline", {
-        elementOrSelector: "#cal-inline",
-        config: { layout: "month_view" },
-        calLink: "kdplyd/30min",
-      });
-      Cal.ns["30min"]("ui", { hideEventTypeDetails: false, layout: "month_view", theme: "dark", cssVarsPerTheme: { dark: { "cal-brand": "#EEAE56" } } });
-    }
-
-    // header scrolled state
-    var header = q('#siteHeader');
-    var onScroll = function () {
-      if (!header) return;
-      header.style.background = window.scrollY > 24 ? 'rgba(253,241,234,0.9)' : 'rgba(253,241,234,0.55)';
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-
-    // responsive nav (breakpoint owned by CSS; this only handles the toggle)
-    var toggle = q('#navToggle');
-    var mob = q('#mobnav');
-    if (toggle && mob) {
-      toggle.addEventListener('click', function () {
-        var open = mob.style.display === 'block';
-        mob.style.display = open ? 'none' : 'block';
-        toggle.setAttribute('aria-expanded', String(!open));
-      });
-      mob.querySelectorAll('a').forEach(function (a) {
-        a.addEventListener('click', function () { mob.style.display = 'none'; });
-      });
-    }
-
-    // contact form -> Formspree
-    var FORM_ENDPOINT = 'https://formspree.io/f/myegqzyn';
-    var form = q('#leadForm');
-    var note = q('#formNote');
-    if (form) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var val = function (id) { var el = q('#' + id); return el ? el.value.trim() : ''; };
-        var name = val('cf-name'), email = val('cf-email'), company = val('cf-company'), need = val('cf-need');
-        if (!name || !email) {
-          [['cf-name', name], ['cf-email', email]].forEach(function (p) {
-            var el = q('#' + p[0]);
-            if (el && !p[1]) { el.style.borderColor = '#F2907D'; el.addEventListener('input', function () { el.style.borderColor = 'rgba(51,43,41,0.14)'; }, { once: true }); }
-          });
-          return;
-        }
-        var gotcha = form.querySelector('[name="_gotcha"]');
-        var btn = form.querySelector('button[type="submit"]');
-        btn.disabled = true; btn.textContent = 'Sending…';
-        if (note) { note.style.display = 'block'; note.style.color = '#EEAE56'; note.textContent = 'Sending…'; }
-        fetch(FORM_ENDPOINT, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            name: name,
-            email: email,
-            company: company || '',
-            message: need || '',
-            _gotcha: gotcha ? gotcha.value : '',
-            _subject: 'Fleet Agentic enquiry — ' + (company || name)
-          })
-        }).then(function (r) {
-          if (!r.ok) throw new Error('send failed');
-          window.location.href = '/thanks/';
-        }).catch(function () {
-          btn.disabled = false; btn.textContent = 'Send message →';
-          if (note) {
-            note.style.display = 'block';
-            note.style.color = '#F2907D';
-            note.innerHTML = 'Send failed — please email <a href="mailto:kendall@fleetagentic.ai" style="color:#B0381F">kendall@fleetagentic.ai</a>';
-          }
-        });
-      });
-    }
-  })();
+    if (bad) { show('Add your name and a valid work email.', 'err'); bad.focus(); return; }
+    btn.disabled = true; btn.textContent = 'Sending…'; show('');
+    var gotcha = form.querySelector('[name="_gotcha"]');
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: name, email: email, company: company, message: need, _gotcha: gotcha ? gotcha.value : '', _subject: 'Fleet Agentic enquiry — ' + (company || name) })
+    }).then(function (r) {
+      if (!r.ok) throw new Error('send failed');
+      window.location.href = '/thanks/';
+    }).catch(function () {
+      btn.disabled = false; btn.textContent = 'Send message →';
+      show('Your message didn’t send. Please email kendall@fleetagentic.ai.', 'err');
+    });
+  });
+})();
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ca0908e5c15f454f94b98b914d107cba"}'></script><!-- End Cloudflare Web Analytics -->
 </body>

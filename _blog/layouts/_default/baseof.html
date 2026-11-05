@@ -4,11 +4,11 @@
 {{ partial "head.html" . }}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Hanken+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: #FFF8F4; color: #332B29; font-family: 'Hanken Grotesk', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-  ::selection { background: #EEAE56; color: #332B29; }
+  body { margin: 0; background: #F3EEE3; color: #0B2545; font-family: 'IBM Plex Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  ::selection { background: #C9A24B; color: #0B2545; }
   a { text-decoration: none; }
   @keyframes waveDrift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @keyframes glowPulse { 0%,100% { opacity: .35; } 50% { opacity: .7; } }
@@ -16,75 +16,75 @@
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } html { scroll-behavior: auto; } }
 
   .post { position: relative; z-index: 1; max-width: 820px; margin: 0 auto; padding: clamp(48px,7vw,84px) 32px 0; }
-  .post .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; margin: 0 0 20px; color: #8F5406; }
-  .post h1 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: clamp(30px,5vw,50px); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 18px; color: #332B29; }
-  .post h2 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: clamp(22px,3.2vw,30px); line-height: 1.15; letter-spacing: -0.015em; margin: 40px 0 20px; color: #332B29; }
-  .post h3 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 600; font-size: clamp(18px,2.4vw,22px); line-height: 1.2; margin: 32px 0 14px; color: #332B29; }
-  .post .deck { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 400; font-size: clamp(17px,2.2vw,21px); line-height: 1.5; color: #4A403D; margin: 0 0 30px; max-width: 62ch; }
-  .post p { font-size: 16px; line-height: 1.7; color: #4A403D; margin: 0 0 16px; max-width: 68ch; }
-  .post .meta { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #6B5C56; margin: 0 0 26px; }
-  .post .lede-rule { border: none; border-top: 1px solid rgba(51,43,41,0.12); margin: 0 0 34px; }
-  .post ul, .post ol { font-size: 16px; line-height: 1.7; color: #4A403D; max-width: 68ch; padding-left: 22px; margin: 0 0 16px; }
+  .post .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; margin: 0 0 20px; color: #7A5C17; }
+  .post h1 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: clamp(30px,5vw,50px); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 18px; color: #0B2545; }
+  .post h2 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: clamp(22px,3.2vw,30px); line-height: 1.15; letter-spacing: -0.015em; margin: 40px 0 20px; color: #0B2545; }
+  .post h3 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 600; font-size: clamp(18px,2.4vw,22px); line-height: 1.2; margin: 32px 0 14px; color: #0B2545; }
+  .post .deck { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 400; font-size: clamp(17px,2.2vw,21px); line-height: 1.5; color: #24395A; margin: 0 0 30px; max-width: 62ch; }
+  .post p { font-size: 16px; line-height: 1.7; color: #24395A; margin: 0 0 16px; max-width: 68ch; }
+  .post .meta { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #4E6380; margin: 0 0 26px; }
+  .post .lede-rule { border: none; border-top: 1px solid rgba(11,37,69,0.12); margin: 0 0 34px; }
+  .post ul, .post ol { font-size: 16px; line-height: 1.7; color: #24395A; max-width: 68ch; padding-left: 22px; margin: 0 0 16px; }
   .post li { margin-bottom: 8px; }
-  .post li::marker { color: #8F5406; }
-  .post a { color: #8F5406; }
-  .post blockquote { border-left: 2px solid rgba(238,174,86,0.4); margin: 24px 0; padding: 4px 0 4px 22px; max-width: 66ch; }
-  .post blockquote p { color: #4A403D; font-style: italic; }
-  .post code { font-family: 'JetBrains Mono', monospace; font-size: 13.5px; color: #8F5406; background: rgba(238,174,86,0.07); border-radius: 4px; padding: 2px 6px; }
-  .post pre { background: #F9D9CE; border: 1px solid rgba(51,43,41,0.18); border-radius: 12px; padding: 20px; overflow-x: auto; margin: 0 0 20px; }
-  .post pre code { background: none; padding: 0; color: #4A403D; font-size: 13px; line-height: 1.6; }
-  .post img { max-width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(51,43,41,0.18); margin: 8px 0 20px; }
-  .post hr { border: none; border-top: 1px solid rgba(51,43,41,0.12); margin: 40px 0; }
+  .post li::marker { color: #7A5C17; }
+  .post a { color: #7A5C17; }
+  .post blockquote { border-left: 2px solid rgba(201,162,75,0.4); margin: 24px 0; padding: 4px 0 4px 22px; max-width: 66ch; }
+  .post blockquote p { color: #24395A; font-style: italic; }
+  .post code { font-family: 'IBM Plex Mono', monospace; font-size: 13.5px; color: #7A5C17; background: rgba(201,162,75,0.07); border-radius: 4px; padding: 2px 6px; }
+  .post pre { background: #E8E1D2; border: 1px solid rgba(11,37,69,0.18); border-radius: 12px; padding: 20px; overflow-x: auto; margin: 0 0 20px; }
+  .post pre code { background: none; padding: 0; color: #24395A; font-size: 13px; line-height: 1.6; }
+  .post img { max-width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(11,37,69,0.18); margin: 8px 0 20px; }
+  .post hr { border: none; border-top: 1px solid rgba(11,37,69,0.12); margin: 40px 0; }
   .post table { border-collapse: collapse; width: 100%; margin: 0 0 20px; display: block; overflow-x: auto; }
-  .post th, .post td { padding: 14px 18px; text-align: left; font-size: 14.5px; border-bottom: 1px solid rgba(51,43,41,0.06); }
-  .post th { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6B5C56; }
-  .post td { color: #4A403D; }
-  .post strong { color: #332B29; }
+  .post th, .post td { padding: 14px 18px; text-align: left; font-size: 14.5px; border-bottom: 1px solid rgba(11,37,69,0.06); }
+  .post th { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #4E6380; }
+  .post td { color: #24395A; }
+  .post strong { color: #0B2545; }
 
   .hub { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: clamp(48px,7vw,84px) 32px 0; }
-  .hub .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; margin: 0 0 20px; color: #8F5406; }
-  .hub h1 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: clamp(30px,5vw,50px); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 18px; color: #332B29; }
-  .hub .deck { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 400; font-size: clamp(17px,2.2vw,21px); line-height: 1.5; color: #4A403D; margin: 0 0 12px; max-width: 62ch; }
-  .hub p { font-size: 16px; line-height: 1.7; color: #4A403D; margin: 0 0 16px; max-width: 68ch; }
-  .hub .divider { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: rgba(238,174,86,0.25); overflow: hidden; white-space: nowrap; margin: 28px 0 36px; }
+  .hub .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; margin: 0 0 20px; color: #7A5C17; }
+  .hub h1 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: clamp(30px,5vw,50px); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 18px; color: #0B2545; }
+  .hub .deck { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 400; font-size: clamp(17px,2.2vw,21px); line-height: 1.5; color: #24395A; margin: 0 0 12px; max-width: 62ch; }
+  .hub p { font-size: 16px; line-height: 1.7; color: #24395A; margin: 0 0 16px; max-width: 68ch; }
+  .hub .divider { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: rgba(201,162,75,0.25); overflow: hidden; white-space: nowrap; margin: 28px 0 36px; }
 
   .postlist { display: flex; flex-direction: column; gap: 16px; }
-  .postcard { display: block; border: 1px solid rgba(51,43,41,0.1); border-radius: 16px; padding: 28px 26px; background: rgba(255,255,255,0.75); transition: border-color .25s ease, transform .25s ease; }
-  .postcard:hover { border-color: rgba(238,174,86,0.4); transform: translateY(-4px); }
-  .postcard .kick { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6B5C56; margin: 0 0 12px; display: flex; flex-wrap: wrap; gap: 6px 12px; }
-  .postcard .kick .k-eyebrow { color: #8F5406; }
-  .postcard h2 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 600; font-size: clamp(19px,2.6vw,23px); line-height: 1.25; color: #332B29; margin: 0 0 10px; }
-  .postcard p { font-size: 15px; line-height: 1.6; color: #5E524E; margin: 0 0 16px; max-width: 70ch; }
-  .postcard .more { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 700; letter-spacing: 0.05em; color: #8F5406; }
-  .postlist-empty { font-size: 15px; color: #6B5C56; font-family: 'JetBrains Mono', monospace; }
+  .postcard { display: block; border: 1px solid rgba(11,37,69,0.1); border-radius: 16px; padding: 28px 26px; background: rgba(255,255,255,0.75); transition: border-color .25s ease, transform .25s ease; }
+  .postcard:hover { border-color: rgba(201,162,75,0.4); transform: translateY(-4px); }
+  .postcard .kick { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #4E6380; margin: 0 0 12px; display: flex; flex-wrap: wrap; gap: 6px 12px; }
+  .postcard .kick .k-eyebrow { color: #7A5C17; }
+  .postcard h2 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 600; font-size: clamp(19px,2.6vw,23px); line-height: 1.25; color: #0B2545; margin: 0 0 10px; }
+  .postcard p { font-size: 15px; line-height: 1.6; color: #3E5573; margin: 0 0 16px; max-width: 70ch; }
+  .postcard .more { font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 700; letter-spacing: 0.05em; color: #7A5C17; }
+  .postlist-empty { font-size: 15px; color: #4E6380; font-family: 'IBM Plex Mono', monospace; }
 
   .related { max-width: 820px; margin: 0 auto; padding: 8px 32px 0; }
-  .related h2 { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #6B5C56; margin: 0 0 18px; }
+  .related h2 { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #4E6380; margin: 0 0 18px; }
   .related-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); gap: 14px; }
 
   .cta-wrap { max-width: 820px; margin: 0 auto; padding: 56px 32px 0; }
-  .cta-panel { border: 1px solid rgba(238,174,86,0.28); border-radius: 16px; padding: 34px 30px; background: linear-gradient(160deg, rgba(238,174,86,0.114), transparent); }
-  .cta-panel .cta-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #8F5406; margin: 0 0 16px; }
-  .cta-panel h2 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 600; font-size: clamp(20px,3vw,26px); line-height: 1.2; color: #332B29; margin: 0 0 12px; }
-  .cta-panel p { font-size: 15px; line-height: 1.55; color: #5E524E; margin: 0 0 22px; max-width: 60ch; }
+  .cta-panel { border: 1px solid rgba(201,162,75,0.28); border-radius: 16px; padding: 34px 30px; background: linear-gradient(160deg, rgba(201,162,75,0.114), transparent); }
+  .cta-panel .cta-eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #7A5C17; margin: 0 0 16px; }
+  .cta-panel h2 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 600; font-size: clamp(20px,3vw,26px); line-height: 1.2; color: #0B2545; margin: 0 0 12px; }
+  .cta-panel p { font-size: 15px; line-height: 1.55; color: #3E5573; margin: 0 0 22px; max-width: 60ch; }
   .cta-row { display: flex; flex-wrap: wrap; gap: 14px; }
-  .btn-primary { display: inline-flex; align-items: center; gap: 9px; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; letter-spacing: 0.05em; color: #332B29; background: #EEAE56; padding: 15px 26px; border-radius: 9px; transition: transform .15s ease, box-shadow .25s ease; }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(238,174,86,0.4); }
-  .btn-ghost { display: inline-flex; align-items: center; gap: 9px; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; letter-spacing: 0.05em; color: #332B29; background: transparent; border: 1px solid rgba(51,43,41,0.2); padding: 15px 26px; border-radius: 9px; transition: border-color .2s ease, color .2s ease; }
-  .btn-ghost:hover { border-color: #EEAE56; color: #8F5406; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; letter-spacing: 0.05em; color: #0B2545; background: #C9A24B; padding: 15px 26px; border-radius: 9px; transition: transform .15s ease, box-shadow .25s ease; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(201,162,75,0.4); }
+  .btn-ghost { display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 500; letter-spacing: 0.05em; color: #0B2545; background: transparent; border: 1px solid rgba(11,37,69,0.2); padding: 15px 26px; border-radius: 9px; transition: border-color .2s ease, color .2s ease; }
+  .btn-ghost:hover { border-color: #C9A24B; color: #7A5C17; }
 
-  .crumb { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #6B5C56; margin-bottom: 24px; }
-  .crumb a { color: #6B5C56; }
-  .crumb a:hover { color: #8F5406; }
+  .crumb { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #4E6380; margin-bottom: 24px; }
+  .crumb a { color: #4E6380; }
+  .crumb a:hover { color: #7A5C17; }
   .foot-link { transition: color .2s; }
-  .foot-link:hover { color: #EEAE56; }
+  .foot-link:hover { color: #C9A24B; }
 </style>
 </head>
 <body>
 
   <!-- ambient background -->
-  <div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(238,174,86,0.067) 1px, transparent 1px), linear-gradient(90deg, rgba(238,174,86,0.067) 1px, transparent 1px);background-size:44px 44px;animation:gridPan 32s linear infinite;mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%);-webkit-mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%)"></div>
-  <div aria-hidden="true" style="position:fixed;top:-260px;left:50%;transform:translateX(-50%);width:900px;height:600px;z-index:0;pointer-events:none;background:radial-gradient(closest-side, rgba(238,174,86,0.266), transparent);filter:blur(30px);animation:glowPulse 9s ease-in-out infinite"></div>
+  <div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(201,162,75,0.067) 1px, transparent 1px), linear-gradient(90deg, rgba(201,162,75,0.067) 1px, transparent 1px);background-size:44px 44px;animation:gridPan 32s linear infinite;mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%);-webkit-mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%)"></div>
+  <div aria-hidden="true" style="position:fixed;top:-260px;left:50%;transform:translateX(-50%);width:900px;height:600px;z-index:0;pointer-events:none;background:radial-gradient(closest-side, rgba(201,162,75,0.266), transparent);filter:blur(30px);animation:glowPulse 9s ease-in-out infinite"></div>
 
   {{ partial "header.html" . }}
 

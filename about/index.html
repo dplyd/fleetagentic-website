@@ -25,39 +25,39 @@
 <meta name="twitter:image" content="https://fleetagentic.ai/assets/og-card.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Hanken+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: #FFF8F4; color: #332B29; font-family: 'Hanken Grotesk', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-  ::selection { background: #EEAE56; color: #332B29; }
+  body { margin: 0; background: #F3EEE3; color: #0B2545; font-family: 'IBM Plex Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  ::selection { background: #C9A24B; color: #0B2545; }
   a { text-decoration: none; }
   @keyframes waveDrift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @keyframes glowPulse { 0%,100% { opacity: .35; } 50% { opacity: .7; } }
   @keyframes gridPan { from { background-position: 0 0; } to { background-position: 44px 44px; } }
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } html { scroll-behavior: auto; } }
   .btn-primary { transition: transform .15s ease, box-shadow .25s ease; }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(238,174,86,0.4); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(201,162,75,0.4); }
   .foot-link { transition: color .2s; }
-  .foot-link:hover { color: #EEAE56; }
+  .foot-link:hover { color: #C9A24B; }
 
   .cs { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: clamp(48px,7vw,84px) 32px clamp(64px,8vw,96px); }
-  .cs h1 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: clamp(30px,5vw,48px); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 26px; color: #332B29; }
-  .cs p { font-size: 16.5px; line-height: 1.75; color: #4A403D; margin: 0 0 20px; max-width: 66ch; }
-  .facts { font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 2; color: #5E524E; border: 1px solid rgba(51,43,41,0.18); border-radius: 12px; padding: 20px 22px; margin: 32px 0 40px; }
-  .facts a { color: #8F5406; }
+  .cs h1 { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: clamp(30px,5vw,48px); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 26px; color: #0B2545; }
+  .cs p { font-size: 16.5px; line-height: 1.75; color: #24395A; margin: 0 0 20px; max-width: 66ch; }
+  .facts { font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 2; color: #3E5573; border: 1px solid rgba(11,37,69,0.18); border-radius: 12px; padding: 20px 22px; margin: 32px 0 40px; }
+  .facts a { color: #7A5C17; }
 </style>
 </head>
 <body>
 
   <!-- ambient background -->
-  <div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(238,174,86,0.067) 1px, transparent 1px), linear-gradient(90deg, rgba(238,174,86,0.067) 1px, transparent 1px);background-size:44px 44px;animation:gridPan 32s linear infinite;mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%);-webkit-mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%)"></div>
-  <div aria-hidden="true" style="position:fixed;top:-260px;left:50%;transform:translateX(-50%);width:900px;height:600px;z-index:0;pointer-events:none;background:radial-gradient(closest-side, rgba(238,174,86,0.266), transparent);filter:blur(30px);animation:glowPulse 9s ease-in-out infinite"></div>
+  <div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(201,162,75,0.067) 1px, transparent 1px), linear-gradient(90deg, rgba(201,162,75,0.067) 1px, transparent 1px);background-size:44px 44px;animation:gridPan 32s linear infinite;mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%);-webkit-mask-image:radial-gradient(120% 80% at 50% 0%, #000 20%, transparent 75%)"></div>
+  <div aria-hidden="true" style="position:fixed;top:-260px;left:50%;transform:translateX(-50%);width:900px;height:600px;z-index:0;pointer-events:none;background:radial-gradient(closest-side, rgba(201,162,75,0.266), transparent);filter:blur(30px);animation:glowPulse 9s ease-in-out infinite"></div>
 
   <!-- header -->
-  <header style="position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(253,241,234,0.55);border-bottom:1px solid rgba(51,43,41,0.12)">
+  <header style="position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(243,238,227,0.55);border-bottom:1px solid rgba(11,37,69,0.12)">
     <div style="max-width:1280px;margin:0 auto;padding:15px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px">
-      <a href="../" aria-label="Fleet Agentic home" style="display:flex;align-items:center;gap:10px;flex-shrink:0"><img src="../assets/fleet-agentic-mark.svg" alt="" width="42" height="30" style="height:30px;width:42px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:15px;line-height:1;letter-spacing:0.04em;color:#332B29;text-transform:uppercase">Fleet<br>Agentic</span></a>
-      <a href="../" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#4A403D">← Back to home</a>
+      <a href="../" aria-label="Fleet Agentic home" style="display:flex;align-items:center;gap:10px;flex-shrink:0"><img src="../assets/fleet-agentic-mark.svg" alt="" width="42" height="30" style="height:30px;width:42px;display:block;flex-shrink:0"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:15px;line-height:1;letter-spacing:0.04em;color:#0B2545;text-transform:uppercase">Fleet<br>Agentic</span></a>
+      <a href="../" style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#24395A">← Back to home</a>
     </div>
   </header>
 
@@ -73,18 +73,18 @@
       Entity: DPLYD, Inc. dba Fleet Agentic · Contact: <a href="mailto:info@fleetagentic.ai">info@fleetagentic.ai</a> · Demos: <a href="https://cal.com/kdplyd/30min" target="_blank" rel="noopener">cal.com/kdplyd/30min</a>
     </div>
 
-    <a href="../#book" class="btn-primary" style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;letter-spacing:0.05em;color:#332B29;background:#EEAE56;padding:15px 26px;border-radius:9px">Book a demo with the founder →</a>
+    <a href="../#book" class="btn-primary" style="display:inline-flex;align-items:center;gap:9px;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:700;letter-spacing:0.05em;color:#0B2545;background:#C9A24B;padding:15px 26px;border-radius:9px">Book a demo with the founder →</a>
   </main>
 
   <!-- footer -->
-  <footer style="background:#332B29;position:relative;z-index:1;border-top:1px solid rgba(249,217,206,0.07)">
+  <footer style="background:#0B2545;position:relative;z-index:1;border-top:1px solid rgba(232,225,210,0.07)">
     <div style="max-width:1280px;margin:0 auto;padding:32px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B3A29B">© 2026 Fleet Agentic</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#7D90A8">© 2026 Fleet Agentic</span>
       <div style="display:flex;gap:24px">
-        <a href="../" class="foot-link" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B3A29B">Home</a>
-        <a href="../terms/" class="foot-link" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B3A29B">Terms</a>
-        <a href="../privacy/" class="foot-link" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B3A29B">Privacy</a>
-        <a href="mailto:info@fleetagentic.ai" class="foot-link" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B3A29B">Contact</a>
+        <a href="../" class="foot-link" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#7D90A8">Home</a>
+        <a href="../terms/" class="foot-link" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#7D90A8">Terms</a>
+        <a href="../privacy/" class="foot-link" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#7D90A8">Privacy</a>
+        <a href="mailto:info@fleetagentic.ai" class="foot-link" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#7D90A8">Contact</a>
       </div>
     </div>
   </footer>
