@@ -377,6 +377,17 @@ button.btn[disabled] { opacity: 0.6; cursor: progress; }
 @media (max-width: 860px) { .reach { grid-template-columns: 1fr; } }
 @media (max-width: 420px) { .days { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 5px; } .day b { font-size: 1.2rem; } }
 
+
+/* Leadership */
+.crew { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.person { display: grid; gap: 10px; align-content: start; padding: 26px 22px; background: var(--navy-card); border: 1px solid var(--navy-line); border-top: 4px solid var(--brass); border-radius: 0 0 10px 10px; }
+.person img { width: 104px; height: 104px; border-radius: 50%; object-fit: cover; border: 3px solid var(--brass); margin-bottom: 6px; }
+.person h3 { font-size: 1.6rem; }
+.person .p-role { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass); }
+.person p:not(.p-role) { color: var(--mist); font-size: 0.96rem; }
+@media (max-width: 1000px) { .crew { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .crew { grid-template-columns: 1fr; } }
+
 footer { border-top: 1px solid rgba(141,169,196,0.16); background: var(--navy-deep); }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; align-items: center; padding-block: 28px; color: var(--chart); font-size: 0.88rem; }
 
@@ -444,6 +455,7 @@ a.case:hover h3 { color: var(--brass); }
       <li><a href="#security">Security</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#verticals">Industries</a></li>
+      <li><a href="#leadership">Leadership</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="/blog/">Blog</a></li>
     </ul>
@@ -453,7 +465,7 @@ a.case:hover h3 { color: var(--brass); }
     </div>
   </div>
   <nav class="mobnav" id="mobnav" hidden>
-    <a href="#model">How it works</a><a href="#agents">Agents</a><a href="#security">Security</a><a href="#pricing">Pricing</a><a href="#verticals">Industries</a><a href="#faq">FAQ</a><a href="/blog/">Blog</a><a href="about/">About</a>
+    <a href="#model">How it works</a><a href="#agents">Agents</a><a href="#security">Security</a><a href="#pricing">Pricing</a><a href="#verticals">Industries</a><a href="#leadership">Leadership</a><a href="#faq">FAQ</a><a href="/blog/">Blog</a><a href="about/">About</a>
   </nav>
 </header>
 
@@ -781,6 +793,42 @@ a.case:hover h3 { color: var(--brass); }
     </div>
   </section>
 
+  <section class="band" id="leadership">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Leadership team</p>
+        <h2>The crew behind the fleet.</h2>
+        <p class="lede">Founders and operators who have built, scaled and sold companies before. Together we bring decades of startup leadership, enterprise engineering, regulated-industry delivery and product design to Fleet Agentic.</p>
+      </div>
+      <div class="crew">
+        <article class="person">
+          <img src="assets/team-kendall-miller.jpg" alt="Kendall Miller" width="120" height="120" loading="lazy">
+          <h3>Kendall Miller</h3>
+          <p class="p-role">Founder &amp; CEO</p>
+          <p>13 years in startup leadership. Two successful exits from CEO and board seats. Founder of CTO Lunches, Grow Big Advisors and Friday Deployment Spirits, and a long-time startup advisor and operator.</p>
+        </article>
+        <article class="person">
+          <img src="assets/team-greg-ebert.jpg" alt="Greg Ebert" width="120" height="120" loading="lazy">
+          <h3>Greg Ebert</h3>
+          <p class="p-role">Founder &amp; CTO</p>
+          <p>25+ years of principal engineering, ex-Amazon and ex-Volkswagen. Kubernetes, distributed systems and regulated-industry deployment. Prior exits: Convercent and Rivet Software.</p>
+        </article>
+        <article class="person">
+          <img src="assets/team-dana-hawthorne.jpg" alt="Dana Hawthorne" width="120" height="120" loading="lazy">
+          <h3>Dana Hawthorne</h3>
+          <p class="p-role">Founder</p>
+          <p>20+ years building consulting and engineering organizations. Founder of Modernize and co-founder of Platform Consulting Group, acquired by AHEAD. Has delivered cloud and AI transformation across regulated sectors.</p>
+        </article>
+        <article class="person">
+          <img src="assets/team-patrick-van-den-broek.jpg" alt="Patrick van den Broek" width="120" height="120" loading="lazy">
+          <h3>Patrick van den Broek</h3>
+          <p class="p-role">Head of Product</p>
+          <p>20+ years leading product and design. Ex-Charter, core team on three startup exits, and enterprise products for IBM, Oracle and Diageo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="band deep" id="faq">
     <div class="wrap">
       <div class="head">
@@ -843,7 +891,7 @@ a.case:hover h3 { color: var(--brass); }
       <div class="foot-cols">
         <div><h4>Product</h4><a href="#model">How it works</a><a href="#security">Security</a><a href="#pricing">Pricing</a><a href="#verticals">Industries</a><a href="solutions/legal/">Legal AI</a><a href="solutions/healthcare/">Healthcare AI</a><a href="solutions/defense/">Defense AI</a></div>
         <div><h4>Learn</h4><a href="learn/the-index-is-the-leak/">The Index Is the Leak</a><a href="case-studies/">Case Studies</a><a href="/blog/">Blog</a><a href="#faq">FAQ</a></div>
-        <div><h4>Company</h4><a href="about/">About</a><a href="carrier/">Carrier Partner Program</a><a href="#book">Book a Demo</a><a href="#contact">Contact Sales</a><a href="mailto:info@fleetagentic.ai">info@fleetagentic.ai</a></div>
+        <div><h4>Company</h4><a href="about/">About</a><a href="#leadership">Leadership</a><a href="carrier/">Carrier Partner Program</a><a href="#book">Book a Demo</a><a href="#contact">Contact Sales</a><a href="mailto:info@fleetagentic.ai">info@fleetagentic.ai</a></div>
       </div>
     </div>
     <div class="foot-badges"><span class="lbl">Built to the standard of</span><a href="#posture">CMMC L2</a><a href="#posture">HIPAA</a><a href="#posture">FERPA</a><a href="#posture">NIST 800-171</a></div>
