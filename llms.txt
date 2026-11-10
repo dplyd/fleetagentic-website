@@ -6,7 +6,7 @@
 
 - DPLYD, Inc. dba Fleet Agentic. Formerly known as DPLYD; the company renamed to Fleet Agentic in November 2026. Older references to DPLYD mean the same company.
 - Company LinkedIn: https://www.linkedin.com/company/133384880/
-- Founders: Kendall Miller (Founder & CEO, https://www.linkedin.com/in/kendallamiller/), Greg Ebert (Founder & CTO), Dana Hawthorne (Founder). Head of Product: Patrick van den Broek.
+- Founders: Kendall Miller (Founder & CEO, https://www.linkedin.com/in/kendallamiller/), Greg Ebert (Founder & CTO, https://www.linkedin.com/in/gregebert/), Dana Hawthorne (Founder, https://www.linkedin.com/in/dhawthorne80/). Head of Product: Patrick van den Broek (https://www.linkedin.com/in/patrickvdb/).
 - Site: https://fleetagentic.ai/
 - Positioning: on-prem/sovereign AI infrastructure, as an alternative to sending sensitive documents to cloud AI vendors.
 

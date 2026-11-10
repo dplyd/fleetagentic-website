@@ -4,7 +4,7 @@
 
 ---
 
-Source: https://fleetagentic.ai/  (last modified 2026-11-06)
+Source: https://fleetagentic.ai/  (last modified 2026-11-10)
 
 Fleet Agentic · Private AI agents
 
@@ -442,17 +442,23 @@ Founder & CTO
 
 25+ years of principal engineering, ex-Amazon and ex-Volkswagen. Kubernetes, distributed systems and regulated-industry deployment. Prior exits: Convercent and Rivet Software.
 
+LinkedIn →
+
 ### Dana Hawthorne
 
 Founder
 
 20+ years building consulting and engineering organizations. Founder of Modernize and co-founder of Platform Consulting Group, acquired by AHEAD. Has delivered cloud and AI transformation across regulated sectors.
 
+LinkedIn →
+
 ### Patrick van den Broek
 
 Head of Product
 
 20+ years leading product and design. Ex-Charter, core team on three startup exits, and enterprise products for IBM, Oracle and Diageo.
+
+LinkedIn →
 
 Questions
 
@@ -494,7 +500,7 @@ Open scheduling calendar →
 
 ---
 
-Source: https://fleetagentic.ai/solutions/legal/  (last modified 2026-11-05)
+Source: https://fleetagentic.ai/solutions/legal/  (last modified 2026-11-10)
 
 Legal AI
 
@@ -662,7 +668,7 @@ A 30-minute walkthrough of Fleet Agentic, running on your data, inside your boun
 
 ---
 
-Source: https://fleetagentic.ai/solutions/healthcare/  (last modified 2026-11-05)
+Source: https://fleetagentic.ai/solutions/healthcare/  (last modified 2026-11-10)
 
 Sovereign AI for Healthcare
 
@@ -772,7 +778,7 @@ See Fleet Agentic running against a sample of your own clinical documentation �
 
 ---
 
-Source: https://fleetagentic.ai/solutions/defense/  (last modified 2026-11-05)
+Source: https://fleetagentic.ai/solutions/defense/  (last modified 2026-11-10)
 
 Defense AI
 
@@ -944,7 +950,7 @@ A 30-minute walkthrough of Fleet Agentic, running on your data, inside your boun
 
 ---
 
-Source: https://fleetagentic.ai/carrier/  (last modified 2026-11-05)
+Source: https://fleetagentic.ai/carrier/  (last modified 2026-11-10)
 
 Partner Program
 
@@ -1112,7 +1118,7 @@ Book a Partner Call → ▸ HAVE QUESTIONS FIRST
 
 ---
 
-Source: https://fleetagentic.ai/learn/the-index-is-the-leak/  (last modified 2026-11-05)
+Source: https://fleetagentic.ai/learn/the-index-is-the-leak/  (last modified 2026-11-10)
 
 Learn
 
@@ -1162,7 +1168,7 @@ Book a Demo → See all verticals
 
 ---
 
-Source: https://fleetagentic.ai/case-studies/  (last modified 2026-11-05)
+Source: https://fleetagentic.ai/case-studies/  (last modified 2026-11-10)
 
 Field Results
 
@@ -1182,7 +1188,7 @@ Read case study →
 
 ---
 
-Source: https://fleetagentic.ai/case-studies/defense-cmmc/  (last modified 2026-11-05)
+Source: https://fleetagentic.ai/case-studies/defense-cmmc/  (last modified 2026-11-10)
 
 Case Study · Defense & Aerospace
 
