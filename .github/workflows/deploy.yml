@@ -21,6 +21,8 @@ jobs:
       HUGO_VERSION: 0.152.1
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history so sitemap lastmod dates come from git
 
       - name: Install Hugo
         run: |
@@ -45,6 +47,11 @@ jobs:
             --exclude='.DS_Store' \
             ./ _site/
 
+      # 1b. Regenerate sitemap-main.xml lastmod dates and llms-full.txt
+      #     from the current pages, git history and blog posts.
+      - name: Build AI/SEO files
+        run: python3 -I .github/scripts/build-ai-files.py _site "$PWD"
+
       # 2. Build the blog into _site/blog/
       - name: Build blog
         run: hugo --source _blog --destination "$PWD/_site/blog" --minify
@@ -54,6 +61,7 @@ jobs:
           test -f _site/index.html          || { echo "homepage missing"; exit 1; }
           test -f _site/CNAME               || { echo "CNAME missing";    exit 1; }
           test -f _site/blog/index.html     || { echo "blog index missing"; exit 1; }
+          test -s _site/llms-full.txt       || { echo "llms-full.txt missing"; exit 1; }
           test ! -d _site/_blog             || { echo "Hugo source leaked into output"; exit 1; }
 
       - uses: actions/upload-pages-artifact@v3

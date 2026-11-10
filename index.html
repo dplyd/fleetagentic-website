@@ -10,35 +10,93 @@
 <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <title>Fleet Agentic: Private AI Agents for Regulated Industries</title>
-<meta name="description" content="Private AI for regulated industries. Starts at $500/month.">
+<meta name="description" content="Local AI (and Agent teams) from hardware to full platform for regulated industries.">
 <link rel="canonical" href="https://fleetagentic.ai/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Fleet Agentic">
 <meta property="og:title" content="Fleet Agentic: Private AI Agents for Regulated Industries">
-<meta property="og:description" content="Private AI for regulated industries. Starts at $500/month.">
+<meta property="og:description" content="Local AI (and Agent teams) from hardware to full platform for regulated industries.">
 <meta property="og:url" content="https://fleetagentic.ai/">
 <meta property="og:image" content="https://fleetagentic.ai/assets/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fleet Agentic: Private AI Agents for Regulated Industries">
-<meta name="twitter:description" content="Private AI for regulated industries. Starts at $500/month.">
+<meta name="twitter:description" content="Local AI (and Agent teams) from hardware to full platform for regulated industries.">
 <meta name="twitter:image" content="https://fleetagentic.ai/assets/og-card.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://fleetagentic.ai/#website",
+      "url": "https://fleetagentic.ai/",
+      "name": "Fleet Agentic",
+      "publisher": { "@id": "https://fleetagentic.ai/#org" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://fleetagentic.ai/#webpage",
+      "url": "https://fleetagentic.ai/",
+      "name": "Fleet Agentic: Private AI Agents for Regulated Industries",
+      "description": "Local AI (and Agent teams) from hardware to full platform for regulated industries.",
+      "isPartOf": { "@id": "https://fleetagentic.ai/#website" },
+      "about": { "@id": "https://fleetagentic.ai/#org" },
+      "dateModified": "2026-11-10"
+    },
+    {
       "@type": "Organization",
       "@id": "https://fleetagentic.ai/#org",
       "name": "Fleet Agentic",
-      "alternateName": "DPLYD",
+      "alternateName": ["DPLYD", "Fleet Agentic (formerly DPLYD)"],
       "legalName": "DPLYD, Inc.",
       "url": "https://fleetagentic.ai/",
       "logo": "https://fleetagentic.ai/assets/fleet-agentic-logo.png",
-      "description": "Fleet Agentic builds fully managed on-premises AI for regulated organizations. The model, the retrieval index, and the data all stay inside the customer's network. Starts at $500/month including 1 seat, then $25/seat/month on customer-owned hardware; $5,000/month fully leased with as many seats as the hardware supports. No per-token fees.",
+      "sameAs": ["https://www.linkedin.com/company/133384880/", "https://github.com/dplyd"],
+      "founder": [
+        { "@id": "https://fleetagentic.ai/#kendall-miller" },
+        { "@id": "https://fleetagentic.ai/#greg-ebert" },
+        { "@id": "https://fleetagentic.ai/#dana-hawthorne" }
+      ],
+      "employee": { "@id": "https://fleetagentic.ai/#patrick-van-den-broek" },
+      "knowsAbout": ["On-premises AI", "Private LLM deployment", "AI agent teams", "Knowledge control plane", "HIPAA", "CMMC 2.0", "NIST 800-171", "FERPA"],
+      "description": "Fleet Agentic (formerly DPLYD) builds fully managed on-premises AI for regulated organizations. The model, the retrieval index, and the data all stay inside the customer's network. Starts at $500/month including 1 seat, then $25/seat/month on customer-owned hardware; $5,000/month fully leased with as many seats as the hardware supports. No per-token fees.",
       "email": "info@fleetagentic.ai",
       "contactPoint": { "@type": "ContactPoint", "email": "info@fleetagentic.ai", "contactType": "sales" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://fleetagentic.ai/#kendall-miller",
+      "name": "Kendall Miller",
+      "jobTitle": "Founder & CEO",
+      "image": "https://fleetagentic.ai/assets/team-kendall-miller.jpg",
+      "sameAs": ["https://www.linkedin.com/in/kendallamiller/"],
+      "worksFor": { "@id": "https://fleetagentic.ai/#org" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://fleetagentic.ai/#greg-ebert",
+      "name": "Greg Ebert",
+      "jobTitle": "Founder & CTO",
+      "image": "https://fleetagentic.ai/assets/team-greg-ebert.jpg",
+      "worksFor": { "@id": "https://fleetagentic.ai/#org" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://fleetagentic.ai/#dana-hawthorne",
+      "name": "Dana Hawthorne",
+      "jobTitle": "Founder",
+      "image": "https://fleetagentic.ai/assets/team-dana-hawthorne.jpg",
+      "worksFor": { "@id": "https://fleetagentic.ai/#org" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://fleetagentic.ai/#patrick-van-den-broek",
+      "name": "Patrick van den Broek",
+      "jobTitle": "Head of Product",
+      "image": "https://fleetagentic.ai/assets/team-patrick-van-den-broek.jpg",
+      "worksFor": { "@id": "https://fleetagentic.ai/#org" }
     },
     {
       "@type": "Product",
@@ -79,6 +137,19 @@
       },
       "provider": { "@id": "https://fleetagentic.ai/#org" }
     }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Does any data leave my network?", "acceptedAnswer": { "@type": "Answer", "text": "No. The model, the retrieval index, the embeddings and the logs all live on-premises, inside your perimeter. Nothing derived from your documents is sent to a third-party API." } },
+    { "@type": "Question", "name": "How is this different from private cloud or GovCloud AI?", "acceptedAnswer": { "@type": "Answer", "text": "GovCloud and private-cloud AI still run on someone else\u2019s computer. Your content and its search index are processed and stored outside your walls, under someone else\u2019s controls. Fleet Agentic moves the computer to you instead." } },
+    { "@type": "Question", "name": "Does it work in an air-gapped network?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, on request. Fleet Agentic can be deployed fully disconnected. Managed updates arrive on a schedule and by a method that fits your environment, including offline transfer for air-gapped enclaves." } },
+    { "@type": "Question", "name": "Who patches and audits it?", "acceptedAnswer": { "@type": "Answer", "text": "We manage patching, monitoring and updates of the software under the monthly fee, and of the hardware on the leased plan. Sentinel\u2019s audit logs are available to your team and your assessor." } },
+    { "@type": "Question", "name": "What does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "On hardware you own: $500/month including 1 seat, then $25 per additional seat. Fully leased: $5,000/month flat with as many seats as the hardware supports, including hardware, maintenance, patching and support. No per-token metering on either." } }
   ]
 }
 </script>
@@ -379,6 +450,10 @@ button.btn[disabled] { opacity: 0.6; cursor: progress; }
 
 
 /* Leadership */
+.story { display: grid; gap: 16px; max-width: 760px; margin: 0 0 clamp(36px, 5vw, 56px); }
+.story p { color: var(--mist); max-width: 68ch; }
+.person .p-link { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.06em; color: var(--brass); text-decoration: none; }
+.person .p-link:hover { text-decoration: underline; }
 .crew { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
 .person { display: grid; gap: 10px; align-content: start; padding: 26px 22px; background: var(--navy-card); border: 1px solid var(--navy-line); border-top: 4px solid var(--brass); border-radius: 0 0 10px 10px; }
 .person img { width: 104px; height: 104px; border-radius: 50%; object-fit: cover; border: 3px solid var(--brass); margin-bottom: 6px; }
@@ -465,7 +540,7 @@ a.case:hover h3 { color: var(--brass); }
     </div>
   </div>
   <nav class="mobnav" id="mobnav" hidden>
-    <a href="#model">How it works</a><a href="#agents">Agents</a><a href="#security">Security</a><a href="#pricing">Pricing</a><a href="#verticals">Industries</a><a href="#leadership">Leadership</a><a href="#faq">FAQ</a><a href="/blog/">Blog</a><a href="about/">About</a>
+    <a href="#model">How it works</a><a href="#agents">Agents</a><a href="#security">Security</a><a href="#pricing">Pricing</a><a href="#verticals">Industries</a><a href="#leadership">Leadership</a><a href="#faq">FAQ</a><a href="/blog/">Blog</a>
   </nav>
 </header>
 
@@ -800,12 +875,18 @@ a.case:hover h3 { color: var(--brass); }
         <h2>The crew behind the fleet.</h2>
         <p class="lede">Founders and operators who have built, scaled and sold companies before. Together we bring decades of startup leadership, enterprise engineering, regulated-industry delivery and product design to Fleet Agentic.</p>
       </div>
+      <div class="story">
+        <p>Fleet Agentic was formerly known as DPLYD. It was founded by Greg Ebert, Dana Hawthorne and Kendall Miller to close the gap between frontier AI productivity and the data-handling obligations of regulated organizations.</p>
+        <p>The founding observation: every &ldquo;compliant&rdquo; cloud AI product still asks you to ship your most sensitive content, or an index derived from it, to somebody else&rsquo;s computer. Fleet Agentic&rsquo;s answer is to move the computer instead.</p>
+        <p>The name describes the product: a fleet of AI agents, working as a team, in formation, on hardware you control. We install and operate the hardware; you own the boundary. Every demo is given by one of the founders, on your own data.</p>
+      </div>
       <div class="crew">
         <article class="person">
           <img src="assets/team-kendall-miller.jpg" alt="Kendall Miller" width="120" height="120" loading="lazy">
           <h3>Kendall Miller</h3>
           <p class="p-role">Founder &amp; CEO</p>
           <p>13 years in startup leadership. Two successful exits from CEO and board seats. Founder of CTO Lunches, Grow Big Advisors and Friday Deployment Spirits, and a long-time startup advisor and operator.</p>
+          <a class="p-link" href="https://www.linkedin.com/in/kendallamiller/" rel="me noopener" target="_blank">LinkedIn &rarr;</a>
         </article>
         <article class="person">
           <img src="assets/team-greg-ebert.jpg" alt="Greg Ebert" width="120" height="120" loading="lazy">
@@ -891,7 +972,7 @@ a.case:hover h3 { color: var(--brass); }
       <div class="foot-cols">
         <div><h4>Product</h4><a href="#model">How it works</a><a href="#security">Security</a><a href="#pricing">Pricing</a><a href="#verticals">Industries</a><a href="solutions/legal/">Legal AI</a><a href="solutions/healthcare/">Healthcare AI</a><a href="solutions/defense/">Defense AI</a></div>
         <div><h4>Learn</h4><a href="learn/the-index-is-the-leak/">The Index Is the Leak</a><a href="case-studies/">Case Studies</a><a href="/blog/">Blog</a><a href="#faq">FAQ</a></div>
-        <div><h4>Company</h4><a href="about/">About</a><a href="#leadership">Leadership</a><a href="carrier/">Carrier Partner Program</a><a href="#book">Book a Demo</a><a href="#contact">Contact Sales</a><a href="mailto:info@fleetagentic.ai">info@fleetagentic.ai</a></div>
+        <div><h4>Company</h4><a href="#leadership">Leadership</a><a href="carrier/">Carrier Partner Program</a><a href="#book">Book a Demo</a><a href="#contact">Contact Sales</a><a href="mailto:info@fleetagentic.ai">info@fleetagentic.ai</a></div>
       </div>
     </div>
     <div class="foot-badges"><span class="lbl">Built to the standard of</span><a href="#posture">CMMC L2</a><a href="#posture">HIPAA</a><a href="#posture">FERPA</a><a href="#posture">NIST 800-171</a></div>

@@ -1,0 +1,1409 @@
+# Fleet Agentic — full site text
+
+> Fleet Agentic (formerly DPLYD; legal entity DPLYD, Inc.) is fully managed private AI and AI agent teams deployed inside a customer's own network, from hardware to full platform, for regulated industries. This file concatenates the text of every public page for LLM ingestion. Index and key facts: https://fleetagentic.ai/llms.txt
+
+---
+
+Source: https://fleetagentic.ai/  (last modified 2026-11-06)
+
+Fleet Agentic · Private AI agents
+
+# A sovereign AI agent fleet, reporting to you.
+
+Secure, cost-controlled agents that work beside every employee and multiply what your team can do. Private AI inside your firewall: your data and its search index never leave the building.
+
+Schedule a Demo See how it works
+
+Explore further. Arrive safely.
+
+The current model
+
+## Every employee wires up AI alone. It doesn’t scale.
+
+Each person connects straight to public models and SaaS tools. Every one of those connections crosses the data security line.
+
+### Sensitive files cross the line
+
+Secure and unsecure company files travel to public models with no guardrails.
+
+### Off-grid means offline
+
+Travelling or disconnected employees lose their AI entirely.
+
+### Spend nobody can see
+
+Every person buys their own tools and tokens. Costs multiply and stay hidden.
+
+The new model
+
+## A fleet of agents guards the line.
+
+Fleet Agentic runs on Lighthouse, inside your walls. Only agents reach out to third-party products, public data and models, under rules you set. Employees work through their agents, and local data stays local.
+
+Outside · third-party apps, public data and models
+
+HubSpotPublic modelsQuickBooks Data security line Lighthouse
+
+### Home base
+
+The installed platform the fleet runs on.
+
+Agent
+
+### Sales
+
+### Agent
+
+### Marketing
+
+### Agent
+
+### Finance
+
+### Local data
+
+Secure + unsecure files stay inside.
+
+### Employees, more productive
+
+Teams hand work to agents instead of to public tools.
+
+### Off-grid employees
+
+Keep working with agents.
+
+Agent to agent
+
+### Onboard automated agents that support your agents.
+
+Assistant agents hand repeatable work to a team of fully automated workflow agents. The fleet supports itself, all inside the security line, so capacity grows without adding risk.
+
+Multiple Lighthouses
+
+### One fleet across every office.
+
+Each office runs its own Lighthouse: leadership in New York, engineering in San Francisco and Denver. Together they run as one secure fleet.
+
+The hidden leak
+
+## Keeping the file local isn’t enough. The index is the leak.
+
+Most “on-prem” AI keeps the document local, then ships a search index of it to the cloud. That creates a second, queryable copy of your sensitive data off-site.
+
+The original file never moved. The sensitive information did.
+
+CHUNKS
+
+Verbatim passages lifted straight out of the document. Not a summary. The text itself.
+
+EMBEDDINGS
+
+Encode the meaning, and are reversible enough to reconstruct the source.
+
+KEYWORDS
+
+Client names, matter numbers, program names and codenames, in plaintext.
+
+METADATA
+
+Authors, dates, case IDs, file paths: a map of everything you hold.
+
+RELATIONSHIPS
+
+Which parties, entities and documents connect. Disclosure without a single sentence leaving.
+
+Fleet Agentic runs on physical hardware inside your perimeter. The model, the index, the embeddings and the logs all stay on the same side of the boundary as your files.
+
+Read the full explainer →
+
+Agent responsibilities
+
+## Build your agent to be a leader.
+
+Every agent is configured with five things. You set the rules once, and every agent follows them.
+
+Model
+
+### Set the model
+
+Plug in public API keys, or let Sonar find available private models and install them. Proprietary models work too.
+
+Knowledge
+
+### Give access to knowledge
+
+RAG-enabled connections to files on shared drives or local machines, with strict, agent-specific access.
+
+Tools
+
+### Allow tool use
+
+Connect third-party apps through curated MCP skills, with a skill importer built on Anthropic standards.
+
+Workflows
+
+### Workflow automation
+
+Connect agents to workflow engines like n8n to run multi-step automations.
+
+Reporting
+
+### Leadership reports
+
+Agents team up to brief leadership on progress, outcomes and any custom metrics you need.
+
+You set the rules. Agents do the work.
+
+Agent management
+
+## No-code agent administration.
+
+One role
+
+### Chief Agent Officer
+
+Manages the whole agent workforce. No computer science engineers, no coding. Any technical leader runs everything from a single, secure interface.
+
+One person. One secure interface. Every agent.
+
+### One leader runs the entire agent team
+
+Create, configure and adjust every agent from one place, without a development team.
+
+### A clear, step-by-step process
+
+Guided setup walks through each agent, one decision at a time.
+
+### Every agent type
+
+Assistant, automated, customer service and more, all managed in one place.
+
+### Easy audits
+
+Agents deliver their own reports on resources, tokens and skills.
+
+### Proactive monitoring
+
+Sentinel watches all activity and reports on it, so issues surface before they spread.
+
+Zero-trust, defense-grade security
+
+## Zero trust. Built for defense. Ready for everyone.
+
+No user, agent or connection is trusted by default, and every request is verified. Compliance is designed into the architecture, giving your team the controls and evidence trail for the frameworks you answer to.
+
+GDPRFERPAHIPAADFARSCCPAAML/CFTNIST 800-171EU AI ActCMMC 2.0
+
+Audit trail
+
+### Evidence for every action.
+
+A detailed record of identity, logins, admin changes, conversations, app events and violations.
+
+Reach Visualizer
+
+### See every agent’s data journey.
+
+Guardrails stop internal agents from ever crossing public and internal data or models.
+
+Sentinel
+
+### Watching the whole fleet.
+
+Sentinel monitors what every agent does and reports on it, so the Chief Agent Officer sees issues before they spread.
+
+Fleet Agentic and the Lighthouse platform hold the bar set by CMMC 2.0 for aerospace and defense contractors, and bring it to every organization.
+
+Token consumption control
+
+## Predictable AI costs, down to the token.
+
+### Local models, fixed costs
+
+Run local and proprietary models on Lighthouse. Variable, hidden public token costs become fixed hardware costs, and Sonar opens a large library of open models.
+
+### Optimized MCP connections
+
+Third-party MCP connections waste tokens on unnecessary calls. Agent MCP connection skills tune each agent and cut that spend dramatically.
+
+### Complete usage monitoring
+
+Every lane of usage is tracked: third-party tools, skills, conversations and more. Agents can report on their own consumption.
+
+Token usage by lane, in Fleet Agentic
+
+Pricing
+
+## Two ways to run it. Never per token.
+
+No per-token metering and no surprise overages. Seats and price are known up front.
+
+Your hardware
+
+$500/month
+
+Includes 1 seat, then $25 per additional seat per month. Software, models, and management on hardware you buy and own.
+
+- Fits inside your own accreditation boundary
+
+- We patch, monitor and maintain the software stack
+
+Fully leased
+
+$5,000/month
+
+As many seats as the hardware supports. Hardware, models, maintenance, patching, and support. No CapEx.
+
+- One flat fee for the whole team
+
+- We own the hardware, updates and lifecycle
+
+- Example: a 10-person team on your own hardware is $725/month. Leased: $5,000/month all-in, however many people use it.
+
+Who it’s for
+
+## Built for regulated industries.
+
+For organizations whose data can’t leave the building: defense contractors, law firms, health systems and school districts.
+
+Defense & aerospace
+
+### Frontier-grade AI, air-gapped.
+
+- Built for CMMC 2.0 Level 2 environments
+
+- CUI and every derived index stay in your enclave
+
+- Proposal and BD drafting on past performance
+
+- Learn more →
+
+Legal
+
+### AI for lawyers, without sending privilege to the cloud.
+
+- Draft, redline and summarize matter sets
+
+- Issue-spot and triage productions
+
+- Search your own precedent bank
+
+- Learn more →
+
+Healthcare
+
+### Clinical AI that never leaves the building.
+
+- Clinical documentation and chart search
+
+- Patient intake and triage
+
+- PHI is never sent to a third-party model
+
+- Learn more →
+
+Education
+
+### Scale AI across districts.
+
+- Student records stay on district infrastructure
+
+- Built to FERPA requirements
+
+- Predictable annual budgets, K-12 and higher ed
+
+- Talk to us about districts →
+
+Field result · Defense & aerospace
+
+### AI infrastructure for a defense contractor preparing for CMMC 2.0
+
+Generative AI deployed on 20 years of BD content without breaking CMMC Level 2 posture or exposing controlled data to frontier models.
+
+Read the case study →
+
+Getting started
+
+## Too many choices. One low-risk first step.
+
+Stand up a single Lighthouse instance running Fleet Agentic. Nothing about your current setup has to change.
+
+### No code
+
+Set up and run agents without developers.
+
+### No re-architecture
+
+Your current systems stay as they are.
+
+### Runs alongside
+
+Fleet Agentic runs next to your current AI setup.
+
+- Stand up one instance
+
+- Build an agent team
+
+- Prove the model
+
+- Scale across the business
+
+Buyers are flooded with AI options, and every one looks like a big bet on code, architecture and budget. So the decision stalls.
+
+Fleet Agentic takes the bet off the table.
+
+Integration partners
+
+## Ready to run with the stack you already have.
+
+Fleet Agentic and Lighthouse work with these products out of the box, and the list keeps growing.
+
+### What the platform runs on
+
+Hardware
+
+NVIDIA, AMD
+
+Infrastructure
+
+Kubernetes, Pulumi, Prometheus, Rust, TypeScript, CloudEvents, Cloudflare
+
+Inference engines
+
+vLLM
+
+Default models
+
+ChatGPT, Claude, Grok, Qwen, Muse, Gemma, Hugging Face
+
+### What agents connect to
+
+Identity
+
+Keycloak, OpenID, OAuth
+
+Databases
+
+MySQL, MongoDB
+
+MCP connectors
+
+MCP, QuickBooks, HubSpot, Rippling, EspoCRM
+
+Workflow engines
+
+n8n
+
+How it fits together
+
+## The product your team uses, and the platform it runs on.
+
+Product
+
+### Fleet Agentic
+
+Configures and manages your agents, with no code. Create automated agents that do the work for you: customer service agents, workflow agents and more.
+
+Platform
+
+### Lighthouse · Sentinel
+
+Lighthouse is the installed platform everything runs on. Sentinel watches every agent and reports on its activity.
+
+Product
+
+### Sonar
+
+Turns token costs into fixed hardware costs. Choose from a library of private models and pick the best one for each agent.
+
+Leadership team
+
+## The crew behind the fleet.
+
+Founders and operators who have built, scaled and sold companies before. Together we bring decades of startup leadership, enterprise engineering, regulated-industry delivery and product design to Fleet Agentic.
+
+Fleet Agentic was formerly known as DPLYD. It was founded by Greg Ebert, Dana Hawthorne and Kendall Miller to close the gap between frontier AI productivity and the data-handling obligations of regulated organizations.
+
+The founding observation: every “compliant” cloud AI product still asks you to ship your most sensitive content, or an index derived from it, to somebody else’s computer. Fleet Agentic’s answer is to move the computer instead.
+
+The name describes the product: a fleet of AI agents, working as a team, in formation, on hardware you control. We install and operate the hardware; you own the boundary. Every demo is given by one of the founders, on your own data.
+
+### Kendall Miller
+
+Founder & CEO
+
+13 years in startup leadership. Two successful exits from CEO and board seats. Founder of CTO Lunches, Grow Big Advisors and Friday Deployment Spirits, and a long-time startup advisor and operator.
+
+LinkedIn →
+
+### Greg Ebert
+
+Founder & CTO
+
+25+ years of principal engineering, ex-Amazon and ex-Volkswagen. Kubernetes, distributed systems and regulated-industry deployment. Prior exits: Convercent and Rivet Software.
+
+### Dana Hawthorne
+
+Founder
+
+20+ years building consulting and engineering organizations. Founder of Modernize and co-founder of Platform Consulting Group, acquired by AHEAD. Has delivered cloud and AI transformation across regulated sectors.
+
+### Patrick van den Broek
+
+Head of Product
+
+20+ years leading product and design. Ex-Charter, core team on three startup exits, and enterprise products for IBM, Oracle and Diageo.
+
+Questions
+
+## What security teams ask first.
+
+### Does any data leave my network?
+
+No. The model, the retrieval index, the embeddings and the logs all live on-premises, inside your perimeter. Nothing derived from your documents is sent to a third-party API.
+
+### How is this different from private cloud or GovCloud AI?
+
+GovCloud and private-cloud AI still run on someone else’s computer. Your content and its search index are processed and stored outside your walls, under someone else’s controls. Fleet Agentic moves the computer to you instead.
+
+### Does it work in an air-gapped network?
+
+Yes, on request. Fleet Agentic can be deployed fully disconnected. Managed updates arrive on a schedule and by a method that fits your environment, including offline transfer for air-gapped enclaves.
+
+### Who patches and audits it?
+
+We manage patching, monitoring and updates of the software under the monthly fee, and of the hardware on the leased plan. Sentinel’s audit logs are available to your team and your assessor.
+
+### What does it cost?
+
+On hardware you own: $500/month including 1 seat, then $25 per additional seat. Fully leased: $5,000/month flat with as many seats as the hardware supports, including hardware, maintenance, patching and support. No per-token metering on either.
+
+## You are not the product. You are the leader.
+
+Of a new agent fleet: secure, cost-controlled and built to supercharge your workforce. See it in a 30-minute walkthrough with the founder, on your own data.
+
+FLEETAGENTIC.AI
+
+Schedule a demo
+
+### See it on your own data.
+
+A 30-minute walkthrough with the founder: Fleet Agentic, Lighthouse and Sentinel, on your own data.
+
+Open scheduling calendar →
+
+---
+
+Source: https://fleetagentic.ai/solutions/legal/  (last modified 2026-11-05)
+
+Legal AI
+
+# AI for lawyers, without sending privilege to the cloud.
+
+The productivity of generative AI — for matters, memos, and client files that never leave your building.
+
+Fleet Agentic puts fully managed AI inside your firm's perimeter. Privileged material stays privileged. No third-party API sees your work product.
+
+Fleet Agentic for legal is a managed on-premises AI for law firms: matter search, drafting assistance, and document review run entirely inside the firm's network — the files and the search index never leave it.
+
+Book a Demo → Talk to Sales ┌ ┐ └ ┘ ▲ ABOVE · THE CLOUD third-party API ◇ frontier LLM ◇ public cloud ◇ shared tenancy ≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿ WATERLINE ↑ your firm's boundary ↑ Fleet Agentic ON-PREM ▾ YOUR MATTERS — STAY HOME privileged work product client files matter data
+
+"What's beneath the waterline is your business."
+
+BUILT TO THE STANDARD OF ◆ HIPAA ◆ CMMC L2 ◆ NIST 800-171 ·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~ The Trade
+
+## The trade you've been asked to make.
+
+Every cloud AI tool asks your firm to ship its most sensitive information — privileged communications, deal documents, client PHI, litigation strategy — to someone else's servers to get an answer back.
+
+For a law firm, that's not a convenience question. It's a duty question. Model Rule 1.6, client outside-counsel guidelines, and the privilege itself all point the same direction: the file shouldn't leave.
+
+◆
+
+You built your security architecture to keep it home. That instinct was right. AI shouldn't be the exception that undoes it.
+
+The part nobody tells you
+
+## Keeping the file local isn't enough. The index is the leak.
+
+Most "on-prem-friendly" legal AI keeps the document local — then ships an index of it to the cloud. That distinction is marketing, not security.
+
+An index derived from your file is a second copy of the sensitive part:
+
+[¶] CHUNKS
+
+Verbatim passages lifted straight out of the document. Not a summary. The text itself.
+
+[≈] EMBEDDINGS
+
+Encode the meaning, and are reversible enough to reconstruct the source.
+
+[#] KEYWORDS
+
+Client names, matter numbers, deal codenames, in plaintext.
+
+[⊟] METADATA
+
+Authors, dates, case IDs, file paths: a map of everything you hold.
+
+[⇄] RELATIONSHIPS
+
+Which parties, entities, and documents connect. Disclosure without a single sentence leaving.
+
+The original file never moved. The privileged information did.
+
+◆
+
+A cloud index of local content is exfiltration the moment it can disclose, infer, search, or reconstruct protected material outside your walls. Fleet Agentic keeps the index on the same side of the boundary as the file. Always.
+
+The Approach
+
+## Bring the AI to the data — not the reverse.
+
+Fleet Agentic is managed AI that lives on your perimeter. The model runs where your files already are.
+
+[⊡]
+
+### On your perimeter
+
+Documents never cross your boundary. Full generative capability, zero egress of privileged content.
+
+[↻]
+
+### Fully managed
+
+On a lease, we own the hardware, updates, and lifecycle. Your team operates; we maintain. No servers for your IT to babysit.
+
+[≡]
+
+### Predictable economics
+
+Lease the appliance for one flat $5,000/month: every lawyer, paralegal, and staff member works from it, and the price doesn't climb when you add the whole litigation team. Prefer to buy your own hardware? Start at $500/month, then $25 per seat. No per-token metering either way.
+
+The Workload
+
+## General-purpose intelligence, with legal where it counts.
+
+Fleet Agentic isn't a narrow legal point-tool. Fleet Agentic runs capable general models — the same drafting, summarizing, and reasoning your team would reach for anywhere — plus legal-specific workflows on top.
+
+▸Draft, redline, and summarize across large matter sets ▸Issue-spot and triage document productions ▸Assist motion and memo drafting against your own precedent bank ▸Search your firm's knowledge base — closed deals, prior briefs, templates — grounded in your work product, not the open internet ▸Intake and conflict-check support
+
+One deployment serves the whole firm. Legal work gets legal handling; everything else your people do with AI runs on the same secure box.
+
+The Record
+
+## Audit-ready by construction.
+
+Compliance shouldn't be a slide deck you assemble the week before a client security review. Fleet Agentic produces an immutable, exportable record of every AI interaction: what ran, on which documents, under what policy, with what result.
+
+When a client's outside-counsel guidelines demand proof — or when a malpractice question surfaces two years later — the evidence already exists.
+
+"trust us" ──▶ evidence on demand. SENTINEL · AUDIT LOG immutable ✔ matter_id bound ✔ access_scope verified ✔ privilege_flag enforced ✔ data_boundary enforced ▸ export evidence ▮ The Comparison
+
+## Fleet Agentic vs. cloud legal AI.
+
+Cloud legal AI Fleet Agentic
+
+Where your data goes Shipped to a third-party API Never leaves your perimeter
+
+The index Copied to the cloud Stays inside your boundary
+
+Pricing Per lawyer, per month Flat $5,000/month leased, or $500 + $25/seat on your hardware. Never per token
+
+Scope Legal tasks only General AI + legal workflows, one deployment
+
+Infrastructure Someone else's cloud Managed hardware on your premises
+
+Air-gapped / classified work Not possible Supported by design
+
+Audit evidence Contractual assurance Immutable, exportable record
+
+The cloud tools are good software. But they solve for legal output while asking you to accept data egress as the cost. Fleet Agentic refuses the trade: the intelligence comes to the data.
+
+Who It's For
+
+## Built for the firms cloud AI can't serve.
+
+Some work simply cannot go to a third-party API: government and defense counsel, matters under protective order, clients whose outside-counsel guidelines forbid third-party AI processing, and any firm that treats privilege as non-negotiable.
+
+◆
+
+If your answer to "where does the data go?" has to be nowhere — Fleet Agentic is the only version of this that works.
+
+·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~ FAQ
+
+## Straight answers.
+
+### Q ▸ Is it safe to use public AI chatbots on client files?
+
+ABA Formal Opinion 512 requires lawyers to evaluate confidentiality risks before entering client information into generative AI tools. Public chatbots process prompts on external servers, which is exactly the exposure the opinion warns about. Fleet Agentic removes the question: privileged material never leaves the firm.
+
+### Q ▸ Does using Fleet Agentic create a privilege-waiver risk?
+
+No third party ever receives the communication or work product — the model runs on hardware inside the firm's own network — so the disclosure that underpins waiver arguments never occurs.
+
+### Q ▸ Does it integrate with our practice management system?
+
+Yes. Fleet Agentic connects to the systems where your matters already live and builds its index locally. Ask us about your specific DMS/PMS in the demo.
+
+### Q ▸ What can associates actually do with it?
+
+Search across matters, first-draft motions and memos from your own precedent, summarize productions, and issue-spot large document sets — with citations back to the source files.
+
+### Q ▸ What does it cost?
+
+Leased: one flat $5,000/month for the whole firm, so you never ration access by timekeeper. On your own hardware: $500/month including 1 seat, then $25 per additional seat. No per-token metering either way.
+
+## See it on your own matters.
+
+A 30-minute walkthrough of Fleet Agentic, running on your data, inside your boundary.
+
+▸ BOOK A DEMO Book a Demo →
+
+---
+
+Source: https://fleetagentic.ai/solutions/healthcare/  (last modified 2026-11-05)
+
+Sovereign AI for Healthcare
+
+# Clinical AI that never leaves the building.
+
+Every ambient scribe, copilot, and clinical assistant on the market today sends PHI to somebody else's cloud. Fleet Agentic doesn't.
+
+The same generative AI productivity your clinicians want — running inside your own perimeter, HIPAA-compliant by construction, not by BAA.
+
+Fleet Agentic for healthcare is a managed on-premises AI for health systems: clinical documentation, intake, and chart search run entirely inside your network — PHI is never transmitted to a third-party API, so no model-vendor BAA is required.
+
+Book a Demo → See the Architecture ↓ ┌ ┐ └ ┘ ▲ ABOVE · THE CLOUD vendor cloud + BAA ◇ ambient scribe ◇ public cloud ◇ shared tenancy ≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿ WATERLINE ↑ your health system's boundary ↑ Fleet Agentic ON-PREM ▾ YOUR PATIENTS — STAY HOME PHI clinical notes patient records intake data
+
+"What's beneath the waterline is your business."
+
+BUILT TO THE STANDARD OF ◆ HIPAA ◆ NIST 800-171 ·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~ 01 / The Tension
+
+## Every "HIPAA-compliant" AI scribe still means a BAA with someone else's cloud.
+
+Abridge, Nuance DAX, Suki, Nabla, Ambience, Epic's own AI Charting — the entire ambient-documentation market runs the same way: audio leaves the exam room, a vendor transcribes it, structures it, indexes it, and hands you a signed BAA as the compliance answer.
+
+▚
+
+That's a legal instrument, not an architecture. The BAA tells you who's liable if something goes wrong. It says nothing about whether PHI ever left your walls in the first place. For most health systems, it never had to.
+
+02 / The Landscape
+
+## The incumbents solved documentation. Not sovereignty.
+
+The ambient-scribe category matured fast — real KLAS-ranked winners, real time-back-to-clinicians, real revenue lift. That's not in dispute. What's in dispute is where the data lives while it happens.
+
+Abridge / Nuance DAX / Suki / Nabla / Ambience Epic AI Charting (bundled) Fleet Agentic Healthcare
+
+Where PHI processes Vendor cloud Epic's cloud / MSFT Azure Your perimeter
+
+Compliance model BAA + trust-us BAA, bundled with EHR contract Architectural — PHI never transmitted
+
+Index/embeddings location Vendor-side, queryable off-site Vendor-side On-prem, same side of the boundary as the source
+
+Pricing Per-seat / per-visit, scales with volume "Free" — bundled into EHR spend Flat leased fee, or per seat on your hardware. Zero token metering
+
+Best fit Ambient documentation at the point of care Existing Epic shops wanting zero incremental spend Any workload touching PHI you can't ship off-site — documentation, intake, coding, record search
+
+The independents compete on note quality and specialty depth. Epic competes on being free. Neither one answers the question a compliance officer actually asks: where does the data go? Fleet Agentic is the only entry in the category where the honest answer is "nowhere."
+
+03 / The Hidden Leak
+
+## De-identification isn't the boundary you think it is.
+
+Most "privacy-preserving" healthcare AI stops at de-identifying content before it leaves your network — stripping the eighteen HIPAA identifiers, then shipping the rest to a cloud model. But clinical narrative re-identifies easily: rare diagnoses, unusual drug combinations, visit timing, and free-text notes can fingerprint a patient even with names removed.
+
+clinical note → de-identification → cloud model · still reconstructable
+
+An index built from de-identified notes is still a second copy of your patients' clinical reality, sitting outside your walls.
+
+◆
+
+Fleet Agentic skips the trade entirely — the model and the index stay on your hardware, so there's no de-identification pipeline to get wrong.
+
+04 / The Approach
+
+## Bring the AI to the chart. Not the chart to the cloud.
+
+Fully managed AI, deployed inside your data center or colo, running the clinical workflows your staff already wants:
+
+▸Clinical documentation — ambient and dictated note generation, structured to your templates ▸Patient intake & triage — structured intake from unstructured patient input, before it ever leaves the building ▸Chart & knowledge-base search — ask questions across your own record system, answered from your own data ▸Coding assist — ICD-10/CPT support grounded in the note that never left your network
+
+Same category of workflow as the incumbents. Different side of the boundary.
+
+05 / Compliance, By Construction
+
+## HIPAA out of the box — because there's no box for PHI to leave.
+
+Every Fleet Agentic healthcare deployment inherits Lighthouse, the platform's hardened base — zero-trust identity, workload isolation, signed supply chain, continuous policy enforcement — and Sentinel, which turns "we're compliant" into an exportable, immutable audit log.
+
+You're not buying a scribe with a compliance page. You're buying compliance as the platform underneath the scribe.
+
+SENTINEL · AUDIT LOG immutable ✔ policy_check passed ✔ access_scope verified ✔ artifact_sig valid ✔ data_boundary enforced ▸ export evidence ▮ ·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~ FAQ
+
+## Straight answers.
+
+### Q ▸ Is Fleet Agentic HIPAA-compliant without a BAA?
+
+A BAA exists to govern PHI you hand to a business associate. Fleet Agentic's architecture means no model vendor ever receives PHI — it is processed on hardware inside your network — so there is no third-party disclosure for a model-vendor BAA to paper over.
+
+### Q ▸ Isn't de-identification enough to use cloud AI?
+
+De-identification is fragile: quasi-identifiers, rare conditions, and free-text context re-identify patients more often than teams expect, and the de-identification step itself usually happens in someone's cloud. Keeping PHI on-prem removes the gamble.
+
+### Q ▸ Can it do clinical documentation?
+
+Yes — visit documentation, summarization, and chart search run on Fleet Agentic. Clinicians get the workflow they've seen in cloud scribes, without PHI transmission.
+
+### Q ▸ How does IT deploy and secure it?
+
+Fleet Agentic installs managed AI inside your network segment of choice. Identity integrates with your directory; access, isolation, and audit logging are enforced on-box and exportable for your compliance team.
+
+### Q ▸ What does it cost?
+
+Two options. Leased: one flat $5,000/month per appliance with as many clinician seats as the hardware supports, including hardware. On your own hardware: $500/month including 1 seat, then $25 per additional seat. No per-note metering on either.
+
+## Stop sending PHI somewhere else to get an answer from it.
+
+See Fleet Agentic running against a sample of your own clinical documentation — 30 minutes, on your data, not a sales deck.
+
+▸ BOOK A DEMO Book a Demo → Talk to Sales
+
+---
+
+Source: https://fleetagentic.ai/solutions/defense/  (last modified 2026-11-05)
+
+Defense AI
+
+# Frontier-grade AI, without CUI leaving the facility.
+
+The productivity of generative AI — for proposals, past performance, and program data that can't touch a public cloud.
+
+Fleet Agentic puts fully managed AI inside your perimeter. Controlled Unclassified Information stays on your network — and so does every index, embedding, and log derived from it.
+
+Fleet Agentic for defense is a managed on-premises AI for contractors handling CUI: BD search, proposal drafting, and program knowledge retrieval run entirely inside your boundary, aligned with your CMMC 2.0 Level 2 posture.
+
+Book a Demo → Talk to Sales ┌ ┐ └ ┘ ▲ ABOVE · THE CLOUD GovCloud / third-party API ◇ frontier LLM ◇ public cloud ◇ shared tenancy ≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿ WATERLINE ↑ your facility's boundary ↑ Fleet Agentic ON-PREM ▾ YOUR PROGRAM DATA — STAYS HOME CUI proposals past performance teaming data
+
+"What's beneath the waterline is your business."
+
+BUILT TO THE STANDARD OF ◆ CMMC 2.0 L2 ◆ NIST 800-171 ·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~ The Boundary
+
+## Your assessors drew the boundary. Cloud AI erases it.
+
+NIST 800-171's data-flow controls — 3.1.x access enforcement, 3.13.x boundary protection — exist to keep CUI inside a defined, assessed enclave. Every cloud AI tool asks you to ship that same CUI to a server outside it.
+
+That's not a convenience question. It's a scope question. If the assessment boundary doesn't cover the AI vendor's cloud, the CUI shouldn't be reaching it — full stop.
+
+◆
+
+You built your compliance posture around a defined enclave. That instinct was right. AI shouldn't be the exception that punches a hole in it.
+
+The part nobody tells you
+
+## Keeping the file local isn't enough. The index is the leak.
+
+Most "on-prem-friendly" defense AI keeps the document local — then ships an index of it to the cloud. That distinction is marketing, not a control boundary.
+
+An index derived from your proposal file is a second copy of the sensitive part:
+
+[¶] CHUNKS
+
+Verbatim passages lifted straight out of a proposal or program document. Not a summary. The text itself.
+
+[≈] EMBEDDINGS
+
+Encode the meaning, and are reversible enough to reconstruct the source.
+
+[#] KEYWORDS
+
+Program names, teaming partners, contract numbers, proposal themes — in plaintext.
+
+[⊟] METADATA
+
+Authors, dates, solicitation numbers, file paths: a map of every program you're pursuing.
+
+[⇄] RELATIONSHIPS
+
+Which teaming partners, primes, and programs connect. Disclosure without a single sentence leaving.
+
+The original file never moved. The CUI did.
+
+◆
+
+A cloud index of local CUI is outside the boundary the moment it can disclose, infer, search, or reconstruct protected material off your enclave. Fleet Agentic keeps the index on the same side of the boundary as the file. Always.
+
+The Approach
+
+## Bring the AI to the data — not the reverse.
+
+Fleet Agentic is managed AI that lives inside your assessed boundary. The model runs where your program data already is.
+
+[⊡]
+
+### Inside your boundary
+
+CUI never crosses your enclave. Full generative capability, zero egress of controlled data.
+
+[↻]
+
+### Fully managed
+
+On a lease, we own the hardware, updates, and lifecycle. Your team operates; we maintain. No new servers for your IT to babysit.
+
+[≡]
+
+### Predictable economics
+
+Lease the appliance for one flat $5,000/month: every BD, capture, and proposal staffer works from it, and the price doesn't climb when you add the whole team. Need the hardware inside your own accreditation boundary? Bring your own: $500/month, then $25 per seat. No per-token metering either way.
+
+The Workload
+
+## General-purpose intelligence, with BD and capture where it counts.
+
+Fleet Agentic isn't a narrow point-tool. Fleet Agentic runs capable general models — the same drafting, summarizing, and reasoning your team would reach for anywhere — plus program-specific workflows on top.
+
+▸Proposal & BD drafting on 20 years of past performance ▸Program knowledge search across contract documents and prior submissions ▸Compliance-aware summarization of DFARS clauses and solicitation packages ▸Teaming and capture research grounded in your program history, not the open internet
+
+One deployment serves the whole capture and delivery organization. Program work gets program handling; everything else your people do with AI runs on the same secure box.
+
+The Record
+
+## Audit-ready by construction.
+
+Compliance shouldn't be a slide deck you assemble the week before a C3PAO assessment. Fleet Agentic produces an immutable, exportable record of every AI interaction: what ran, on which documents, under what policy, with what result.
+
+When an assessor asks for evidence — or when a program audit surfaces two years later — the record already exists.
+
+"trust us" ──▶ evidence on demand. SENTINEL · AUDIT LOG immutable ✔ cui_flag bound ✔ access_scope verified ✔ enclave_boundary enforced ✔ control_family 3.1 / 3.13 ▸ export evidence ▮ The Comparison
+
+## Fleet Agentic vs. GovCloud SaaS AI.
+
+GovCloud SaaS AI Fleet Agentic
+
+Where the model runs Vendor's FedRAMP/GovCloud tenancy Inside your facility
+
+Where the index lives Vendor cloud, outside your enclave Same side of the boundary as the data
+
+ATO / assessment surface A new external system to scope and trust An asset inside your existing boundary
+
+Evidence at assessment Vendor attestations and contract language Immutable, exportable record on demand
+
+Pricing Per-seat / per-token, scales with usage Flat $5,000/month leased, or $500 + $25/seat on your hardware. Never per token
+
+Disconnected / air-gapped work Not possible — requires connectivity Supported by design
+
+GovCloud SaaS AI is still someone else's cloud — inside the FedRAMP boundary, but outside yours. Fleet Agentic refuses that trade: the intelligence comes to the data.
+
+Who It's For
+
+## Built for the contractors cloud AI can't serve.
+
+Some work simply cannot go to a third-party API: CUI under NIST 800-171, programs preparing for CMMC 2.0 Level 2 assessment, export-controlled technical data, and any contractor that treats its assessment boundary as non-negotiable.
+
+◆
+
+If your answer to "where does the data go?" has to be nowhere outside the enclave — Fleet Agentic is the only version of this that works.
+
+·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~ Field Results
+
+## Proof from the field.
+
+## DEFENSE & AEROSPACE
+
+### AI Infrastructure for a Defense Contractor Preparing for CMMC 2.0
+
+Deploy generative AI on 20 years of BD content without violating CMMC Level 2 posture or exposing controlled data to frontier models.
+
+Read the case study → ·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~·~ FAQ
+
+## Straight answers.
+
+### Q ▸ Can we use generative AI on CUI at all?
+
+Yes, if the entire processing chain stays inside your assessed boundary. That is the design constraint Fleet Agentic is built around: model, index, embeddings, and logs all remain on your network.
+
+### Q ▸ Does Fleet Agentic expand our CMMC assessment scope?
+
+Fleet Agentic is deployed inside your existing boundary and inherits your enclave's controls; Sentinel produces the audit evidence assessors ask for. It is scoped as an asset within the boundary, not a new external service.
+
+### Q ▸ What about the search index — isn't that where tools leak?
+
+Most "compliant" AI tools keep the file local but ship an index to their cloud. An index is derived CUI. Fleet Agentic keeps the index on the same side of the boundary as the data.
+
+### Q ▸ Is it air-gapped?
+
+Yes, on request. Fleet Agentic can be deployed fully disconnected. Managed updates are delivered on a schedule and by a mechanism that fits your environment, including offline transfer for air-gapped enclaves.
+
+## See it on your own program data.
+
+A 30-minute walkthrough of Fleet Agentic, running on your data, inside your boundary.
+
+▸ BOOK A DEMO Book a Demo →
+
+---
+
+Source: https://fleetagentic.ai/carrier/  (last modified 2026-11-05)
+
+Partner Program
+
+# Your AI, running at the edge, secured by us.
+
+Regulated buyers won't touch your product if it means shipping their data to your cloud. Fleet Agentic Carrier gets you there anyway.
+
+A managed appliance, deployed on your customer's site, running your product on open-weight models we help you select. You keep the product and the relationship. We handle the box.
+
+Fleet Agentic Carrier is a partner program for AI software vendors: we deploy and manage a hardware appliance at your customer's site so your product runs inside their network boundary — without you building on-premises infrastructure, hardware logistics, or an edge support model.
+
+Become a Carrier Partner → See How It Works ↓ ┌ ┐ └ ┘ ▲ YOUR PRODUCT · SHIPPED you own this ⊡ your AI application ⊡ your models or ours ⊡ your license terms ▼ ≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿≈∿ WATERLINE ↓ the customer's boundary ↓ Fleet Agentic Appliance ON THEIR PREMISES ▾ FULLY MANAGED — FULLY THEIRS hardware inference updates audit evidence
+
+"Ship the product. Not the risk."
+
+YOUR PRODUCT INHERITS ◆ CMMC L2 ◆ HIPAA ◆ FERPA ◆ NIST 800-171 · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · 01 / The Problem
+
+## Regulated buyers want your AI. They just can't take it your way.
+
+Legal, healthcare, defense, and education organizations are ready to buy AI products — but not ones that route their privileged, PHI, FERPA, or classified data through a third-party cloud. That objection kills deals in procurement, not in the demo.
+
+Building your own on-prem offering means standing up hardware logistics, edge ops, compliance posture, and a support model you don't have — for every customer, every site. Most AI vendors don't have six months and a hardware team to spare. So the deal stalls, or dies.
+
+▚
+
+The market you're locked out of isn't small. It's the market that cares most about security — which means it pays the most, and churns the least.
+
+02 / The Approach
+
+## We put your product inside their perimeter. You never touch a box.
+
+Fleet Agentic Carrier is a partner program: we deploy, manage, and secure the physical appliance your product runs on, at your customer's site. You ship your application. We ship the trust.
+
+[⊡]
+
+### Appliance, not a project
+
+Standardized hardware, deployed and maintained by Fleet Agentic at each customer site. No custom infra work for you or them.
+
+[◆]
+
+### Model selection, done with you
+
+We work alongside your team to pick the right open-weight model for your product's workload — performance, cost, and compliance fit, not just what's popular.
+
+[↻]
+
+### Fully managed lifecycle
+
+Updates, monitoring, and hardware maintenance are ours. You ship new product releases; we get them onto every deployed box.
+
+[≡]
+
+### Predictable, partner-friendly economics
+
+Fixed costs per deployment, not per-token or per-seat. Built so your margin holds up at enterprise scale.
+
+Every Carrier appliance inherits Lighthouse, the same hardened base under every Fleet Agentic deployment, and Sentinel, which exports the audit evidence your customer's security team asks for.
+
+03 / The Distribution Value
+
+## A channel into every account your sales team can't close alone.
+
+Carrier isn't just infrastructure — it's a go-to-market unlock. Every regulated prospect who says "we can't do cloud" becomes a prospect you can say yes to.
+
+01
+
+### Co-sell into regulated verticals
+
+Fleet Agentic's compliance posture — CMMC L2, HIPAA, FERPA, NIST 800-171 — becomes part of your pitch, not a gap in it.
+
+02
+
+### Faster procurement cycles
+
+Security review is the longest step in enterprise AI deals. A pre-built, audited appliance shortens it.
+
+03
+
+### One deployment model, many verticals
+
+Legal, healthcare, defense, education — the same Carrier appliance, tuned per vertical, so you don't rebuild your delivery model for each new market.
+
+04
+
+### Reference-ready compliance
+
+Every deployment is audit-ready by construction — evidence your customer's security team can actually use, not a slide about "enterprise-grade."
+
+04 / How It Works STEP 01 [⊡]
+
+### Scope the deployment
+
+We map your product's requirements — compute, data flow, model needs — against the customer's compliance profile.
+
+STEP 02 [◆]
+
+### Select the model, together
+
+Fleet Agentic and your team choose the open-weight model that fits the workload, before hardware ever ships.
+
+STEP 03 [↻]
+
+### Ship the appliance
+
+Fleet Agentic deploys the box on the customer's premises. Your product runs on it, fully within their boundary.
+
+STEP 04 [✔]
+
+### We maintain, you iterate
+
+Fleet Agentic handles hardware, updates, and lifecycle. You keep shipping product — every release reaches every deployed site.
+
+· ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · ~ · 05 / Who Carrier Is For
+
+## Built for AI vendors selling into markets that can't go to the cloud.
+
+## [⊡] AI PRODUCT TEAMS
+
+### Your product is ready. Your infrastructure isn't.
+
+### ▸No hardware or edge-ops team to build ▸Losing deals to "we can't send data to your cloud" ▸Want to sell into legal, health, defense, or education without a 6-month infra buildout Talk to Partnerships → [↻] PLATFORMS WITH ENTERPRISE CUSTOMERS
+
+### Your customers are asking for on-prem. You need a way to say yes.
+
+### ▸Enterprise customers requesting local deployment ▸Want a channel partner, not a DIY hardware project ▸Need compliance credibility fast Talk to Partnerships → FAQ
+
+## Straight answers for partners.
+
+### Q ▸ Who owns the customer relationship in a Carrier deployment?
+
+You do. Carrier is infrastructure, not resale. You keep the contract, the pricing, the product roadmap, and the account. Fleet Agentic is the deployment and management layer underneath it.
+
+### Q ▸ Does my product have to be rebuilt to run on the appliance?
+
+No. If your product runs in containers against an OpenAI-compatible inference endpoint, it runs on a Carrier appliance. We scope the specifics — compute, storage, data flow, network egress — before any hardware ships.
+
+### Q ▸ Which models can we run?
+
+Current-generation open-weight models. We select one with your team based on your workload's performance, cost, and compliance requirements rather than defaulting to whatever is popular. Model choice never requires sending customer data off-premises.
+
+### Q ▸ Who does the customer call when something breaks?
+
+Fleet Agentic owns the appliance: hardware, operating system, inference runtime, updates, and monitoring. You own your application. The split is clean, and we support your team directly rather than putting you in the middle of hardware tickets.
+
+### Q ▸ How does Carrier pricing work for partners?
+
+A fixed cost per deployed appliance — no per-token metering and no per-seat licensing — so your margin does not erode as a customer's usage grows. Exact pricing depends on deployment size and volume commitment.
+
+### Q ▸ Can our customers run disconnected or air-gapped?
+
+Yes. The appliance can run fully disconnected, with managed updates delivered on a schedule and mechanism that fits the customer's environment, including offline transfer for air-gapped enclaves.
+
+## Stop losing deals to "we can't send our data to the cloud."
+
+Ship your product where regulated buyers already need it to run.
+
+▸ BECOME A CARRIER PARTNER
+
+### A 30-minute conversation about your product and your market.
+
+We'll map what a Carrier deployment would look like for your customers.
+
+Book a Partner Call → ▸ HAVE QUESTIONS FIRST
+
+---
+
+Source: https://fleetagentic.ai/learn/the-index-is-the-leak/  (last modified 2026-11-05)
+
+Learn
+
+# The index is the leak.
+
+Most "on-prem-friendly" AI products keep your file on your server — and ship an index of it to their cloud. This page explains why that index is, for privacy purposes, a second copy of the document.
+
+local document → content extraction → cloud index · outside your boundary
+
+### KEYWORDS
+
+Topics, names, projects, clients, and legal matters — right there in plaintext.
+
+### CHUNKS
+
+Verbatim passages copied straight out of the file. Not derived — the content itself.
+
+### EMBEDDINGS
+
+Encode the meaning — and are reversible enough to reconstruct the source text.
+
+### METADATA
+
+Filenames, authors, dates, case IDs, and paths — a map of what you hold.
+
+### RELATIONSHIPS
+
+Which people, entities, and documents connect — disclosure without a single sentence.
+
+◆
+
+A cloud index of local content is exfiltration the moment it holds enough derived information to disclose, infer, search, or reconstruct protected content outside your walls. Fleet Agentic keeps the index on the same side of the boundary as the data.
+
+## The embeddings are reversible
+
+This isn't theoretical. Research on embedding inversion — e.g. "Text Embeddings Reveal (Almost) As Much As Text" (Morris et al., EMNLP 2023) — reconstructs source text from embedding vectors with high fidelity. If your embeddings sit in a vendor's cloud, treat the text as being there too.
+
+## Five questions to ask any "compliant" AI vendor
+
+▸ Where is the index stored? ▸ Where are embeddings computed? ▸ Where do chunks live at rest? ▸ What metadata leaves our network? ▸ Can you show us the data-flow diagram?
+
+## See it on your own data.
+
+A 30-minute walkthrough of Fleet Agentic, Lighthouse, and Sentinel.
+
+Book a Demo → See all verticals
+
+---
+
+Source: https://fleetagentic.ai/case-studies/  (last modified 2026-11-05)
+
+Field Results
+
+# Proof from regulated environments.
+
+How Fleet Agentic deploys sovereign AI where the data can't move.
+
+DEFENSE & AEROSPACE
+
+### AI Infrastructure for a Defense Contractor Preparing for CMMC 2.0
+
+Deploy generative AI on 20 years of BD content without violating CMMC Level 2 posture or exposing controlled data to frontier models.
+
+Read case study →
+
+▸ additional deployments in progress — write-ups published as customers clear them for release.
+
+---
+
+Source: https://fleetagentic.ai/case-studies/defense-cmmc/  (last modified 2026-11-05)
+
+Case Study · Defense & Aerospace
+
+# AI Infrastructure for a Defense Contractor Preparing for CMMC 2.0
+
+Frontier-grade AI productivity across 20 years of business-development content — without a single controlled document, or its derived index, leaving the perimeter.
+
+Defense contractor. Name redacted at their request.
+
+INDUSTRYDefense & Aerospace CHALLENGEDeploy generative AI on 20 years of BD content without violating CMMC Level 2 posture or exposing controlled data to frontier models. 01 / The Problem
+
+## The Problem
+
+A defense contractor needed to bring AI into business development — not engineering. Contract negotiation, marketing content, and 20 years of institutional knowledge sat in a proprietary CRM they couldn't risk exposing to third-party APIs. They were mid-preparation for CMMC 2.0, meaning third-party auditors — not internal self-attestation — would soon verify every control. Anything built had to be audit-ready from day one, not retrofitted later.
+
+Internally, they lacked the GPU/inference expertise, Kubernetes fluency, and LLM tooling knowledge to scope, let alone build, a compliant solution. Prior consultants offered strategy decks, not deployable infrastructure.
+
+02 / The Solution
+
+## The Solution
+
+Fleet Agentic deployed fully managed, on-prem AI — inference and infrastructure-as-a-service, repeatable and consistent, running inside the contractor's perimeter. The core engineering:
+
+### Bridged Linux ↔ Windows environments
+
+Custom services spanning SMB shares so inference could reach content wherever it lived.
+
+### Inherited access control
+
+Existing document-level ACLs were ingested and enforced at the inference layer, so search results always honored pre-existing security profiles.
+
+### Crawl-walk-run rollout
+
+Phased deployment so the organization adopted capability at a pace matched to its own operational maturity.
+
+03 / The Outcome
+
+## The Outcome
+
+### Zero egress
+
+Frontier-grade AI productivity without a single document — or its derived index — leaving the contractor's boundary.
+
+### 20 years, searchable
+
+Two decades of BD content made queryable in place, without exposing controlled data to frontier models.
+
+### Posture inherited, not bolted on
+
+CMMC-ready throughout the deployment, rather than requiring a rebuild before assessment.
+
+◆
+
+Security posture was inherited, not bolted on — CMMC-ready throughout, not rebuilt before audit.
+
+04 / The Pattern
+
+## Why This Matters Broadly
+
+Defense contractors face a shared bind: real AI value sits in unstructured, decades-deep, proprietary content — but frontier models and cloud indexing are structurally incompatible with controlled environments. The same bind shows up for law firms holding privileged work product and health systems holding PHI. The fix isn't a thinner AI tool; it's moving inference and the index inside the perimeter, inheriting the access controls and audit posture the organization already built. That's the model Fleet Agentic now productizes across defense contractors and every other regulated vertical.
+
+## See it on your own data.
+
+A 30-minute walkthrough of Fleet Agentic, Lighthouse, and Sentinel.
+
+Book a Demo → See all verticals
+
+---
+
+Source: https://fleetagentic.ai/blog/cmmc-phase-2-paused-ai-tools/  (published 2026-10-13)
+
+# CMMC Phase 2 is Paused For Now. Here's What What Means for CUI and AI Tools
+
+*The November 10 deadline has shifted, but DFARS 7012 is still an expectation. CMMC Phase 2 will be back.*
+
+**tl;dr**
+- On July 13, 2026, the Department suspended CMMC Phase 2, which was due November 10, 2026, due to it's suspension, many people think they no longer need to worry about it.
+- Phase 1 self-assessments are still enforced.
+- Any AI tool that touches CUI (Controlled Unclassified Information) is within scope—including the index of that data you may be sharing with a frontier model.
+
+
+### What changed
+
+On July 13, 2026, the Department of War, maybe forever in our hearts and minds as DoD, suspended Phase 2 and launched a 60-day review. Phase 2 would have made a Level 2 certification from a third-party assessor (C3PAO) a pre-requisite for award for many contractors and contracting companies with access to CUI. Phases 3 and 4 are frozen for now, but make no mistake, these standards are going to come back. 
+
+On September 3, new rules directed contracting officers to remove third-party CMMC requirements. Certificates already issued are still valid (congrats if you did one). We found the Cyber AB reported only 1,391 final Level 2 certificates as of May 2026 (meaning there are a LOT of places that haven't yet complied).
+
+### What did not change
+
+The certification date requirement is the only thing that _moved_ —it's not gone forever. You are still required to maintain adequate security and incident reporting even now, and you'll be expected to be back at CMMC level 2 when the standards return. Unless an assessor is involved, the affirmation is your own statement to the government, and if the controls aren't real, you'll still be in trouble.
+
+### The precedent
+
+You may recall there was a pause in 2021, so this isn't unprecidented. And when that pause ended it streamlined CMMC 2.0, and the program was reshaped, not removed/repealed. If you're a contractor spending this pause time fixing architecture you'll be ahead in every important outcome. Estimates of how many companies need Level 2 differ, roughly 80,000 by the Department's figures and 118,000 by figures other cite, but nobody disputes the fact that FAR more companies will require it.
+
+### Where AI expands your scope
+
+With AI, every AI tool that processes, stores, or indexes CUI is a part of the system you will need to assess: the model, the interface, the logs and, as we cover in {{< postlink "why-the-index-is-the-leak" "Why the Index Is the Leak" >}}, the search index. If those are uploaded to a frontier model's cloud, your "boundary" now includes that environment. Adding AI after you've documented your boundary means revisiting your system security plan, diagrams and data flows. Shadow IT use, like a browser tab to a consumer chatbot, is a data flow you wont be able to afford ({{< postlink "shadow-ai-regulated-firms" "Shadow AI" >}}). The easiest way to keep that from happening is to offer easily accessible AI inside the boundary you already defend.
+
+### A no-regrets checklist for Q4
+
+1. Define your CUI boundary in writing.
+2. Create an inventory of every AI tool your company uses, shadow IT or not.
+3. Decide where AI might touch CUI, and create an approved option.
+4. Check every "implemented" control in your affirmations against evidence.
+5. Ask each AI vendor to give you in writing where prompts, files, embeddings and logs are stored.
+6. Put the report on your calendar and re-check regularly.
+
+### How Fleet Agentic fits
+
+Fleet Agentic was designed from the start to meet the standard of CMMC. The model, index, embeddings, and logs run inside your network, so adding AI won't add a third-party system or cloud to your "boundary." Sentinel produces exportable evidence for an assessor or to back your own affirmation. See our [defense case study](/case-studies/defense-cmmc/).
+
+### Using the pause well
+
+Plan your work. In the first 30 days, confirm the "boundary" and inventory your AI tools—including finding out what your people are truly using. In days 30 to 60, ensure you have no gaps: multi-factor authentication, logging, segmentation, and a written AI policy. In days 60 to 90, test you are collecting the right evidence well by asking someone outside the project to produce it for a week—this will dramatically speed up your audit time when it comes. If you wait, you will do the same work later but under pressure, with less say in how it's done and it will very likely cost you more.
+
+### Frequently asked questions
+
+**Is CMMC canceled?** No. Phase 2 is suspended _for now_ and third-party requirements are being removed from solicitations for now. The underlying clauses and standards aren't going anywhere.
+
+**Do I need to act by November 10?** That date no longer triggers new requirements. Existing requirements continue.
+
+**Is my Level 2 certificate still valid?** Issued certificates remain valid. Ask your assessor about maintenance as the review concludes. Also, pat yourself on the back. Well done.
+
+### Get AI inside your boundary
+
+**[Book a 30-minute walkthrough](https://cal.com/kdplyd/30min)** or visit our [defense page](/solutions/defense/).
+
+**Sources:** Crowell & Moring (July 2026); Covington, Inside Government Contracts (September 2026); governmentcontractslaw.com; DoD CIO CMMC page; 32 CFR Part 170; Class Deviation 2026-O0025 Rev. 3.
+
+---
+
+Source: https://fleetagentic.ai/blog/local-private-ai-has-arrived/  (published 2026-09-03)
+
+# Local Private AI Has Arrived
+
+Last December was the AI wow moment. The frontier labs shipped models that were finally good enough that the whole tech world said, "Oh, this is different." Engineers had watched the progress for years and been impressed. But December was when everything changed.
+
+That same moment has now arrived for open weight models.
+
+Over the last few months, the open models caught up to where it counts. They're good enough to handle the vast majority of real work, provided you have decent hardware and a proper setup. And you no longer need a rack of servers to run them well. The hardware requirement has collapsed. What used to demand a data center now fits on a desk, in a small box.
+
+That collapse solves a problem that has kept AI out of the industries that need it most.
+
+If you work in healthcare, defense, legal, or finance, you already know the calculation. The capability and productivity gains of AI were tempting, but the privacy risk was disqualifying. Sending your data, your legal briefs, your patient records, your P&Ls to someone else's cloud was never going to fly with your compliance team, and rightly so. So you waited.
+
+You don't have to wait anymore. When the model runs locally, the privacy concern goes away because the data goes nowhere. It stays on your box, in your office, under your control. Nothing leaks because nothing leaves.
+
+That's the whole reason Fleet Agentic exists.
+
+We put great open weight models on a small box that sits on your desk. One unit comfortably serves five to twenty people depending on how hard they lean on it.
+
+But the model is the easy part. The hard part is everything around it, and that's where we spent our effort. Fleet Agentic ships with auditability built in, so you can show your work when someone asks. Role based access controls, so only the right people see the right things. And the ability to load the models with your own local knowledge, so the system can respond with context specific to you.
+
+Stability. Security. Your most sensitive data can now leverage AI, and trust it will never walk out the door.
+
+**If your legitimate security concerns have kept you on the sidelines, let's talk. Reach out and we'll show you what private AI on your own desk actually looks like.**
+
+---
+
+Source: https://fleetagentic.ai/blog/why-the-index-is-the-leak/  (published 2026-09-28)
+
+# Why the Index Is the Leak: How AI Search Copies Sensitive Data Off-Site
+
+*Your files never left the building. Their meaning did.*
+
+**In short**
+- An AI "index" is a second, searchable copy of your documents: keywords, snippets, embeddings and metadata.
+- Published research shows embeddings can be turned back into the text they came from, so they need the same protection as the source.
+- If a vendor hosts your index, where it lives decides your compliance boundary.
+
+### The setup that looks safe
+
+Picture a firm that buys an AI assistant that "works with your documents." The files stay on the local server, and the security questionnaire gets a clean answer: *data at rest remains on-premises.*
+
+But to answer questions, the system has to break each document into chunks and turn each chunk into a list of numbers called an embedding. It stores those numbers, plus text snippets and metadata, in a search index, and in many products that index lives in the vendor's cloud. The files never moved. A queryable copy of what's in them did.
+
+I think this is the most under-asked question in AI procurement, mostly because the answer on the questionnaire is technically true.
+
+### What an AI index contains
+
+An index usually holds five things: keywords that reveal what a document is about, verbatim snippets so the assistant can quote them, embeddings that encode meaning, metadata like file names, authors and access labels, and relationships between documents and entities. You couldn't safely publish it as a summary. It's a working copy built for retrieval, which is exactly what an attacker, a subpoena or a curious insider goes after.
+
+### What the research shows
+
+For years people assumed embeddings were opaque. That assumption hasn't held up. Cornell researchers Morris, Kuleshov, Shmatikov and Rush (arXiv 2310.06816) built Vec2Text, which reconstructs text from its embedding. Against GTR-base embeddings it recovered 92 percent of 32-token inputs exactly, and 89 percent of full names in pseudo-re-identified MIMIC-III clinical notes. The authors concluded that embeddings should be protected like raw text.
+
+Later work goes further. ALGEN showed inversion with only a few examples. A 2026 method, Zero2Text, works black-box with no training, and a 2026 survey (arXiv 2607.01276) catalogs the growing family of attacks.
+
+Accuracy depends on the embedding model, the text length and how much access the attacker has — and defenses like noise or secret scaling exist, usually at some cost to retrieval quality. Even so, "we only store vectors, not text" isn't a safety argument anymore.
+
+### Why this becomes a compliance question
+
+Regulated data stays regulated after you transform it. If a derived copy can disclose CUI, PHI, privileged material or student records, a careful assessor or counsel may treat it as in scope. We aren't lawyers, so ask yours: does our vendor's index sit inside the boundary we documented, and can we show evidence?
+
+### Five questions for any AI vendor
+
+1. Where are the embeddings stored? Ask for the location by name.
+2. Where is the index queried? Queries run against your data.
+3. Who holds the keys? If the vendor can read the index, so can anyone who compromises or compels the vendor.
+4. What leaves in telemetry, logs and support bundles? Traces often carry the content you meant to protect.
+5. What can you show an assessor? Look for exportable logs of who queried what, and when.
+
+### How Fleet Agentic is built around this
+
+We started from the index instead of the file. The model, retrieval index, embeddings and logs all run on hardware inside your network, and no third-party model API sees your prompts or retrieved passages. Lighthouse handles identity, isolation and segmentation. Sentinel is an immutable audit log with evidence export, so question five gets a report and not a promise. Air-gapped deployment is available, with updates by offline transfer.
+
+### A 20-minute test you can run this week
+
+Pick one AI tool your organization already uses and ask IT to trace a single document through it, on paper. Where is the file read? Where is it split into chunks? Which service turns those chunks into embeddings, and where are the results stored? Where does a question get matched against them? Ask the same about prompts, retrieved snippets and logs. Then draw it as a one-page data-flow diagram. If any box sits outside your network, or IT can't say where it sits, you've found the index. Most teams find at least one copy they didn't expect — and it's a lot cheaper to find it in a diagram than in an incident report.
+
+### Frequently asked questions
+
+**Are embeddings legally "CUI" or "personal data"?** There's no single answer. It depends on the data and the regulation. The research shows embeddings can leak the underlying text, so prudent programs treat them as sensitive. Ask counsel.
+
+**Isn't encrypting the vector database enough?** Not if the vendor holds the keys, decrypts to query, or stores snippets and metadata next to the vectors.
+
+**Does on-premises remove all AI risk?** No. It removes one category of third-party exposure and makes the boundary auditable. You still need access control, logging and policy.
+
+### See where your index lives
+
+Book a 30-minute walkthrough on your own data. **[Schedule it](https://cal.com/kdplyd/30min)**
+
+**Sources:** Morris et al., arXiv 2310.06816; arXiv 2607.01276; [fleetagentic.ai/learn/the-index-is-the-leak](https://fleetagentic.ai/learn/the-index-is-the-leak/).
